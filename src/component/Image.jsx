@@ -6,7 +6,7 @@ const Image = ({ src, alt , width, height, style, className }) => {
             src={src}
             alt={alt}
             width={width}
-            height={height}
+            height={height} 
             style={style}
             className={className}
         />
