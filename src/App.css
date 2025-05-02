@@ -12,4 +12,6 @@ body{
 .sidebar-app-main-container{
     border: solid;
     display: flex;
+    /* align-items: center; */
+    /* width: 100%; */
 }

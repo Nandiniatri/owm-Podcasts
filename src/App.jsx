@@ -1,4 +1,5 @@
 import './App.css'
+import AllPodcaste from './podcasts/allPodCasts/AllPodcaste'
 import Header from './podcasts/Header/Header'
 import Sidebar from './podcasts/sidebar/Sidebar'
 
@@ -9,7 +10,7 @@ function App() {
       <Header />
       <div className='sidebar-app-main-container'>
         <Sidebar />
-        hello
+        <AllPodcaste />
       </div>
     </>
   )
