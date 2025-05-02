@@ -1,6 +1,6 @@
 import { createServer } from "miragejs";
 import Sidebar from "../fixtures/Sidebar";
-import logo from "../contextApi/logo";
+import logo from "../fixtures/logo";
 
 export default function makeServer({ environment = "development" } = {}) {
   let server = createServer({
