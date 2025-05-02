@@ -24,9 +24,9 @@ const AppContextProvider = ({ children }) => {
   const fetchDiscoverCarDataApi = async () => {
     try {
       const response = await fetch('/data/discoverCarousalData.json');
+      // console.log(response);
       const result = await response.json();
-      console.log(result);
-      
+      // console.log(result);
       setDiscoverCaroData(result);
     } catch (error) {
       console.error("Error fetching sidebar data:", error);

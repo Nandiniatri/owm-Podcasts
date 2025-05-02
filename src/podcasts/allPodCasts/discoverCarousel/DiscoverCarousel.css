@@ -1,0 +1,80 @@
+.discover-container {
+    background-color: #000;
+    color: white;
+    /* padding: 40px 80px; */
+    font-family: sans-serif;
+    padding: 10px;
+}
+
+.discover-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.carousel-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    position: relative;
+}
+
+.carousel-image {
+    width: 280px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-text-content {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.carousel-link-title {
+    color: #60a5fa; 
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.carousel-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.carousel-subtitle {
+    color: #9ca3af; 
+    font-size: 1rem;
+}
+
+.carousel-content {
+    font-size: 0.9rem;
+    color: #d1d5db; 
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #374151; 
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+    background-color: #4b5563;
+}
+
+.carousel-button.left {
+    left: -40px;
+}
+
+.carousel-button.right {
+    right: -40px;
+}
