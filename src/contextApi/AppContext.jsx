@@ -6,6 +6,17 @@ const AppContextProvider = ({ children }) => {
   const [sidebar, setSidebar] = useState([]);
   const [discoverBtn, setDiscoverBtn] = useState([]);
   const [discoverCaroData, setDiscoverCaroData] = useState([]);
+  const [trending , setTrending] = useState([]);
+  
+  const fetchTrendingApi = async () => {
+    try {
+      const response = await fetch('/api/trending');
+      const result = await response.json();
+      setTrending(result);
+    } catch (error) {
+      console.error("Error fetching sidebar data:", error);
+    }
+  };
 
   const fetchDiscoverCarDataApi = async () => {
     try {
@@ -41,13 +52,15 @@ const AppContextProvider = ({ children }) => {
     fetchSidebarApi();
     fetchDiscoverBtnDataApi();
     fetchDiscoverCarDataApi();
+    fetchTrendingApi();
   }, []);
 
   return (
     <AppContext.Provider value={{
       sidebar,
       discoverBtn,
-      discoverCaroData
+      discoverCaroData,
+      trending
     }}>
       {children}
     </AppContext.Provider>

@@ -12,11 +12,9 @@ function App() {
         <div className='sideBar-div'>
           <Sidebar />
         </div>
+        
         <div className='AllPodcaste-div'>
           <AllPodcaste />
-          <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque deserunt obcaecati quas dolorem quisquam officia vero saepe, sapiente laboriosam vel ab assumenda natus aliquam ut tempora dolores suscipit, quis molestias.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque deserunt obcaecati quas dolorem quisquam officia vero saepe, sapiente laboriosam vel ab assumenda natus aliquam ut tempora dolores suscipit, quis molestias.Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque deserunt obcaecati quas dolorem quisquam officia vero saepe, sapiente laboriosam vel ab assumenda natus aliquam ut tempora dolores suscipit, quis molestias.Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque deserunt obcaecati quas dolorem quisquam officia vero saepe, sapiente laboriosam vel ab assumenda natus aliquam ut tempora dolores suscipit, quis molestias.
-          </h1>
         </div>
       </div>
     </>

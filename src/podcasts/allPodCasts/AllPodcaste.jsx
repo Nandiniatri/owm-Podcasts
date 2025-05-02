@@ -7,8 +7,9 @@ const AllPodcaste = () => {
         <>
             <Discover />
             <DiscoverCarousel />
+            
         </>
     )
 }
 
-export default AllPodcaste;
+export default AllPodcaste; 
