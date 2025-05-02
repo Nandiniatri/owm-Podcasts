@@ -17,10 +17,9 @@ const AppContextProvider = ({ children }) => {
     }
   };
 
-
   const fetchDiscoverBtnDataApi = async () => {
     try {
-      const response = await fetch('/data/discoverBtnData.json');
+      const response = await fetch('/api/discoverBtn');
       const result = await response.json();
       setDiscoverBtn(result);
     } catch (error) {

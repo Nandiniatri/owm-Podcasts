@@ -10,7 +10,7 @@ export default [
         icon: "FiZap",
         label: "New Releases",
     },
-    {
+    { 
         id: "3",
         icon: "FiClock",
         label: "In Progress",

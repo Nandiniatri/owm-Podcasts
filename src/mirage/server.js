@@ -1,6 +1,7 @@
 import { createServer } from "miragejs";
 import Sidebar from "../fixtures/Sidebar";
 import logo from "../fixtures/logo";
+import discoverBtnData from "../fixtures/discoverBtnData";
 
 export default function makeServer({ environment = "development" } = {}) {
   let server = createServer({
@@ -8,7 +9,8 @@ export default function makeServer({ environment = "development" } = {}) {
 
     fixtures: {
       sidebar:Sidebar,
-      logo: logo
+      logo: logo,
+      discoverBtn: discoverBtnData
     },
 
     routes() {
@@ -21,6 +23,10 @@ export default function makeServer({ environment = "development" } = {}) {
       this.get("/sidebar", (schema) => {
         return schema.db.sidebar;
       });
+
+      this.get("/discoverBtn" , (schema) => {
+        return schema.db.discoverBtn
+      })
     },
   });
 
