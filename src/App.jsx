@@ -9,8 +9,12 @@ function App() {
     <>
       <Header />
       <div className='sidebar-app-main-container'>
-        <Sidebar />
-        <AllPodcaste />
+        <div className='sideBar-div'>
+          <Sidebar />
+        </div>
+        <div className='AllPodcaste-div'>
+          <AllPodcaste />
+        </div>
       </div>
     </>
   )

@@ -1,0 +1,47 @@
+.discover-btn-main-container {
+    /* border: solid red; */
+    display: flex;
+    flex-direction: column;
+    /* gap: 30px; */
+}
+
+.discover-btn-div1 h1 {
+    /* border: solid; */
+    font-family: Retina, helvetica, arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: -0.8px;
+    line-height: 64px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.discover-btn-div2 {
+    /* border: solid blue; */
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.discover-btn-div2 button {
+    font-size: 14.4px;
+    font-weight: 500;
+    justify-content: left;
+    gap: 8px;
+    background: rgb(6, 6, 6);
+    border: 1px solid rgba(184, 195, 201, 0.5);
+    color: rgb(255, 255, 255);
+    border-radius: 48px;
+    height: 36px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    padding: 8px 20px;
+    font-family: Retina, helvetica, arial, sans-serif;
+}
