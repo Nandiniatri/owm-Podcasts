@@ -15,7 +15,7 @@ const Discover = () => {
             <div className='discover-btn-div2'>
                 {discoverBtn.map((disBtn) => {
                     return (
-                        <div>
+                        <div key={disBtn.id}>
                             <Button>{disBtn.title}</Button>
                         </div>
                     )

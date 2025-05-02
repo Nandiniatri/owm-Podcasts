@@ -5,6 +5,33 @@ export const AppContext = createContext();
 const AppContextProvider = ({ children }) => {
   const [sidebar, setSidebar] = useState([]);
   const [discoverBtn, setDiscoverBtn] = useState([]);
+  const [discoverCaroData, setDiscoverCaroData] = useState([]);
+
+  // const fetchDiscoverBtnDataApi = async () => {
+  //   try {
+  //     const response = await fetch('http://localhost:5173/api/podcasts');
+  //     console.log(response);
+
+  //     const result = await response.json();
+  //     console.log(result);
+
+  //     setDiscoverBtn(result);
+  //   } catch (error) {
+  //     console.error("Error fetching sidebar data:", error);
+  //   }
+  // };
+
+  const fetchDiscoverCarDataApi = async () => {
+    try {
+      const response = await fetch('/data/discoverCarousalData.json');
+      const result = await response.json();
+      console.log(result);
+      
+      setDiscoverCaroData(result);
+    } catch (error) {
+      console.error("Error fetching sidebar data:", error);
+    }
+  };
 
 
   const fetchDiscoverBtnDataApi = async () => {
@@ -30,12 +57,14 @@ const AppContextProvider = ({ children }) => {
   useEffect(() => {
     fetchSidebarApi();
     fetchDiscoverBtnDataApi();
+    fetchDiscoverCarDataApi();
   }, []);
 
   return (
     <AppContext.Provider value={{
       sidebar,
-      discoverBtn
+      discoverBtn,
+      discoverCaroData
     }}>
       {children}
     </AppContext.Provider>
