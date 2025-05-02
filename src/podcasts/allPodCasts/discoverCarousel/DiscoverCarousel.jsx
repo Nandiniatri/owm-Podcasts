@@ -23,7 +23,11 @@ const DiscoverCarousel = () => {
         return null;
     }
 
-    const currentSlide = discoverCaroData[currentIndex] || {};
+    const currentSlide = discoverCaroData[currentIndex];
+
+    const handleImageIndex = (index) => {
+        setCurrentIndex(index)
+    }
 
     return (
         <div className="discover-container">
@@ -36,34 +40,49 @@ const DiscoverCarousel = () => {
                             className="carousel-image"
                         />
                     )}
-
-                    <button
-                        className="carousel-button left"
-                        onClick={() =>
-                            setCurrentIndex(
-                                (prev) => (prev - 1 + discoverCaroData.length) % discoverCaroData.length
-                            )
-                        }
-                    >
-                        {"<"}
-                    </button>
-
-                    <button
-                        className="carousel-button right"
-                        onClick={() =>
-                            setCurrentIndex((prev) => (prev + 1) % discoverCaroData.length)
-                        }
-                    >
-                        {">"}
-                    </button>
                 </div>
 
                 <div className="carousel-text-content">
-                    <span className="carousel-link-title">{currentSlide.linkTitle}</span>
+                    <span className="carousel-link-title">
+                        <a href={currentSlide.title}>{currentSlide.linkTitle}</a></span>
                     <h3 className="carousel-title">{currentSlide.title}</h3>
                     <p className="carousel-subtitle">{currentSlide.subTitle}</p>
                     <p className="carousel-content">{currentSlide.content}</p>
                 </div>
+            </div>
+
+            <div className="carousel-button-container">
+                <Button
+                    className="carousel-button left"
+                    onClick={() =>
+                        setCurrentIndex(
+                            (prev) => (prev - 1 + discoverCaroData.length) % discoverCaroData.length
+                        )
+                    }
+                >
+                    {"<"}
+                </Button>
+
+                <Button
+                    className="carousel-button right"
+                    onClick={() =>
+                        setCurrentIndex((prev) => (prev + 1) % discoverCaroData.length)
+                    }
+                >
+                    {">"}
+                </Button>
+            </div>
+
+            <div className="carousel-index-image-div">
+                {discoverCaroData.map((item , index) => {
+                    const isActive = index === currentIndex;
+                    return (
+                        <div key={index} className={`carousel-image-div ${isActive ? "active" : ""}`} 
+                        >
+                            <Image src={item.image} onClick={() => handleImageIndex(index)} />
+                        </div>
+                    )
+                })}
             </div>
         </div>
     );

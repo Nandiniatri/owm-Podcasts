@@ -34,9 +34,9 @@ body {
     width: calc(100% - 250px);
     /* height: 100%; */
     overflow-y: auto;
-    /* padding: 25px; */
+    padding: 1px 20px;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    border: solid;
+    /* border: solid; */
 }

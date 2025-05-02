@@ -2,15 +2,15 @@
     {
         "id": 1,
         "image": "https://static.pocketcasts.com/discover/images/webp/480/f278a6d0-fdea-013d-4721-02bb5ef11301.webp",
-        "linkTitle": "feature",
+        "linkTitle": "featured",
         "title": "The Extraordinarians",
         "subTitle": "Headgum",
-        "content": "What does it take to be the very best at something EXTREMELY specific? Listen in as television and film’s most celebrated character actors Kristen Schaal, Tony Hale and Matt Oberg chat with the world’s most extraordinary record breakers. They cover everything from tightrope walking across two hot air balloons, breaking your own world record of most amount of flips on a trampoline and even some weirder ones like putting over 600 barbecue skewers in your beard! Join these three friends as they shed a little spotlight on the strangest and most unlikely champions.If you’d like to nominate someone in your life for “World’s Best…” or “World’s Worst…“, please email worldsgreatestpod@gmail.com!Watch every episode on Youtube!This is a Headgum podcast. Follow Headgum on Twitter, Instagram, and Tiktok. Advertise on The Extraordinarians via Gumball.fm."
+        "content": "What does it take to be the very best at something EXTREMELY specific? Listen in as television and film’s most celebrated character actors Kristen Schaal, Tony Hale and Matt Oberg chat with the world’s most extraordinary record breakers."
     },
     {
         "id": 2,
         "image": "https://static.pocketcasts.com/discover/images/webp/480/9e20ba70-6dba-013b-f25a-0acc26574db2.webp",
-        "linkTitle": "feature",
+        "linkTitle": "featured",
         "title": "HBO's The Last of Us Podcast",
         "subTitle": "HBO",
         "content": "The official companion podcast for the HBO Original series The Last of Us, based on the critically acclaimed video game of the same name. Each week, join Host Troy Baker (who played Joel in the video game) as he breaks down episodes of the TV series with Showrunners Craig Mazin and Neil Druckmann. Together they’ll dive into key moments and reveal the creative process behind this adaptation."
@@ -18,15 +18,15 @@
     {
         "id": 3,
         "image": "https://static.pocketcasts.com/discover/images/webp/480/a1b47590-8377-012e-3b79-00163e1b201c.webp",
-        "linkTitle": "feature",
+        "linkTitle": "featured",
         "title": "Close All Tabs",
         "subTitle": "KQED",
-        "content":"Ever wonder where the internet stops and IRL begins? Close All Tabs breaks down how digital culture shapes our world through thoughtful insights and irreverent humor. From internet trends to AI slop to the politics of memes, Close All Tabs covers it all.How will AI change our jobs and lives? Is the government watching what I post? Is there life beyond TikTok? Host Morgan Sung  pulls from experts, the audience, and history to add context to the trends and depth to the memes. And she’ll wrestle with as many browser tabs as it takes to explain the cultural moment we’re all collectively living."
+        "content": "Ever wonder where the internet stops and IRL begins? Close All Tabs breaks down how digital culture shapes our world through thoughtful insights and irreverent humor. From internet trends to AI slop to the politics of memes, Close All Tabs covers it all.How will AI change our jobs and lives?."
     },
     {
         "id": 4,
         "image": "https://static.pocketcasts.com/discover/images/webp/480/60f813d0-edb6-013d-1b29-0acc26574db2.webp",
-        "linkTitle": "feature",
+        "linkTitle": "featured",
         "title": "No One Saw It Coming",
         "subTitle": "ABC listen",
         "content": "The bit players, the unexpected twists, the turning point you missed. Join Walkley award-winner Marc Fennell as he uncovers the incredible moments that changed the course of history.New episodes out Tuesday."
@@ -34,7 +34,7 @@
     {
         "id": 5,
         "image": "https://static.pocketcasts.com/discover/images/webp/480/ecf0df70-f750-013d-1b45-0acc26574db2.webp",
-        "linkTitle": "feature",
+        "linkTitle": "featured",
         "title": "What We Spend",
         "subTitle": "Audacy",
         "content": "Imagine if you could ask someone anything you wanted about their finances. On What We Spend, people from across the country and across the financial spectrum are opening their wallets—and their lives—to tell you everything: what they make, what they want, and—for one week—what they spend.If you want to be on What We Spend, we’d love to hear from you. Write us at: whatwespendpodcast@gmail.com"
@@ -42,9 +42,9 @@
     {
         "id": 6,
         "image": "https://static.pocketcasts.com/discover/images/webp/480/9911a4f0-e72b-013d-46fd-02bb5ef11301.webp",
-        "linkTitle": "feature",
+        "linkTitle": "featured",
         "title": "It's Storytime with Wil Wheaton",
         "subTitle": "Wil Wheaton",
-        "content": "You may recognize Wil Wheaton's name from his acting work in television shows like The Big Bang Theory, Leverage, and Star Trek: The Next Generation, or 1985's timeless classic, Stand By Me. You may recognize his voice from one of the many audio books he's narrated, including number one New York Times bestseller, Ready Player One, John Scalzi's award-winning Collapsing Empire Trilogy, or even his own bestselling memoir, Still Just A Geek."
+        "content": "You may recognize Wil Wheaton's name from his acting work in television shows like The Big Bang Theory, Leverage, and Star Trek: The Next Generation, or 1985's timeless classic, Stand By Me."
     }
 ]
