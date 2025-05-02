@@ -9,7 +9,7 @@ const AppContextProvider = ({ children }) => {
 
   const fetchDiscoverCarDataApi = async () => {
     try {
-      const response = await fetch('/data/discoverCarousalData.json');
+      const response = await fetch('/api/discoverCarousel');
       const result = await response.json();
       setDiscoverCaroData(result);
     } catch (error) {
