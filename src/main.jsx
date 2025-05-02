@@ -3,7 +3,9 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import AppContextProvider from './contextApi/AppContext.jsx'
+import makeServer from './mirage/server.js'
 
+makeServer();
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AppContextProvider>

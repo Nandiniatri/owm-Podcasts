@@ -11,7 +11,7 @@
     {
         "icon": "FiClock",
         "label": "In Progress"
-    },
+    }, 
     {
         "icon": "FiStar",
         "label": "Starred"

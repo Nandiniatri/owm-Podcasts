@@ -7,26 +7,10 @@ const AppContextProvider = ({ children }) => {
   const [discoverBtn, setDiscoverBtn] = useState([]);
   const [discoverCaroData, setDiscoverCaroData] = useState([]);
 
-  // const fetchDiscoverBtnDataApi = async () => {
-  //   try {
-  //     const response = await fetch('http://localhost:5173/api/podcasts');
-  //     console.log(response);
-
-  //     const result = await response.json();
-  //     console.log(result);
-
-  //     setDiscoverBtn(result);
-  //   } catch (error) {
-  //     console.error("Error fetching sidebar data:", error);
-  //   }
-  // };
-
   const fetchDiscoverCarDataApi = async () => {
     try {
       const response = await fetch('/data/discoverCarousalData.json');
-      // console.log(response);
       const result = await response.json();
-      // console.log(result);
       setDiscoverCaroData(result);
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
@@ -46,8 +30,10 @@ const AppContextProvider = ({ children }) => {
 
   const fetchSidebarApi = async () => {
     try {
-      const response = await fetch('/data/sidebar.json');
+      const response = await fetch('/api/sidebar');
       const result = await response.json();
+      console.log(result);
+      
       setSidebar(result);
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
