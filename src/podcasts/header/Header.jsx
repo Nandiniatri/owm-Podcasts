@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { FaSearch, FaUserCircle } from "react-icons/fa";
 import './Header.css';
 import Image from "../../component/Image";
-import Input from "../../component/Input";
+import Input from "../../component/Input"; 
 import { FaArrowLeft } from "react-icons/fa6"; 
 import { FaArrowRight } from "react-icons/fa6";
 
@@ -10,7 +10,7 @@ const Header = () => {
     const [logoData, setLogoData] = useState([]);
 
     const fetchLogoApi = async () => {
-        const response = await fetch('/data/logo.json');
+        const response = await fetch('/api/logo');
         const result = await response.json();
         setLogoData(result);
     };

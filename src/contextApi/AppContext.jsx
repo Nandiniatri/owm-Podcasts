@@ -32,8 +32,6 @@ const AppContextProvider = ({ children }) => {
     try {
       const response = await fetch('/api/sidebar');
       const result = await response.json();
-      console.log(result);
-      
       setSidebar(result);
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
