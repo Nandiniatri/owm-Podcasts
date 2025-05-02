@@ -23,7 +23,7 @@
 .discover-btn-div2 {
     /* border: solid blue; */
     display: flex;
-    gap: 30px;
+    gap: 20px;
     flex-wrap: wrap;
     padding: 10px;
 }
