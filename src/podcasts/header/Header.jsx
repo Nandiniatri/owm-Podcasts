@@ -3,7 +3,7 @@ import { FaSearch, FaUserCircle } from "react-icons/fa";
 import './Header.css';
 import Image from "../../component/Image";
 import Input from "../../component/Input";
-import { FaArrowLeft } from "react-icons/fa6";
+import { FaArrowLeft } from "react-icons/fa6"; 
 import { FaArrowRight } from "react-icons/fa6";
 
 const Header = () => {

@@ -8,3 +8,8 @@ body{
     font-family: Retina, helvetica, arial, sans-serif;
     color: white;
 }
+
+.sidebar-app-main-container{
+    border: solid;
+    display: flex;
+}

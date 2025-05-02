@@ -4,12 +4,12 @@
     justify-content: space-between;
     background-color: black;
     color: white;
-    padding: 15px;
 }
 
 .header-left {
-    width: 25%;
+    width: 19%;
     padding: 15px;
+    /* border: solid; */
 }
 
 .header-center-main-Container {
@@ -22,6 +22,7 @@
     padding: 4px;
     border-bottom: thin solid #ccc;
     padding-bottom: 20px;
+    /* border: solid; */
 }
 
 .logo-img {
@@ -43,6 +44,7 @@
     align-items: center;
     width: 80%;
     justify-content: space-between;
+    /* border: solid; */
 }
 
 .header-center-div1 {

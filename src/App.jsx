@@ -7,8 +7,9 @@ function App() {
   return (
     <>
       <Header />
-      <div className=''>
+      <div className='sidebar-app-main-container'>
         <Sidebar />
+        hello
       </div>
     </>
   )
