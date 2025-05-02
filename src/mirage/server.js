@@ -4,6 +4,7 @@ import logo from "../fixtures/logo";
 import discoverBtnData from "../fixtures/discoverBtnData";
 import discoverCarousalData from "../fixtures/discoverCarousalData";
 import trending from "../fixtures/trending";
+import webbyAwardWinners from "../fixtures/webbyAwardWinners";
 
 export default function makeServer({ environment = "development" } = {}) {
   let server = createServer({
@@ -14,7 +15,8 @@ export default function makeServer({ environment = "development" } = {}) {
       logo: logo,
       discoverBtn: discoverBtnData,
       discoverCarousel : discoverCarousalData,
-      trending : trending
+      trending : trending,
+      webbyAwardWinner2025: webbyAwardWinners 
     },
 
     routes() {
@@ -38,6 +40,10 @@ export default function makeServer({ environment = "development" } = {}) {
 
       this.get("/trending" , (schema) => {
         return schema.db.trending
+      })
+
+      this.get("/webbyAwardWinner2025" , (schema) => {
+        return schema.db.webbyAwardWinner2025
       })
     },
   });

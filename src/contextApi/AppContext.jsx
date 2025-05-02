@@ -7,6 +7,17 @@ const AppContextProvider = ({ children }) => {
   const [discoverBtn, setDiscoverBtn] = useState([]);
   const [discoverCaroData, setDiscoverCaroData] = useState([]);
   const [trending , setTrending] = useState([]);
+  const [webByAward , setWebByAward] = useState([]);
+
+  const fetchWebByAwardWinnerApi = async () => {
+    try {
+      const response = await fetch('/api/webbyAwardWinner2025');
+      const result = await response.json();
+      setWebByAward(result);
+    } catch (error) {
+      console.error("Error fetching sidebar data:", error);
+    }
+  };
   
   const fetchTrendingApi = async () => {
     try {
@@ -53,6 +64,7 @@ const AppContextProvider = ({ children }) => {
     fetchDiscoverBtnDataApi();
     fetchDiscoverCarDataApi();
     fetchTrendingApi();
+    fetchWebByAwardWinnerApi();
   }, []);
 
   return (
@@ -60,7 +72,8 @@ const AppContextProvider = ({ children }) => {
       sidebar,
       discoverBtn,
       discoverCaroData,
-      trending
+      trending,
+      webByAward
     }}>
       {children}
     </AppContext.Provider>

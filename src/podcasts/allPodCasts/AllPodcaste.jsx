@@ -2,6 +2,7 @@ import './AllPodcaste.css';
 import Discover from './discover/Discover';
 import DiscoverCarousel from './discoverCarousel/DiscoverCarousel';
 import Trending from './trending/Trending';
+import WebbyAwardWinners from './webbyAwardWinners2025/WebbyAwardWinners';
 
 const AllPodcaste = () => {
     return (
@@ -9,6 +10,7 @@ const AllPodcaste = () => {
             <Discover />
             <DiscoverCarousel />
             <Trending />
+            <WebbyAwardWinners />
         </>
     )
 }
