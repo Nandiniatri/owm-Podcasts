@@ -1,0 +1,70 @@
+.under20MinData-container {
+    padding: 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+    /* border-top: 0.1px solid; */
+    margin-top: 30px;
+}
+
+.webbyaward-title {
+    font-family: Retina, Helvetica, Arial, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 24px;
+    letter-spacing: -0.8px;
+}
+
+.webbyaward-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.webbyaward-seeall-link {
+    text-decoration: none;
+    color: #aaa;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.webbyaward-seeall-icon {
+    font-size: 18px;
+}
+
+.webbyaward-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 24px;
+}
+
+.webbyaward-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.webbyaward-img {
+    width: 100%;
+    height: 150px; /* ya koi bhi fixed height jo design ke hisaab se ho */
+    border-radius: 2px;
+    object-fit: cover; /* ye image ko crop karega without distortion */
+    margin-bottom: 12px;
+}
+
+.webbyaward-name {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    color: #ffffff;
+}
+
+.webbyaward-author {
+    font-size: 13px;
+    color: #aaa;
+    margin-top: 4px;
+}

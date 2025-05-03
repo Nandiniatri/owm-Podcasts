@@ -6,6 +6,7 @@ import Trending from './trending/Trending';
 import WebbyAwardWinners from './webbyAwardWinners2025/WebbyAwardWinners';
 import { AppContext } from '../../contextApi/AppContext';
 import GuestCuratorCardFile from '../../reasuableComponent/guestCuratorCard/GuestCuratorCard';
+import Under20MinFIle from './under20Min/Under20Min';
 
 
 const AllPodcaste = () => {
@@ -17,6 +18,8 @@ const AllPodcaste = () => {
             <DiscoverCarousel />
             <Trending />
             <WebbyAwardWinners />
+            <GuestCuratorCardFile data={guestCurator} />
+            <Under20MinFIle />
             <GuestCuratorCardFile data={guestCurator} />
         </>
     )

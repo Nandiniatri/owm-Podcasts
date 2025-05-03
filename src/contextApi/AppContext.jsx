@@ -9,6 +9,17 @@ const AppContextProvider = ({ children }) => {
   const [trending , setTrending] = useState([]);
   const [webByAward , setWebByAward] = useState([]);
   const [guestCurator , setGuestCurator] = useState([]);
+  const [under20MinData , setUnder20MinData] = useState([]);
+
+  const fetchUnder20MinApi = async () => {
+    try {
+      const response = await fetch('/api/under20Min');
+      const result = await response.json();
+      setUnder20MinData(result);
+    } catch (error) {
+      console.error("Error fetching sidebar data:", error);
+    }
+  };
 
 
   const fetchGuestCuratorApi = async () => {
@@ -78,6 +89,7 @@ const AppContextProvider = ({ children }) => {
     fetchTrendingApi();
     fetchWebByAwardWinnerApi();
     fetchGuestCuratorApi();
+    fetchUnder20MinApi();
   }, []);
 
   return (
@@ -87,7 +99,8 @@ const AppContextProvider = ({ children }) => {
       discoverCaroData,
       trending,
       webByAward,
-      guestCurator
+      guestCurator,
+      under20MinData
     }}>
       {children}
     </AppContext.Provider>
