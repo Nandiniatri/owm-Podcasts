@@ -8,6 +8,18 @@ const AppContextProvider = ({ children }) => {
   const [discoverCaroData, setDiscoverCaroData] = useState([]);
   const [trending , setTrending] = useState([]);
   const [webByAward , setWebByAward] = useState([]);
+  const [guestCurator , setGuestCurator] = useState([]);
+
+
+  const fetchGuestCuratorApi = async () => {
+    try {
+      const response = await fetch('/api/guestCuratorCard');
+      const result = await response.json();
+      setGuestCurator(result);
+    } catch (error) {
+      console.error("Error fetching sidebar data:", error);
+    }
+  };
 
   const fetchWebByAwardWinnerApi = async () => {
     try {
@@ -65,6 +77,7 @@ const AppContextProvider = ({ children }) => {
     fetchDiscoverCarDataApi();
     fetchTrendingApi();
     fetchWebByAwardWinnerApi();
+    fetchGuestCuratorApi();
   }, []);
 
   return (
@@ -73,7 +86,8 @@ const AppContextProvider = ({ children }) => {
       discoverBtn,
       discoverCaroData,
       trending,
-      webByAward
+      webByAward,
+      guestCurator
     }}>
       {children}
     </AppContext.Provider>

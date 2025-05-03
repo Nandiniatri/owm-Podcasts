@@ -5,6 +5,7 @@ import discoverBtnData from "../fixtures/discoverBtnData";
 import discoverCarousalData from "../fixtures/discoverCarousalData";
 import trending from "../fixtures/trending";
 import webbyAwardWinners from "../fixtures/webbyAwardWinners";
+import guestCuratorCard from "../fixtures/guestCuratorCard";
 
 export default function makeServer({ environment = "development" } = {}) {
   let server = createServer({
@@ -16,7 +17,8 @@ export default function makeServer({ environment = "development" } = {}) {
       discoverBtn: discoverBtnData,
       discoverCarousel : discoverCarousalData,
       trending : trending,
-      webbyAwardWinner2025: webbyAwardWinners 
+      webbyAwardWinner2025: webbyAwardWinners ,
+      guestCuratorCard:guestCuratorCard
     },
 
     routes() {
@@ -44,6 +46,10 @@ export default function makeServer({ environment = "development" } = {}) {
 
       this.get("/webbyAwardWinner2025" , (schema) => {
         return schema.db.webbyAwardWinner2025
+      })
+
+      this.get("guestCuratorCard" , (schema) => {
+        return schema.db.guestCuratorCard
       })
     },
   });
