@@ -1,8 +1,7 @@
-.under20MinData-container {
+/* .under20MinData-container {
     padding: 20px;
     color: white;
     font-family: Arial, sans-serif;
-    /* border-top: 0.1px solid; */
     margin-top: 30px;
 }
 
@@ -50,9 +49,9 @@
 
 .webbyaward-img {
     width: 100%;
-    height: 150px; /* ya koi bhi fixed height jo design ke hisaab se ho */
+    height: 150px;
     border-radius: 2px;
-    object-fit: cover; /* ye image ko crop karega without distortion */
+    object-fit: cover;
     margin-bottom: 12px;
 }
 
@@ -67,4 +66,4 @@
     font-size: 13px;
     color: #aaa;
     margin-top: 4px;
-}
+} */

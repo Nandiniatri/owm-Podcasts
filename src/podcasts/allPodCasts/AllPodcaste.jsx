@@ -7,6 +7,7 @@ import WebbyAwardWinners from './webbyAwardWinners2025/WebbyAwardWinners';
 import { AppContext } from '../../contextApi/AppContext';
 import GuestCuratorCardFile from '../../reasuableComponent/guestCuratorCard/GuestCuratorCard';
 import Under20MinFIle from './under20Min/Under20Min';
+import PodcasteStatedKit from './podcastStarted/PodcastStartedKit';
 
 
 const AllPodcaste = () => {
@@ -21,6 +22,7 @@ const AllPodcaste = () => {
             <GuestCuratorCardFile data={guestCurator} />
             <Under20MinFIle />
             <GuestCuratorCardFile data={netWorkHigh} />
+            <PodcasteStatedKit />
         </>
     )
 }

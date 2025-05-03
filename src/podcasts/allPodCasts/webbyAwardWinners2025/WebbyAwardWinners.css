@@ -1,5 +1,5 @@
 .webbyaward-container {
-    padding: 20px;
+    padding: 10px;
     color: white;
     font-family: Arial, sans-serif;
     border-top: 0.1px solid;
@@ -49,8 +49,10 @@
 }
 
 .webbyaward-img {
-    width: 100%;
-    height: auto;
+    /* width: 100%; */
+    /* border: solid; */
+    width: 134px;
+    height: 145px;
     border-radius: 2px;
     object-fit: cover;
     margin-bottom: 12px;
