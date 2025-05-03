@@ -7,6 +7,7 @@ import trending from "../fixtures/trending";
 import webbyAwardWinners from "../fixtures/webbyAwardWinners";
 import guestCuratorCard from "../fixtures/guestCuratorCard";
 import under20Minutes from "../fixtures/under20Minutes";
+import networkHighlight from "../fixtures/networkHighlight";
 
 export default function makeServer({ environment = "development" } = {}) {
   let server = createServer({
@@ -20,7 +21,8 @@ export default function makeServer({ environment = "development" } = {}) {
       trending : trending,
       webbyAwardWinner2025: webbyAwardWinners ,
       guestCuratorCard:guestCuratorCard,
-      under20Min:under20Minutes
+      under20Min:under20Minutes,
+      networkHighlight:networkHighlight
     },
 
     routes() {
@@ -56,6 +58,10 @@ export default function makeServer({ environment = "development" } = {}) {
 
       this.get("under20Min" ,(schema) => {
         return schema.db.under20Min
+      })
+
+      this.get("networkHighlight" ,(schema) => {
+        return schema.db.networkHighlight
       })
     },
   });

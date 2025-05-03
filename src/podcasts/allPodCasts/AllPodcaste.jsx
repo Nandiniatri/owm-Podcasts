@@ -10,7 +10,7 @@ import Under20MinFIle from './under20Min/Under20Min';
 
 
 const AllPodcaste = () => {
-    const { guestCurator } = useContext(AppContext);
+    const { guestCurator, netWorkHigh } = useContext(AppContext);
 
     return (
         <>
@@ -20,7 +20,7 @@ const AllPodcaste = () => {
             <WebbyAwardWinners />
             <GuestCuratorCardFile data={guestCurator} />
             <Under20MinFIle />
-            <GuestCuratorCardFile data={guestCurator} />
+            <GuestCuratorCardFile data={netWorkHigh} />
         </>
     )
 }

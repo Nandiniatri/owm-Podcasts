@@ -6,10 +6,22 @@ const AppContextProvider = ({ children }) => {
   const [sidebar, setSidebar] = useState([]);
   const [discoverBtn, setDiscoverBtn] = useState([]);
   const [discoverCaroData, setDiscoverCaroData] = useState([]);
-  const [trending , setTrending] = useState([]);
-  const [webByAward , setWebByAward] = useState([]);
-  const [guestCurator , setGuestCurator] = useState([]);
-  const [under20MinData , setUnder20MinData] = useState([]);
+  const [trending, setTrending] = useState([]);
+  const [webByAward, setWebByAward] = useState([]);
+  const [guestCurator, setGuestCurator] = useState([]);
+  const [under20MinData, setUnder20MinData] = useState([]);
+  const [netWorkHigh , setNetWorkHigh] = useState([]);
+
+  const fetchNetworkHighLightApi = async () => {
+    try {
+      const response = await fetch('/api/networkHighlight');
+      const result = await response.json();
+      setNetWorkHigh(result);
+    } catch (error) {
+      console.error("Error fetching sidebar data:", error);
+    }
+  };
+
 
   const fetchUnder20MinApi = async () => {
     try {
@@ -41,7 +53,7 @@ const AppContextProvider = ({ children }) => {
       console.error("Error fetching sidebar data:", error);
     }
   };
-  
+
   const fetchTrendingApi = async () => {
     try {
       const response = await fetch('/api/trending');
@@ -90,6 +102,7 @@ const AppContextProvider = ({ children }) => {
     fetchWebByAwardWinnerApi();
     fetchGuestCuratorApi();
     fetchUnder20MinApi();
+    fetchNetworkHighLightApi();
   }, []);
 
   return (
@@ -100,7 +113,8 @@ const AppContextProvider = ({ children }) => {
       trending,
       webByAward,
       guestCurator,
-      under20MinData
+      under20MinData,
+      netWorkHigh
     }}>
       {children}
     </AppContext.Provider>
