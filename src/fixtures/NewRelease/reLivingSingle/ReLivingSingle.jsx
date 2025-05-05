@@ -1,0 +1,3 @@
+export default [
+    { id: 1, image: "https://images.squarespace-cdn.com/content/v1/5f750385ca7dfb43d5eda30a/1637101238529-785HZ1JMCOR2X5O44CYJ/0509D347-4AF8-4CF5-9932-012A9AA26D90.PNG", title: "Kim Coles and Erika Alexander", content: "A nostalgic podcast that dives into behind-the-scenes stories, personal experiences, and the lasting cultural impact of the iconic 1990s sitcom Living Single.", videoUrlId: "zy_YVInz2eo", youtubeUrl: "https://youtu.be/zy_YVInz2eo?si=8M6MD6OuYZ7XvamE" }
+]
