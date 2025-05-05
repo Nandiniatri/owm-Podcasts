@@ -15,11 +15,8 @@ const opts = {
 
 
 const RajShamani = () => {
-  const { rajShami } = useContext(AppContext);
+  const { rajShami , showData, setShowData} = useContext(AppContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [showData, setShowData] = useState([]);
-  console.log(showData);
-
 
   const handleOpenModal = (podcast) => {
     // console.log(podcast);
