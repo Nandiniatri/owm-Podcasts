@@ -1,9 +1,14 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AppContext } from "../../../contextApi/AppContext";
 import '../commonCss.css';
 
 const RanveerAllahbadiaOUTER = () => {
     const { ranveerAllahbadiaOUTER } = useContext(AppContext);
+
+    const handleModalOpen = (podcast) => {
+        alert(podcast.id);
+    }
+
 
     return (
         <div className="section-container">
@@ -17,7 +22,7 @@ const RanveerAllahbadiaOUTER = () => {
 
             <div className="card-grid">
                 {ranveerAllahbadiaOUTER.map((podcast) => (
-                    <div className="card" key={podcast.id}>
+                    <div className="card" key={podcast.id} onClick={() => handleModalOpen(podcast)}>
                         <img src={podcast.image} alt={podcast.title} className="card-img" />
                         <h3 className="card-title">{podcast.title}</h3>
                         <p className="card-subtitle">{podcast.content}</p>
