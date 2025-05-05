@@ -1,9 +1,23 @@
 import { useContext, useState } from "react";
 import { AppContext } from "../../../contextApi/AppContext";
 import '../commonCss.css';
+import Modal from "../../../component/modal/Modal";
+import YouTube from "react-youtube";
+import Button from "../../../component/Button";
 
 const BhartiTvOuter = () => {
-    const { bhartiTvOUTERData } = useContext(AppContext);
+    const { bhartiTvOUTERData, showModal, setShowModal } = useContext(AppContext);
+    const [videoId, setVideoId] = useState([]);
+
+    const handleOpenModal = (podcast) => {
+        setVideoId(podcast.videoUrlId);
+        setShowModal(true);
+    }
+
+    const handleCloseModal = () => {
+        setShowModal(false);
+    }
+
 
     return (
         <div className="section-container">
@@ -13,11 +27,11 @@ const BhartiTvOuter = () => {
                     <span>See All</span>
                     <span className="section-seeall-icon">→</span>
                 </a>
-            </div> 
+            </div>
 
             <div className="card-grid">
                 {bhartiTvOUTERData.map((podcast) => (
-                    <div className="card" key={podcast.id}>
+                    <div className="card" key={podcast.id} onClick={() => handleOpenModal(podcast)}>
                         <img src={podcast.image} alt={podcast.title} className="card-img" />
                         <h3 className="card-title">{podcast.title}</h3>
                         <p className="card-subtitle">{podcast.content}</p>
@@ -25,6 +39,23 @@ const BhartiTvOuter = () => {
                 ))}
             </div>
 
+            {showModal && (
+                <Modal isOpen={showModal}>
+                    <div style={{ textAlign: 'right' }}>
+                        <Button onClick={handleCloseModal}>X</Button>
+                    </div>
+                    <YouTube
+                        videoId={videoId}
+                        opts={{
+                            height: '390',
+                            width: '640',
+                            playerVars: {
+                                autoplay: 1,
+                            },
+                        }}
+                    />
+                </Modal>
+            )}
         </div>
     );
 };

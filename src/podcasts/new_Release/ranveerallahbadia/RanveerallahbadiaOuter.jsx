@@ -1,12 +1,21 @@
 import { useContext, useState } from "react";
 import { AppContext } from "../../../contextApi/AppContext";
 import '../commonCss.css';
+import Modal from "../../../component/modal/Modal";
+import YouTube from "react-youtube";
+import Button from "../../../component/Button";
 
 const RanveerAllahbadiaOUTER = () => {
-    const { ranveerAllahbadiaOUTER } = useContext(AppContext);
+    const { ranveerAllahbadiaOUTER, showModal, setShowModal } = useContext(AppContext);
+    const [videoId, setVideoId] = useState([]);
 
-    const handleModalOpen = (podcast) => {
-        alert(podcast.id);
+    const handleOpenModal = (podcast) => {
+        setVideoId(podcast.videoUrlId);
+        setShowModal(true);
+    }
+
+    const handleCloseModal = () => {
+        setShowModal(false);
     }
 
 
@@ -29,6 +38,24 @@ const RanveerAllahbadiaOUTER = () => {
                     </div>
                 ))}
             </div>
+
+            {showModal && (
+                <Modal isOpen={showModal}>
+                    <div style={{ textAlign: 'right' }}>
+                        <Button onClick={handleCloseModal}>X</Button>
+                    </div>
+                    <YouTube
+                        videoId={videoId}
+                        opts={{
+                            height: '390',
+                            width: '640',
+                            playerVars: {
+                                autoplay: 1,
+                            },
+                        }}
+                    />
+                </Modal>
+            )}
         </div>
     );
 };
