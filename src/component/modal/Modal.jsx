@@ -1,7 +1,9 @@
 import './Modal.css';
 
 const Modal = ({ isOpen, children }) => {
-    if (!isOpen) return null;
+    if(!isOpen){
+        return null;
+    }
 
     return (
         <div className="modal-overlay">
@@ -13,3 +15,4 @@ const Modal = ({ isOpen, children }) => {
 };
 
 export default Modal;
+  
