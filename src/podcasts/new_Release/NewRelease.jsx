@@ -1,8 +1,17 @@
+import RajShamani from "./rajShamani/RajShamaniOuter";
+
+
 const NewRelease = () => {
     return (
         <div>
-            <h1>New Release</h1>
-            
+            <div>
+                <h1>New Release</h1>
+            </div>
+
+            <div>
+                <RajShamani />
+            </div>
+
         </div>
     )
 }

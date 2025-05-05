@@ -10,8 +10,19 @@ const AppContextProvider = ({ children }) => {
   const [webByAward, setWebByAward] = useState([]);
   const [guestCurator, setGuestCurator] = useState([]);
   const [under20MinData, setUnder20MinData] = useState([]);
-  const [netWorkHigh , setNetWorkHigh] = useState([]);
-  const [podcasteStartedData , setPodCasteStartedData] = useState([]);
+  const [netWorkHigh, setNetWorkHigh] = useState([]);
+  const [podcasteStartedData, setPodCasteStartedData] = useState([]);
+  const [rajShami , setRajShami] = useState([]);
+
+  const fetchRajShamiApi = async () => {
+    try {
+      const response = await fetch('/api/rajShmmi');
+      const result = await response.json();
+      setRajShami(result);
+    } catch (error) {
+      console.error("Error fetching sidebar data:", error);
+    }
+  };
 
   const fetchPodcastStartedApi = async () => {
     try {
@@ -115,6 +126,9 @@ const AppContextProvider = ({ children }) => {
     fetchUnder20MinApi();
     fetchNetworkHighLightApi();
     fetchPodcastStartedApi();
+
+
+    fetchRajShamiApi();
   }, []);
 
   return (
@@ -127,7 +141,9 @@ const AppContextProvider = ({ children }) => {
       guestCurator,
       under20MinData,
       netWorkHigh,
-      podcasteStartedData
+      podcasteStartedData,
+
+      rajShami
     }}>
       {children}
     </AppContext.Provider>

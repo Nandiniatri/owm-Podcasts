@@ -6,4 +6,4 @@ export default [
     { id: 3, image: "https://m.media-amazon.com/images/I/51T8ED0IXoL._SL500_.jpg", title: "Dr. Koushik Lahiri", content: "Celebrity Skincare SECRETS - Remove Acne, Diet & Treatments ", videoUrlId: "rdc-toYy_90", youtubeUrl: "https://youtu.be/rdc-toYy_90?si=LESxFOO6RF6n_voR" },
 
     { id: 4, image: "https://i.ytimg.com/vi/373VDfqlL3E/maxresdefault.jpg", title: "Ex-Khalish", content: "Militant On Brainwashing Youth, Attacking Indian Army, Pakistan & Crossing Border", videoUrlId: "373VDfqlL3E", youtubeUrl: "https://youtu.be/373VDfqlL3E?si=DdyhyWs1uQYR9RhJ" },
-]
+] 

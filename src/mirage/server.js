@@ -9,6 +9,7 @@ import guestCuratorCard from "../fixtures/guestCuratorCard";
 import under20Minutes from "../fixtures/under20Minutes";
 import networkHighlight from "../fixtures/networkHighlight";
 import podcastStarterKit from "../fixtures/podcastStarterKit";
+import RajShamani from "../fixtures/NewRelease/rajShamani/RajShamani";
 
 export default function makeServer({ environment = "development" } = {}) {
   let server = createServer({
@@ -24,7 +25,9 @@ export default function makeServer({ environment = "development" } = {}) {
       guestCuratorCard:guestCuratorCard,
       under20Min:under20Minutes,
       networkHighlight:networkHighlight,
-      podcastStarted: podcastStarterKit
+      podcastStarted: podcastStarterKit,
+
+      rajShmmi: RajShamani
     },
 
     routes() {
@@ -68,6 +71,11 @@ export default function makeServer({ environment = "development" } = {}) {
 
       this.get("podcastStarted" ,(schema) => {
         return schema.db.podcastStarted
+      })
+
+
+      this.get("rajShmmi" ,(schema) => {
+        return schema.db.rajShmmi
       })
     },
   });
