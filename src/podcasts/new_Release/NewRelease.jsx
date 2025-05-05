@@ -1,5 +1,6 @@
 import BhartiTvOuter from "./bhartiTv/BhartiTvOuter";
 import RajShamani from "./rajShamani/RajShamaniOuter";
+import RanveerAllahbadiaOUTER from "./ranveerallahbadia/RanveerallahbadiaOuter";
 
 
 const NewRelease = () => {
@@ -12,6 +13,7 @@ const NewRelease = () => {
             <div>
                 <RajShamani />
                 <BhartiTvOuter />
+                <RanveerAllahbadiaOUTER />
             </div>
 
         </div>

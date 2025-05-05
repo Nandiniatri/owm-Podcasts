@@ -11,6 +11,7 @@ import networkHighlight from "../fixtures/networkHighlight";
 import podcastStarterKit from "../fixtures/podcastStarterKit";
 import RajShamani from "../fixtures/NewRelease/rajShamani/RajShamani";
 import BhartiTVOuter from "../fixtures/NewRelease/bhartiTV/BhartiTVOuter";
+import RanveerAllahbadiaOuter from "../fixtures/NewRelease/ranveerallahbadia/RanveerAllahbadiaOuter";
 
 export default function makeServer({ environment = "development" } = {}) {
   let server = createServer({
@@ -29,7 +30,8 @@ export default function makeServer({ environment = "development" } = {}) {
       podcastStarted: podcastStarterKit,
       
       rajShmmi: RajShamani,
-      bhartiTvOUTER:BhartiTVOuter
+      bhartiTvOUTER:BhartiTVOuter,
+      ranveerAllahbadiaOUTER: RanveerAllahbadiaOuter
     },
 
     routes() {
@@ -82,6 +84,10 @@ export default function makeServer({ environment = "development" } = {}) {
 
       this.get("bhartiTvOUTER" ,(schema) => {
         return schema.db.bhartiTvOUTER
+      })
+
+      this.get("ranveerAllahbadiaOUTER" ,(schema) => {
+        return schema.db.ranveerAllahbadiaOUTER
       })
 
     },
