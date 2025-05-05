@@ -20,7 +20,7 @@ const Sidebar = () => {
         <div className="sidebar-container">
             <div className="sidebar-menu">
                 {sidebar.map((item, index) => (
-                        <Link to={item.label} className="sidebar-item" key={index} >
+                        <Link to={item.path} className="sidebar-item" key={index} >
                             <span className="sidebar-icon">{iconMap[item.icon]}</span>
                             <span className="sidebar-label">{item.label}</span>
                         </Link>

@@ -3,6 +3,7 @@ import './App.css'
 import AllPodcaste from './podcasts/allPodCasts/AllPodcaste'
 import Header from './podcasts/Header/Header'
 import Sidebar from './podcasts/sidebar/Sidebar'
+import NewRelease from './podcasts/new_Release/NewRelease'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Routes>
             <Route path='*' element={<AllPodcaste />} />
             <Route path='/discover' element={<AllPodcaste />} />
+            <Route path='/new-releases' element={<NewRelease />} />
           </Routes>
         </div>
       </div>
