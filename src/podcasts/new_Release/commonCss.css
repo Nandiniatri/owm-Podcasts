@@ -1,9 +1,14 @@
+.new-release-main-container{
+    /* border: solid; */
+    padding: 12px;
+}
+
 .section-container {
-    padding: 10px;
+    /* padding: 10px; */
     color: white;
     font-family: Arial, sans-serif;
     /* border-top: 0.1px solid; */
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .section-title {
@@ -22,11 +27,13 @@
 
 .section-seeall-link {
     text-decoration: none;
-    color: #aaa;
-    font-size: 14px;
+    color: rgb(3, 169, 244);
+    font-size: 18px;
     display: flex;
     align-items: center;
     gap: 4px;
+    /* border: solid; */
+    line-height: 30px;
 }
 
 .section-seeall-icon {

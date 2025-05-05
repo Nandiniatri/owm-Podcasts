@@ -6,4 +6,6 @@ export default [
     { id: 3, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuIznG4c1ddR3mbhFf5yq0tMUvP5KTTn36Ig&s", title: "Prathamesh Sinha", content: "TRS Kids Special - Meet India's Youngest Inspiration Prathamesh Sinha", videoUrlId: "gO-1O_C5Fms", youtubeUrl: "https://youtu.be/gO-1O_C5Fms?si=K3qxStxaqO9PUhyu" },
 
     { id: 4, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3MDzCWlVZgm92ftF4M0KLeKVCSYcPJn4OPw&s", title: "Major Prajakta Desa", content: "Kashmir's ASLI Story - PAK Army, Pahalgam Attack & India's Retaliation", videoUrlId: "tx6l9NNGCBc", youtubeUrl: "https://youtu.be/tx6l9NNGCBc?si=9YhEIxbmHciCt9dB" },
+
+    { id: 5, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIBddiFIWThXNiFmUs8kBuPe-oifkQAQSkyg&s", title: "Sushant Sareen", content: "Pakistan Dark Secrets Exposed - ISI, Politics & Kashmir Issue", videoUrlId: "sxqWPr6so18", youtubeUrl: "https://youtu.be/sxqWPr6so18?si=KmGSEYzffUF9jKSq" }
 ]

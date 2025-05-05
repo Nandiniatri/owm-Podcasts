@@ -13,6 +13,17 @@ const AppContextProvider = ({ children }) => {
   const [netWorkHigh, setNetWorkHigh] = useState([]);
   const [podcasteStartedData, setPodCasteStartedData] = useState([]);
   const [rajShami , setRajShami] = useState([]);
+  const [bhartiTvOUTERData , setBhartiTvOUTERData] = useState([]);
+
+  const fetchBhartiTvOuterDataApi = async () => {
+    try {
+      const response = await fetch('/api/bhartiTvOUTER');
+      const result = await response.json();
+      setBhartiTvOUTERData(result);
+    } catch (error) {
+      console.error("Error fetching sidebar data:", error);
+    }
+  };
 
   const fetchRajShamiApi = async () => {
     try {
@@ -129,6 +140,7 @@ const AppContextProvider = ({ children }) => {
 
 
     fetchRajShamiApi();
+    fetchBhartiTvOuterDataApi();
   }, []);
 
   return (
@@ -143,7 +155,9 @@ const AppContextProvider = ({ children }) => {
       netWorkHigh,
       podcasteStartedData,
 
-      rajShami
+      rajShami,
+      bhartiTvOUTERData
+      
     }}>
       {children}
     </AppContext.Provider>

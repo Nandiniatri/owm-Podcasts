@@ -5,5 +5,8 @@ export default [
 
     { id: 3, image: "https://i.ytimg.com/vi/iWMOg-6Wzzg/maxresdefault.jpg", title: "Acharya Sakshi & Acharya Sanjeev", content: "Acharya Sakshi & Acharya Sanjeev On Finances , Wealth & Prosperity", videoUrlId: "iWMOg-6Wzzg", youtubeUrl: "https://youtu.be/iWMOg-6Wzzg?si=etS179KxxKIyhHHT" },
 
-    { id: 4, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrzxeLiulTxb4WlYYcnINnAKQO1Rmlv0jBfg&s", title: "Divyanka Tripathi & Vivek Dahiya", content: "Divyanka Tripathi & Vivek Dahiya : Stories Unwrapped", videoUrlId: "MsGD8i77flc", youtubeUrl: "https://youtu.be/MsGD8i77flc?si=mOHKLmP2IeHozvgb" }
-]
+    { id: 4, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrzxeLiulTxb4WlYYcnINnAKQO1Rmlv0jBfg&s", title: "Divyanka Tripathi & Vivek Dahiya", content: "Divyanka Tripathi & Vivek Dahiya : Stories Unwrapped", videoUrlId: "MsGD8i77flc", youtubeUrl: "https://youtu.be/MsGD8i77flc?si=mOHKLmP2IeHozvgb" },
+
+    { id: 5, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO-kTWbEMq5nlcyIUEHaxJ43DAiDPdobkm3g&s", title: "Sanjeev Kapoor", content: "@sanjeevkapoorkhazana: Master Of All Chefs", videoUrlId: "w45G0NkW8gs", youtubeUrl: "https://youtu.be/w45G0NkW8gs?si=qWBMCS_0okEI9gS2" }
+
+] 
