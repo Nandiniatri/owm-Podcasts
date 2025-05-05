@@ -7,5 +7,5 @@ export default [
 
     { id: 4, image: "https://i.ytimg.com/vi/373VDfqlL3E/maxresdefault.jpg", title: "Ex-Khalish", content: "Militant On Brainwashing Youth, Attacking Indian Army, Pakistan & Crossing Border", videoUrlId: "373VDfqlL3E", youtubeUrl: "https://youtu.be/373VDfqlL3E?si=DdyhyWs1uQYR9RhJ" },
 
-    { id: 5, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9l52N2WowPmoPyxFKpdJqUBK-wsmtJ6Cbew&s", title: "Raj Sheoran", content: "CoBRA Commando: Terror*sm In India, Naxal*tes, Trump & PM Modi", videoUrlId: "", youtubeUrl: "" }
+    { id: 5, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9l52N2WowPmoPyxFKpdJqUBK-wsmtJ6Cbew&s", title: "Raj Sheoran", content: "CoBRA Commando: Terror*sm In India, Naxal*tes, Trump & PM Modi", videoUrlId: "u-3Qf9-LEoE", youtubeUrl: "https://youtu.be/u-3Qf9-LEoE?si=UMl4s9zT-hlr3brw" }
 ] 

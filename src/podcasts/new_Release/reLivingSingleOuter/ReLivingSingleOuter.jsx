@@ -2,13 +2,13 @@ import { useContext } from "react";
 import { AppContext } from "../../../contextApi/AppContext";
 import '../commonCss.css';
 
-const BhartiTvOuter = () => {
-    const { bhartiTvOUTERData, showModal, setShowModal } = useContext(AppContext);
+const ReLivingSingleOUTER = () => {
+    const { reLivingSingleOUTER } = useContext(AppContext);
 
     return (
         <div className="section-container">
             <div className="section-header">
-                <h2 className="section-title">Bharti TV</h2>
+                <h2 className="section-title">Re Living Single</h2>
                 <a href="#seeAll" className="section-seeall-link">
                     <span>See All</span>
                     <span className="section-seeall-icon">→</span>
@@ -16,8 +16,8 @@ const BhartiTvOuter = () => {
             </div>
 
             <div className="card-grid">
-                {bhartiTvOUTERData.map((podcast) => (
-                    <div className="card" key={podcast.id} onClick={() => handleModalOpen(podcast)}>
+                {reLivingSingleOUTER.map((podcast) => (
+                    <div className="card" key={podcast.id}>
                         <img src={podcast.image} alt={podcast.title} className="card-img" />
                         <h3 className="card-title">{podcast.title}</h3>
                         <p className="card-subtitle">{podcast.content}</p>
@@ -28,4 +28,4 @@ const BhartiTvOuter = () => {
     );
 };
 
-export default BhartiTvOuter;
+export default ReLivingSingleOUTER;

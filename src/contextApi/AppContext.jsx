@@ -3,6 +3,7 @@ import { createContext, useEffect, useState } from "react";
 export const AppContext = createContext();
 
 const AppContextProvider = ({ children }) => {
+  const [showModal, setShowModal] = useState(false);
   const [sidebar, setSidebar] = useState([]);
   const [discoverBtn, setDiscoverBtn] = useState([]);
   const [discoverCaroData, setDiscoverCaroData] = useState([]);
@@ -15,6 +16,17 @@ const AppContextProvider = ({ children }) => {
   const [rajShami , setRajShami] = useState([]);
   const [bhartiTvOUTERData , setBhartiTvOUTERData] = useState([]);
   const [ranveerAllahbadiaOUTER , setRanveerAllahbadiaOUTER] = useState([]);
+  const [reLivingSingleOUTER , setRelivingSingleOUTER] = useState([]);
+
+  const fetchRelivingSingleOUTERDataApi = async () => {
+    try {
+      const response = await fetch('/api/reLivingSingleOUTER');
+      const result = await response.json();
+      setRelivingSingleOUTER(result);
+    } catch (error) {
+      console.error("Error fetching sidebar data:", error);
+    }
+  };
 
   const fetchranveerAllahbadiaOUTERDataApi = async () => {
     try {
@@ -153,10 +165,12 @@ const AppContextProvider = ({ children }) => {
     fetchRajShamiApi();
     fetchBhartiTvOuterDataApi();
     fetchranveerAllahbadiaOUTERDataApi();
+    fetchRelivingSingleOUTERDataApi();
   }, []);
 
   return (
     <AppContext.Provider value={{
+      showModal, setShowModal,
       sidebar,
       discoverBtn,
       discoverCaroData,
@@ -169,7 +183,8 @@ const AppContextProvider = ({ children }) => {
 
       rajShami,
       bhartiTvOUTERData,
-      ranveerAllahbadiaOUTER
+      ranveerAllahbadiaOUTER,
+      reLivingSingleOUTER
     }}>
       {children}
     </AppContext.Provider>
