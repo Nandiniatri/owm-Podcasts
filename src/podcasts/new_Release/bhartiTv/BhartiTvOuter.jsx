@@ -5,17 +5,26 @@ import Modal from "../../../component/modal/Modal";
 import YouTube from "react-youtube";
 import Button from "../../../component/Button";
 
+
+const opts = {
+    width: '100%',
+    height: '100%',
+    playerVars: {
+        autoplay: 1,
+    },
+};
+
 const BhartiTvOuter = () => {
-    const { bhartiTvOUTERData, showModal, setShowModal } = useContext(AppContext);
-    const [videoId, setVideoId] = useState([]);
+    const { bhartiTvOUTERData, showData, setShowData } = useContext(AppContext);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleOpenModal = (podcast) => {
-        setVideoId(podcast.videoUrlId);
-        setShowModal(true);
+        // console.log(podcast);
+        setIsModalOpen(true);
+        setShowData([podcast]);
     }
-
     const handleCloseModal = () => {
-        setShowModal(false);
+        setIsModalOpen(false);
     }
 
 
@@ -39,23 +48,21 @@ const BhartiTvOuter = () => {
                 ))}
             </div>
 
-            {showModal && (
-                <Modal isOpen={showModal}>
-                    <div style={{ textAlign: 'right' }}>
-                        <Button onClick={handleCloseModal}>X</Button>
+            <div>
+                <Modal isOpen={isModalOpen} isClosed={handleCloseModal}>
+                    <div className="modal-btn-div">
+                        <Button onClick={handleCloseModal} className="modal-close-button">Close</Button>
                     </div>
-                    <YouTube
-                        videoId={videoId}
-                        opts={{
-                            height: '390',
-                            width: '640',
-                            playerVars: {
-                                autoplay: 1,
-                            },
-                        }}
-                    />
+                    <div>
+                        {showData.map((item) => (
+                            <div className="youtube-video" key={item.id}>
+                                <YouTube videoId={item.videoUrlId} className="youtube-y" opts={opts} />
+                            </div>
+                        ))}
+                    </div>
                 </Modal>
-            )}
+            </div>
+
         </div>
     );
 };

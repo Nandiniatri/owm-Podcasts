@@ -3,7 +3,7 @@ import { createContext, useEffect, useState } from "react";
 export const AppContext = createContext();
 
 const AppContextProvider = ({ children }) => {
-  const [showModal, setShowModal] = useState(false);
+  const [showData, setShowData] = useState([]);
   const [sidebar, setSidebar] = useState([]);
   const [discoverBtn, setDiscoverBtn] = useState([]);
   const [discoverCaroData, setDiscoverCaroData] = useState([]);
@@ -170,7 +170,7 @@ const AppContextProvider = ({ children }) => {
 
   return (
     <AppContext.Provider value={{
-      showModal, setShowModal,
+      showData, setShowData,
       sidebar,
       discoverBtn,
       discoverCaroData,
