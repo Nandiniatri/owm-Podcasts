@@ -4,6 +4,7 @@ import '../commonCss.css';
 import Modal from "../../../component/modal/Modal";
 import YouTube from "react-youtube";
 import Button from "../../../component/Button";
+import { Link } from "react-router-dom";
 
 
 const opts = {
@@ -32,10 +33,10 @@ const BhartiTvOuter = () => {
         <div className="section-container">
             <div className="section-header">
                 <h2 className="section-title">Bharti TV</h2>
-                <a href="#seeAll" className="section-seeall-link">
+                <Link to={"/new-releases/bhartiTV"} className="section-seeall-link">
                     <span>See All</span>
                     <span className="section-seeall-icon">→</span>
-                </a>
+                </Link> 
             </div>
 
             <div className="card-grid">

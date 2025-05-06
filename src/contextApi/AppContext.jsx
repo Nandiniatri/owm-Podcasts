@@ -17,6 +17,20 @@ const AppContextProvider = ({ children }) => {
   const [bhartiTvOUTERData , setBhartiTvOUTERData] = useState([]);
   const [ranveerAllahbadiaOUTER , setRanveerAllahbadiaOUTER] = useState([]);
   const [reLivingSingleOUTER , setRelivingSingleOUTER] = useState([]);
+  const [bhartiTVInnerData , setBhartiTVInnerData] = useState([]);
+
+  const fetchBhartiTvInnerDataApi = async () => {
+    try {
+      const response = await fetch('/api/bhartiTvInner');
+      const result = await response.json();
+      console.log(result);
+      
+      setBhartiTVInnerData(result);
+    } catch (error) {
+      console.error("Error fetching sidebar data:", error);
+    }
+  };
+
 
   const fetchRelivingSingleOUTERDataApi = async () => {
     try {
@@ -166,6 +180,7 @@ const AppContextProvider = ({ children }) => {
     fetchBhartiTvOuterDataApi();
     fetchranveerAllahbadiaOUTERDataApi();
     fetchRelivingSingleOUTERDataApi();
+    fetchBhartiTvInnerDataApi();
   }, []);
 
   return (
@@ -184,7 +199,9 @@ const AppContextProvider = ({ children }) => {
       rajShami,
       bhartiTvOUTERData,
       ranveerAllahbadiaOUTER,
-      reLivingSingleOUTER
+      reLivingSingleOUTER,
+
+      bhartiTVInnerData
     }}>
       {children}
     </AppContext.Provider>
