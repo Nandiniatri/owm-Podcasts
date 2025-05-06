@@ -16,7 +16,7 @@ const opts = {
 
 
 const RajShamani = () => {
-  const { rajShami , showData, setShowData} = useContext(AppContext);
+  const { rajShami, showData, setShowData } = useContext(AppContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = (podcast) => {
@@ -31,7 +31,7 @@ const RajShamani = () => {
   return (
     <div className="section-container">
       <div className="section-header">
-        <h2 className="section-title">Raj Shamani</h2> 
+        <h2 className="section-title">Raj Shamani</h2>
         <Link to={"/new-releases/RajShamani"} className="section-seeall-link">
           <span>See All</span>
           <span className="section-seeall-icon">→</span>
@@ -49,7 +49,7 @@ const RajShamani = () => {
         ))}
       </div>
 
-      <div>
+      {/* <div>
         <Modal isOpen={isModalOpen} isClosed={handleCloseModal}>
           <div className="modal-btn-div">
             <Button onClick={handleCloseModal} className="modal-close-button">Close</Button>
@@ -62,7 +62,21 @@ const RajShamani = () => {
             ))}
           </div>
         </Modal>
-      </div>
+      </div> */}
+
+
+      {isModalOpen && (
+        <div className="modal-overlay">
+          <div className="custom-modal">
+            <button onClick={handleCloseModal} className="modal-close-button">✕</button>
+            {showData.map((item) => (
+              <div className="youtube-video" key={item.id}>
+                <YouTube videoId={item.videoUrlId} className="youtube-y" opts={opts} />
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
     </div>
   );

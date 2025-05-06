@@ -47,7 +47,7 @@ const RanveerAllahbadiaOUTER = () => {
                 ))}
             </div>
 
-            <div>
+            {/* <div>
                 <Modal isOpen={isModalOpen} isClosed={handleCloseModal}>
                     <div className="modal-btn-div">
                         <Button onClick={handleCloseModal} className="modal-close-button">Close</Button>
@@ -60,7 +60,21 @@ const RanveerAllahbadiaOUTER = () => {
                         ))}
                     </div>
                 </Modal>
-            </div>
+            </div> */}
+
+
+            {isModalOpen && (
+                <div className="modal-overlay">
+                    <div className="custom-modal">
+                        <button onClick={handleCloseModal} className="modal-close-button">✕</button>
+                        {showData.map((item) => (
+                            <div className="youtube-video" key={item.id}>
+                                <YouTube videoId={item.videoUrlId} className="youtube-y" opts={opts} />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

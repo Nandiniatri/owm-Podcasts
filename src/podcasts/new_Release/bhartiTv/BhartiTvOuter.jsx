@@ -36,7 +36,7 @@ const BhartiTvOuter = () => {
                 <Link to={"/new-releases/bhartiTV"} className="section-seeall-link">
                     <span>See All</span>
                     <span className="section-seeall-icon">→</span>
-                </Link> 
+                </Link>
             </div>
 
             <div className="card-grid">
@@ -49,7 +49,7 @@ const BhartiTvOuter = () => {
                 ))}
             </div>
 
-            <div>
+            {/* <div>
                 <Modal isOpen={isModalOpen} isClosed={handleCloseModal}>
                     <div className="modal-btn-div">
                         <Button onClick={handleCloseModal} className="modal-close-button">Close</Button>
@@ -62,7 +62,20 @@ const BhartiTvOuter = () => {
                         ))}
                     </div>
                 </Modal>
-            </div>
+            </div> */}
+
+            {isModalOpen && (
+                <div className="modal-overlay">
+                    <div className="custom-modal">
+                        <button onClick={handleCloseModal} className="modal-close-button">✕</button>
+                        {showData.map((item) => (
+                            <div className="youtube-video" key={item.id}>
+                                <YouTube videoId={item.videoUrlId} className="youtube-y" opts={opts} />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
 
         </div>
     );

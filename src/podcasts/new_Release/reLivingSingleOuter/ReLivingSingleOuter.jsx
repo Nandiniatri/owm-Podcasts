@@ -1,4 +1,4 @@
-import { useContext , useState} from "react";
+import { useContext, useState } from "react";
 import { AppContext } from "../../../contextApi/AppContext";
 import '../commonCss.css';
 import Modal from "../../../component/modal/Modal";
@@ -47,7 +47,7 @@ const ReLivingSingleOUTER = () => {
                 ))}
             </div>
 
-            <div>
+            {/* <div>
                 <Modal isOpen={isModalOpen} isClosed={handleCloseModal}>
                     <div className="modal-btn-div">
                         <Button onClick={handleCloseModal} className="modal-close-button">Close</Button>
@@ -60,8 +60,20 @@ const ReLivingSingleOUTER = () => {
                         ))}
                     </div>
                 </Modal>
-            </div>
+            </div> */}
 
+            {isModalOpen && (
+                <div className="modal-overlay">
+                    <div className="custom-modal">
+                        <button onClick={handleCloseModal} className="modal-close-button">✕</button>
+                        {showData.map((item) => (
+                            <div className="youtube-video" key={item.id}>
+                                <YouTube videoId={item.videoUrlId} className="youtube-y" opts={opts} />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
 
         </div>
     );
