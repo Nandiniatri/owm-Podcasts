@@ -14,6 +14,7 @@ import BhartiTVOuter from "../fixtures/NewRelease/bhartiTV/BhartiTVOuter";
 import RanveerAllahbadiaOuter from "../fixtures/NewRelease/ranveerallahbadia/RanveerAllahbadiaOuter";
 import ReLivingSingleOuter from "../fixtures/NewRelease/reLivingSingle/ReLivingSingleOuter";
 import BhartiTVInner from "../fixtures/NewRelease/bhartiTV/BhartiTVInner";
+import RajShamaniInner from "../fixtures/NewRelease/rajShamani/RajShamaniInner";
 
 export default function makeServer({ environment = "development" } = {}) {
   let server = createServer({
@@ -35,7 +36,8 @@ export default function makeServer({ environment = "development" } = {}) {
       bhartiTvOUTER:BhartiTVOuter,
       ranveerAllahbadiaOUTER: RanveerAllahbadiaOuter,
       reLivingSingleOUTER: ReLivingSingleOuter,
-      bhartiTvInner:BhartiTVInner
+      bhartiTvInner:BhartiTVInner,
+      rajShamaniINNER: RajShamaniInner
     },
 
     routes() {
@@ -101,6 +103,11 @@ export default function makeServer({ environment = "development" } = {}) {
       this.get("bhartiTvInner" ,(schema) => {
         return schema.db.bhartiTvInner
       })
+
+      this.get("rajShamaniINNER" ,(schema) => {
+        return schema.db.rajShamaniINNER
+      })
+
     },
   });
 
