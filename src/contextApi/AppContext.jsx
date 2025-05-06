@@ -19,6 +19,18 @@ const AppContextProvider = ({ children }) => {
   const [reLivingSingleOUTER , setRelivingSingleOUTER] = useState([]);
   const [bhartiTVInnerData , setBhartiTVInnerData] = useState([]);
   const [rajShamaniInnerData , setRajShamaniInnerData] = useState([]);
+  const [ranveerAllabadiaInnerData , setRanveerAllabadiaInnerData] = useState([]);
+
+
+  const fetchRanveerAllabadiaInnerDataApi = async () => {
+    try {
+      const response = await fetch('/api/ranveerAllahbadiaINNER');
+      const result = await response.json();
+      setRanveerAllabadiaInnerData(result);
+    } catch (error) {
+      console.error("Error fetching sidebar data:", error);
+    }
+  };
 
 
   const fetchRajShamaniInnerDataApi = async () => {
@@ -193,6 +205,7 @@ const AppContextProvider = ({ children }) => {
     fetchRelivingSingleOUTERDataApi();
     fetchBhartiTvInnerDataApi();
     fetchRajShamaniInnerDataApi();
+    fetchRanveerAllabadiaInnerDataApi();
   }, []);
 
   return (
@@ -214,7 +227,8 @@ const AppContextProvider = ({ children }) => {
       reLivingSingleOUTER,
 
       bhartiTVInnerData,
-      rajShamaniInnerData
+      rajShamaniInnerData,
+      ranveerAllabadiaInnerData
     }}>
       {children}
     </AppContext.Provider>

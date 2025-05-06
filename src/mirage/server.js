@@ -15,6 +15,7 @@ import RanveerAllahbadiaOuter from "../fixtures/NewRelease/ranveerallahbadia/Ran
 import ReLivingSingleOuter from "../fixtures/NewRelease/reLivingSingle/ReLivingSingleOuter";
 import BhartiTVInner from "../fixtures/NewRelease/bhartiTV/BhartiTVInner";
 import RajShamaniInner from "../fixtures/NewRelease/rajShamani/RajShamaniInner";
+import RanveerAllahbadiaInner from "../fixtures/NewRelease/ranveerallahbadia/RanveerAllahbadiaInner";
 
 export default function makeServer({ environment = "development" } = {}) {
   let server = createServer({
@@ -37,7 +38,8 @@ export default function makeServer({ environment = "development" } = {}) {
       ranveerAllahbadiaOUTER: RanveerAllahbadiaOuter,
       reLivingSingleOUTER: ReLivingSingleOuter,
       bhartiTvInner:BhartiTVInner,
-      rajShamaniINNER: RajShamaniInner
+      rajShamaniINNER: RajShamaniInner,
+      ranveerAllahbadiaINNER : RanveerAllahbadiaInner
     },
 
     routes() {
@@ -106,6 +108,10 @@ export default function makeServer({ environment = "development" } = {}) {
 
       this.get("rajShamaniINNER" ,(schema) => {
         return schema.db.rajShamaniINNER
+      })
+
+      this.get("ranveerAllahbadiaINNER" ,(schema) => {
+        return schema.db.ranveerAllahbadiaINNER
       })
 
     },

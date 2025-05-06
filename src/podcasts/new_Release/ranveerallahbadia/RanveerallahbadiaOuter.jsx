@@ -4,6 +4,7 @@ import '../commonCss.css';
 import Modal from "../../../component/modal/Modal";
 import YouTube from "react-youtube";
 import Button from "../../../component/Button";
+import { Link } from "react-router-dom";
 
 const opts = {
     width: '100%',
@@ -18,7 +19,6 @@ const RanveerAllahbadiaOUTER = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleOpenModal = (podcast) => {
-        // console.log(podcast);
         setIsModalOpen(true);
         setShowData([podcast]);
     }
@@ -31,10 +31,10 @@ const RanveerAllahbadiaOUTER = () => {
         <div className="section-container">
             <div className="section-header">
                 <h2 className="section-title">Ranveer Allahbadia</h2>
-                <a href="#seeAll" className="section-seeall-link">
+                <Link to={"/new-releases/RanveerAllahbadia"} className="section-seeall-link">
                     <span>See All</span>
                     <span className="section-seeall-icon">→</span>
-                </a>
+                </Link>
             </div>
 
             <div className="card-grid">

@@ -6,6 +6,7 @@ import Sidebar from './podcasts/sidebar/Sidebar'
 import NewRelease from './podcasts/new_Release/NewRelease'
 import BhartiTvInner from './podcasts/new_Release/bhartiTv/BhartiTVInner'
 import RajShamaniInnerFile from './podcasts/new_Release/rajShamani/rajShamaniInnerFile/RajShamaniInnerLinkFile'
+import RanveerAllabadiaInnerFile from './podcasts/new_Release/ranveerallahbadia/RanveerAllahbadiaInner'
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
             <Route path='/new-releases' element={<NewRelease />} />
             <Route path='/new-releases/RajShamani' element={<RajShamaniInnerFile />} />
             <Route path="/new-releases/bhartiTV" element={<BhartiTvInner />}/>
+            <Route path="/new-releases/RanveerAllahbadia" element={<RanveerAllabadiaInnerFile />}/>
           </Routes>
         </div>
       </div>
