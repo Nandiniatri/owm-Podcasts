@@ -160,7 +160,7 @@ const AppContextProvider = ({ children }) => {
 
   const fetchTrendingApi = async () => {
     try {
-      const response = await fetch('/api/trending');
+      const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/trending/');
       const result = await response.json();
       setTrending(result);
     } catch (error) {

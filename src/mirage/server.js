@@ -3,7 +3,7 @@ import Sidebar from "../fixtures/Sidebar";
 import logo from "../fixtures/logo";
 import discoverBtnData from "../fixtures/discoverBtnData";
 import discoverCarousalData from "../fixtures/discoverCarousalData";
-import trending from "../fixtures/trending";
+// import trending from "../fixtures/trending";
 import webbyAwardWinners from "../fixtures/webbyAwardWinners";
 import guestCuratorCard from "../fixtures/guestCuratorCard";
 import under20Minutes from "../fixtures/under20Minutes";
@@ -27,7 +27,7 @@ export default function makeServer({ environment = "development" } = {}) {
       logo: logo,
       discoverBtn: discoverBtnData,
       discoverCarousel : discoverCarousalData,
-      trending : trending,
+      // trending : trending,
       webbyAwardWinner2025: webbyAwardWinners ,
       guestCuratorCard:guestCuratorCard,
       under20Min:under20Minutes,
@@ -63,9 +63,13 @@ export default function makeServer({ environment = "development" } = {}) {
         return schema.db.discoverCarousel
       })
 
-      this.get("/trending" , (schema) => {
-        return schema.db.trending
-      })
+      // this.get("/trending" , (schema) => {
+      //   return schema.db.trending
+      // })
+      
+      // this.get("/trending" , async() =>{
+      //   const response = await fetch("")
+      // })
 
       this.get("/webbyAwardWinner2025" , (schema) => {
         return schema.db.webbyAwardWinner2025

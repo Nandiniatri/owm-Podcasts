@@ -1,9 +1,25 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Trending.css";
 import { AppContext } from "../../../contextApi/AppContext";
 
 const Trending = () => {
     const { trending } = useContext(AppContext);
+
+    // const [data , setData] = useState([]);
+
+    // const fetchTrending = async() => {
+    //     try {
+    //         const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/trending/');
+    //         const result = await response.json();
+    //         setData(result);
+    //       } catch (error) {
+    //         console.error("Error fetching sidebar data:", error);
+    //       }
+    // }
+
+    // useEffect(() => {
+    //     fetchTrending();
+    // },[])
 
     return (
         <div className="trending-container">
