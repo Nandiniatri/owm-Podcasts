@@ -2,13 +2,29 @@ import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../../../contextApi/AppContext";
 import Button from "../../../component/Button";
 import Image from "../../../component/Image";
+import YouTube from "react-youtube";
+import '../commonCss.css';
+
+const opts = {
+    width: '100%',
+    height: '100%',
+    playerVars: {
+        autoplay: 1,
+    }, 
+};
 
 const NewReleaseSliderFile = () => {
-    const { newReleseCarousel } = useContext(AppContext);
+    const { newReleseCarousel, showData, setShowData } = useContext(AppContext);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const handleNewReleaseImg = () => {
-        alert('hello')
+    const handleNewReleaseImg = (currentSlide) => {
+        setIsModalOpen(true);
+        setShowData([currentSlide]);
+    }
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
     }
 
     useEffect(() => {
@@ -16,7 +32,7 @@ const NewReleaseSliderFile = () => {
 
         const nextPage = setInterval(() => {
             setCurrentIndex((prev) => (prev + 1) % newReleseCarousel.length);
-        }, 3000);
+        }, 4000);
 
         return () => clearInterval(nextPage);
     }, [newReleseCarousel]);
@@ -40,7 +56,7 @@ const NewReleaseSliderFile = () => {
                             src={currentSlide.image}
                             alt={currentSlide.title}
                             className="common-carousel-image"
-                            onClick={handleNewReleaseImg}
+                            onClick={() => handleNewReleaseImg(currentSlide)}
                         />
                     )}
                 </div>
@@ -84,9 +100,8 @@ const NewReleaseSliderFile = () => {
                     return (
                         <div
                             key={index}
-                            className={`common-carousel-image-div ${
-                                isActive ? "active" : ""
-                            }`}
+                            className={`common-carousel-image-div ${isActive ? "active" : ""
+                                }`}
                         >
                             <Image
                                 src={item.image}
@@ -96,6 +111,20 @@ const NewReleaseSliderFile = () => {
                     );
                 })}
             </div>
+
+            {isModalOpen && (
+                <div className="modal-overlay">
+                    <div className="custom-modal">
+                        <button onClick={handleCloseModal} className="modal-close-button">✕</button>
+                        {showData.map((item) => (
+                            <div className="youtube-video" key={item.id}>
+                                <YouTube videoId={item.videoUrlId} className="youtube-y" opts={opts} />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
+
         </div>
     );
 };

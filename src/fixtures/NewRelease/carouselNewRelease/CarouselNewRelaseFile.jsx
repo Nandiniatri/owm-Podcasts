@@ -6,8 +6,8 @@ export default [
         title: "Ravi Guptacomedy",
         subTitle: "Prakhar Gupta",
         content: "I Regret Inviting Ravi Gupta on My Podcast!! | PGX#88 @raviguptacomedy.Prakhar Gupta and Ravi Gupta have a collaborative relationship, particularly through Prakhar's podcast.The Prakhar Gupta Xperience (PGX). Ravi Gupta, a stand-up comedian, is frequently featured as a guest on the podcast",
-        videoUrlId:"lFAIxq8kaY",
-        youtubeUrl:"https://youtu.be/-lFAIxq8kaY?si=xlEcpHnymG36KWOC"
+        videoUrlId:"-lFAIxq8kaY",
+        youtubeUrl:"https://youtu.be/-lFAIxq8kaY?si=-lPxm5gxga4BFU_l"
     },
     {
         id: 2,

@@ -13,7 +13,7 @@ const DiscoverCarousel = () => {
 
         const nextPage = setInterval(() => {
             setCurrentIndex((prev) => (prev + 1) % discoverCaroData.length);
-        }, 3000);
+        }, 6000);
 
         return () => clearInterval(nextPage);
     }, [discoverCaroData]);

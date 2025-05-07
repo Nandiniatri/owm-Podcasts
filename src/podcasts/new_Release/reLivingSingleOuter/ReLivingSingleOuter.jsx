@@ -11,7 +11,7 @@ const opts = {
     height: '100%',
     playerVars: {
         autoplay: 1,
-    },
+    }, 
 };
 
 const ReLivingSingleOUTER = () => {
@@ -47,21 +47,6 @@ const ReLivingSingleOUTER = () => {
                     </div>
                 ))}
             </div>
-
-            {/* <div>
-                <Modal isOpen={isModalOpen} isClosed={handleCloseModal}>
-                    <div className="modal-btn-div">
-                        <Button onClick={handleCloseModal} className="modal-close-button">Close</Button>
-                    </div>
-                    <div>
-                        {showData.map((item) => (
-                            <div className="youtube-video" key={item.id}>
-                                <YouTube videoId={item.videoUrlId} className="youtube-y" opts={opts} />
-                            </div>
-                        ))}
-                    </div>
-                </Modal>
-            </div> */}
 
             {isModalOpen && (
                 <div className="modal-overlay">
