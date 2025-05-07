@@ -68,31 +68,31 @@ export default [
         title: "Tyler Brown",
         publisher: "Steven Cohen",
         image: "https://static.pocketcasts.com/discover/images/webp/480/00188cf0-1490-0138-9f94-0acc26574db2.webp",
-        videoUrlId: "",
-        youtubeUrl: ""
+        videoUrlId: "fc_iMeQc4e8",
+        youtubeUrl: "https://youtu.be/fc_iMeQc4e8?si=vjHn-40nxd-AQACL"
     },
     {
         id: 10,
         title: "Health Matters",
         publisher: "NewYork-Presbyterian",
         image: "https://static.pocketcasts.com/discover/images/webp/480/609ae620-afc8-013b-f3b5-0acc26574db2.webp",
-        videoUrlId: "",
-        youtubeUrl: ""
+        videoUrlId: "ZoOr_ex279U",
+        youtubeUrl: "https://youtu.be/ZoOr_ex279U?si=5KZkV5RJLa7oibuj"
     },
     {
         id: 11,
         title: "Where Are You Going?",
         publisher: "Loftus Media",
         image: "https://static.pocketcasts.com/discover/images/webp/480/57a57500-b1db-013b-f3c2-0acc26574db2.webp",
-        videoUrlId: "",
-        youtubeUrl: ""
+        videoUrlId: "YINSxF4DV-k",
+        youtubeUrl: "https://youtu.be/YINSxF4DV-k?si=OMtI_beWCAzEcJcz"
     },
     {
         id: 12,
-        title: "CNN 5 Good Things",
+        title: "How to help someone who’s down a conspiracy theory rabbit hole",
         publisher: "CNN Audio",
         image: "https://static.pocketcasts.com/discover/images/webp/480/eb0fc590-0ae2-013d-5da7-0acc26574db2.webp",
-        videoUrlId: "",
-        youtubeUrl: ""
+        videoUrlId: "Gxb65amXnac",
+        youtubeUrl: "https://youtu.be/Gxb65amXnac?si=CksGy4KBLCKIjJsq"
     },
 ];
