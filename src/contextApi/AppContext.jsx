@@ -24,7 +24,7 @@ const AppContextProvider = ({ children }) => {
 
   const fetchNewReleaseCarouselDataApi = async () => {
     try {
-      const response = await fetch('/api/NewReleaseCarouselData');
+      const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/NewReleaseCarouselData');
       const result = await response.json();
       setNewReleseCarousel(result);
     } catch (error) {
@@ -35,7 +35,7 @@ const AppContextProvider = ({ children }) => {
 
   const fetchRanveerAllabadiaInnerDataApi = async () => {
     try {
-      const response = await fetch('/api/ranveerAllahbadiaINNER');
+      const response = await fetch('ranveerAllahbadiaINNER');
       const result = await response.json();
       setRanveerAllabadiaInnerData(result);
     } catch (error) {
@@ -98,7 +98,7 @@ const AppContextProvider = ({ children }) => {
 
   const fetchRajShamiApi = async () => {
     try {
-      const response = await fetch('/api/rajShmmi');
+      const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/rajShamiouter');
       const result = await response.json();
       setRajShami(result);
     } catch (error) {
@@ -170,7 +170,7 @@ const AppContextProvider = ({ children }) => {
 
   const fetchDiscoverCarDataApi = async () => {
     try {
-      const response = await fetch('/api/discoverCarousel');
+      const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/discoverCarousel');
       const result = await response.json();
       setDiscoverCaroData(result);
     } catch (error) {
@@ -180,7 +180,7 @@ const AppContextProvider = ({ children }) => {
 
   const fetchDiscoverBtnDataApi = async () => {
     try {
-      const response = await fetch('/api/discoverBtn');
+      const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/discoverBtn');
       const result = await response.json();
       setDiscoverBtn(result);
     } catch (error) {

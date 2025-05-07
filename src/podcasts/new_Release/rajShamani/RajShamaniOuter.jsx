@@ -26,7 +26,7 @@ const RajShamani = () => {
   }
   const handleCloseModal = () => {
     setIsModalOpen(false);
-  }
+  } 
 
   return (
     <div className="section-container">
