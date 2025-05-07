@@ -23,8 +23,6 @@ body {
     position: fixed;
     top: 87px;
     left: 0;
-    /* background-color: #111; */
-    /* border-right: 1px solid #444; */
     padding: 10px;
     overflow-y: auto;
 }
@@ -36,7 +34,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    /* border: solid; */
     overflow-y: scroll;
     scrollbar-width: thin;
     scrollbar-color: #717070 transparent;

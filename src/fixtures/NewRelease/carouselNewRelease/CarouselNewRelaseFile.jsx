@@ -1,0 +1,54 @@
+export default [
+    {
+        id: 1,
+        image: "https://i.ytimg.com/vi/-lFAIxq8kaY/maxresdefault.jpg",
+        linkTitle: "featured",
+        title: "Ravi Guptacomedy",
+        subTitle: "Headgum",
+        content: "I Regret Inviting Ravi Gupta on My Podcast!! | PGX#88 @raviguptacomedy",
+        videoUrlId:"lFAIxq8kaY",
+        youtubeUrl:"https://youtu.be/-lFAIxq8kaY?si=xlEcpHnymG36KWOC"
+    },
+    {
+        id: 2,
+        image: "https://static.pocketcasts.com/discover/images/webp/480/9e20ba70-6dba-013b-f25a-0acc26574db2.webp",
+        linkTitle: "featured",
+        title: "HBO's The Last of Us Podcast",
+        subTitle: "HBO",
+        content: "The official companion podcast for the HBO Original series The Last of Us, based on the critically acclaimed video game of the same name. Each week, join Host Troy Baker (who played Joel in the video game) as he breaks down episodes of the TV series with Showrunners Craig Mazin and Neil Druckmann. Together they’ll dive into key moments and reveal the creative process behind this adaptation."
+    },
+    {
+        id: 3,
+        image: "https://static.pocketcasts.com/discover/images/webp/480/a1b47590-8377-012e-3b79-00163e1b201c.webp",
+        linkTitle: "featured",
+        title: "Close All Tabs",
+        subTitle: "KQED",
+        content: "Ever wonder where the internet stops and IRL begins? Close All Tabs breaks down how digital culture shapes our world through thoughtful insights and irreverent humor. From internet trends to AI slop to the politics of memes, Close All Tabs covers it all. How will AI change our jobs and lives?"
+    },
+    {
+        id: 4,
+        image: "https://static.pocketcasts.com/discover/images/webp/480/60f813d0-edb6-013d-1b29-0acc26574db2.webp",
+        linkTitle: "featured",
+        title: "No One Saw It Coming",
+        subTitle: "ABC listen",
+        content: "The bit players, the unexpected twists, the turning point you missed. Join Walkley award-winner Marc Fennell as he uncovers the incredible moments that changed the course of history. New episodes out Tuesday."
+    },
+    {
+        id: 5,
+        image: "https://static.pocketcasts.com/discover/images/webp/480/ecf0df70-f750-013d-1b45-0acc26574db2.webp",
+        linkTitle: "featured",
+        title: "What We Spend",
+        subTitle: "Audacy",
+        content: "Imagine if you could ask someone anything you wanted about their finances. On What We Spend, people from across the country and across the financial spectrum are opening their wallets—and their lives—to tell you everything: what they make, what they want, and—for one week—what they spend. If you want to be on What We Spend, we’d love to hear from you. Write us at: whatwespendpodcast@gmail.com"
+    },
+    {
+        id: 6,
+        image: "https://static.pocketcasts.com/discover/images/webp/480/9911a4f0-e72b-013d-46fd-02bb5ef11301.webp",
+        linkTitle: "featured",
+        title: "It's Storytime with Wil Wheaton",
+        subTitle: "Wil Wheaton",
+        content: "You may recognize Wil Wheaton's name from his acting work in television shows like The Big Bang Theory, Leverage, and Star Trek: The Next Generation, or 1985's timeless classic, Stand By Me."
+    }
+];
+
+
