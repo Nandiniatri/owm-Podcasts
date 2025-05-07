@@ -150,7 +150,7 @@ const AppContextProvider = ({ children }) => {
 
   const fetchWebByAwardWinnerApi = async () => {
     try {
-      const response = await fetch('/api/webbyAwardWinner2025');
+      const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/webbyawards');
       const result = await response.json();
       setWebByAward(result);
     } catch (error) {
