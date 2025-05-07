@@ -31,7 +31,7 @@ body {
 
 .AllPodcaste-div {
     margin-left: 300px;
-    /* width: calc(100% - 250px); */
+    width: calc(100% - 250px);
     padding: 1px 20px;
     display: flex;
     flex-direction: column;

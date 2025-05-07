@@ -1,4 +1,5 @@
 import BhartiTvOuter from "./bhartiTv/BhartiTvOuter";
+import NewReleaseSliderFile from "./new_Release_Carousel/NewReleaseCarousel";
 import RajShamani from "./rajShamani/RajShamaniOuter";
 import RanveerAllahbadiaOUTER from "./ranveerallahbadia/RanveerallahbadiaOuter";
 import ReLivingSingleOUTER from "./reLivingSingleOuter/ReLivingSingleOuter";
@@ -12,7 +13,7 @@ const NewRelease = () => {
             </div>
 
             <div>
-                
+                <NewReleaseSliderFile />
                 <RajShamani />
                 <BhartiTvOuter />
                 <RanveerAllahbadiaOUTER />

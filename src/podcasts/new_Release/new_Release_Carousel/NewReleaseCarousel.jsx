@@ -2,9 +2,8 @@ import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../../../contextApi/AppContext";
 import Button from "../../../component/Button";
 import Image from "../../../component/Image";
-import "./DiscoverCarousel.css";
- 
-const DiscoverCarousel = () => {
+
+const NewReleaseSliderFile = () => {
     const { discoverCaroData } = useContext(AppContext);
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -74,10 +73,10 @@ const DiscoverCarousel = () => {
             </div>
 
             <div className="carousel-index-image-div">
-                {discoverCaroData.map((item , index) => {
+                {discoverCaroData.map((item, index) => {
                     const isActive = index === currentIndex;
                     return (
-                        <div key={index} className={`carousel-image-div ${isActive ? "active" : ""}`} 
+                        <div key={index} className={`carousel-image-div ${isActive ? "active" : ""}`}
                         >
                             <Image src={item.image} onClick={() => handleImageIndex(index)} />
                         </div>
@@ -86,6 +85,6 @@ const DiscoverCarousel = () => {
             </div>
         </div>
     );
-};
+}
 
-export default DiscoverCarousel;
+export default NewReleaseSliderFile;

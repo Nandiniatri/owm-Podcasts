@@ -18,7 +18,7 @@ import RajShamaniInner from "../fixtures/NewRelease/rajShamani/RajShamaniInner";
 import RanveerAllahbadiaInner from "../fixtures/NewRelease/ranveerallahbadia/RanveerAllahbadiaInner";
 
 export default function makeServer({ environment = "development" } = {}) {
-  let server = createServer({
+  let server = createServer({ 
     environment,
 
     fixtures: {
