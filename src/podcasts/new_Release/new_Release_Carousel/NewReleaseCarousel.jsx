@@ -4,58 +4,64 @@ import Button from "../../../component/Button";
 import Image from "../../../component/Image";
 
 const NewReleaseSliderFile = () => {
-    const { discoverCaroData } = useContext(AppContext);
+    const { newReleseCarousel } = useContext(AppContext);
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    const handleNewReleaseImg = () => {
+        alert('hello')
+    }
+
     useEffect(() => {
-        if (!discoverCaroData || discoverCaroData.length === 0) return;
+        if (!newReleseCarousel || newReleseCarousel.length === 0) return;
 
         const nextPage = setInterval(() => {
-            setCurrentIndex((prev) => (prev + 1) % discoverCaroData.length);
+            setCurrentIndex((prev) => (prev + 1) % newReleseCarousel.length);
         }, 3000);
 
         return () => clearInterval(nextPage);
-    }, [discoverCaroData]);
+    }, [newReleseCarousel]);
 
-
-    if (!discoverCaroData || discoverCaroData.length === 0) {
+    if (!newReleseCarousel || newReleseCarousel.length === 0) {
         return null;
     }
 
-    const currentSlide = discoverCaroData[currentIndex];
+    const currentSlide = newReleseCarousel[currentIndex];
 
     const handleImageIndex = (index) => {
-        setCurrentIndex(index)
-    }
+        setCurrentIndex(index);
+    };
 
     return (
-        <div className="discover-container">
-            <div className="carousel-wrapper">
+        <div className="common-carousel-container">
+            <div className="common-carousel-wrapper">
                 <div style={{ position: "relative" }}>
                     {currentSlide.image && (
                         <Image
                             src={currentSlide.image}
                             alt={currentSlide.title}
-                            className="carousel-image"
+                            className="common-carousel-image"
+                            onClick={handleNewReleaseImg}
                         />
                     )}
                 </div>
 
-                <div className="carousel-text-content">
-                    <span className="carousel-link-title">
-                        <a href={currentSlide.title}>{currentSlide.linkTitle}</a></span>
-                    <h3 className="carousel-title">{currentSlide.title}</h3>
-                    <p className="carousel-subtitle">{currentSlide.subTitle}</p>
-                    <p className="carousel-content">{currentSlide.content}</p>
+                <div className="common-carousel-text-content">
+                    <span className="common-carousel-link-title">
+                        <a href={currentSlide.title}>{currentSlide.linkTitle}</a>
+                    </span>
+                    <h3 className="common-carousel-title">{currentSlide.title}</h3>
+                    <p className="common-carousel-subtitle">{currentSlide.subTitle}</p>
+                    <p className="common-carousel-content">{currentSlide.content}</p>
                 </div>
             </div>
 
-            <div className="carousel-button-container">
+            <div className="common-carousel-button-container">
                 <Button
-                    className="carousel-button left"
+                    className="common-carousel-button left"
                     onClick={() =>
                         setCurrentIndex(
-                            (prev) => (prev - 1 + discoverCaroData.length) % discoverCaroData.length
+                            (prev) =>
+                                (prev - 1 + newReleseCarousel.length) % newReleseCarousel.length
                         )
                     }
                 >
@@ -63,28 +69,35 @@ const NewReleaseSliderFile = () => {
                 </Button>
 
                 <Button
-                    className="carousel-button right"
+                    className="common-carousel-button right"
                     onClick={() =>
-                        setCurrentIndex((prev) => (prev + 1) % discoverCaroData.length)
+                        setCurrentIndex((prev) => (prev + 1) % newReleseCarousel.length)
                     }
                 >
                     {">"}
                 </Button>
             </div>
 
-            <div className="carousel-index-image-div">
-                {discoverCaroData.map((item, index) => {
+            <div className="common-carousel-index-image-div">
+                {newReleseCarousel.map((item, index) => {
                     const isActive = index === currentIndex;
                     return (
-                        <div key={index} className={`carousel-image-div ${isActive ? "active" : ""}`}
+                        <div
+                            key={index}
+                            className={`common-carousel-image-div ${
+                                isActive ? "active" : ""
+                            }`}
                         >
-                            <Image src={item.image} onClick={() => handleImageIndex(index)} />
+                            <Image
+                                src={item.image}
+                                onClick={() => handleImageIndex(index)}
+                            />
                         </div>
-                    )
+                    );
                 })}
             </div>
         </div>
     );
-}
+};
 
 export default NewReleaseSliderFile;

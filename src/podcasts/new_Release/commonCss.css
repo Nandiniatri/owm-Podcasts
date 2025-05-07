@@ -17,7 +17,7 @@
 .section-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
     border: none;
 }
 
@@ -227,4 +227,130 @@
 .media-youtube-y {
     width: 100%;
     height: 400px;
+}
+
+
+
+
+
+.common-carousel-container {
+    background-color: #000;
+    color: white;
+    padding: 20px;
+    font-family: sans-serif;
+    margin-top: 20px;
+}
+
+.common-carousel-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    position: relative;
+}
+
+.common-carousel-image {
+    width: 215px;
+    height: 200px; 
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+}
+
+
+.common-carousel-text-content {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.common-carousel-link-title {
+    color: #60a5fa;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.common-carousel-link-title a {
+    text-decoration: none;
+    color: #60a5fa;
+}
+
+.common-carousel-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.common-carousel-subtitle {
+    color: #9ca3af;
+    font-size: 1rem;
+}
+
+.common-carousel-content {
+    color: #d1d5db;
+    font-family: Retina, helvetica, arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 144%;
+    margin: 0px;
+    padding: 0px;
+    min-height: 118px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.common-carousel-button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+    position: relative;
+    bottom: 135px;
+}
+
+.common-carousel-button {
+    background-color: #374151;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.common-carousel-button:hover {
+    background-color: #4b5563;
+}
+
+.common-carousel-index-image-div {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.common-carousel-image-div {
+    border: 2px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: border 0.3s ease;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.common-carousel-image-div img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    object-fit: cover;
+}
+
+.common-carousel-image-div.active {
+    border: 2px solid #60a5fa;
 }

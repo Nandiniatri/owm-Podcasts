@@ -4,50 +4,60 @@ export default [
         image: "https://i.ytimg.com/vi/-lFAIxq8kaY/maxresdefault.jpg",
         linkTitle: "featured",
         title: "Ravi Guptacomedy",
-        subTitle: "Headgum",
-        content: "I Regret Inviting Ravi Gupta on My Podcast!! | PGX#88 @raviguptacomedy",
+        subTitle: "Prakhar Gupta",
+        content: "I Regret Inviting Ravi Gupta on My Podcast!! | PGX#88 @raviguptacomedy.Prakhar Gupta and Ravi Gupta have a collaborative relationship, particularly through Prakhar's podcast.The Prakhar Gupta Xperience (PGX). Ravi Gupta, a stand-up comedian, is frequently featured as a guest on the podcast",
         videoUrlId:"lFAIxq8kaY",
         youtubeUrl:"https://youtu.be/-lFAIxq8kaY?si=xlEcpHnymG36KWOC"
     },
     {
         id: 2,
-        image: "https://static.pocketcasts.com/discover/images/webp/480/9e20ba70-6dba-013b-f25a-0acc26574db2.webp",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB0bVgg4vxGT23suCacF9JoXpdkeqNyeaa3g&s",
         linkTitle: "featured",
-        title: "HBO's The Last of Us Podcast",
-        subTitle: "HBO",
-        content: "The official companion podcast for the HBO Original series The Last of Us, based on the critically acclaimed video game of the same name. Each week, join Host Troy Baker (who played Joel in the video game) as he breaks down episodes of the TV series with Showrunners Craig Mazin and Neil Druckmann. Together they’ll dive into key moments and reveal the creative process behind this adaptation."
+        title: "Anuj Sharma",
+        subTitle: "Paras Chhabra Podcast",
+        content: "The Anuj Sharma x Paras Chhabra podcast brings raw, unfiltered conversations straight from the heart. Paras opens up about his journey, fame, and personal struggles like never before. Anuj’s candid hosting style makes the podcast engaging and relatable for every listener.",
+        videoUrlId:"LQyp53x8AIc",
+        youtubeUrl:"https://youtu.be/LQyp53x8AIc?si=E3dPPyQKv-5Jr3Ny"
     },
     {
         id: 3,
-        image: "https://static.pocketcasts.com/discover/images/webp/480/a1b47590-8377-012e-3b79-00163e1b201c.webp",
+        image: "https://i.ytimg.com/vi/gRo3zRVu104/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDC3c6MLdjUKmxPOogTPvsVoj3INg",
         linkTitle: "featured",
-        title: "Close All Tabs",
-        subTitle: "KQED",
-        content: "Ever wonder where the internet stops and IRL begins? Close All Tabs breaks down how digital culture shapes our world through thoughtful insights and irreverent humor. From internet trends to AI slop to the politics of memes, Close All Tabs covers it all. How will AI change our jobs and lives?"
+        title: "Prakash Raj",
+        subTitle: "The Lallantop",
+        content: "In a bold and candid conversation, Prakash Raj revealed behind-the-scenes stories from his iconic films Singham and Wanted. He didn’t hold back while sharing his views on PM Modi, Rahul Gandhi, and Arvind Kejriwal. The episode is a fiery mix of cinema, politics, and personal truths.",
+        videoUrlId:"gRo3zRVu104",
+        youtubeUrl:"https://youtu.be/gRo3zRVu104?si=Yh6MvKK8BDbfnxs1"
     },
     {
         id: 4,
-        image: "https://static.pocketcasts.com/discover/images/webp/480/60f813d0-edb6-013d-1b29-0acc26574db2.webp",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSvuIufbw8EoVRLjQgNXfXTEcPzWFDuKNwqB1XnrCIQIW7ANAuXNRJOcagcw4s4EwgI2o&usqp=CAU",
         linkTitle: "featured",
-        title: "No One Saw It Coming",
-        subTitle: "ABC listen",
-        content: "The bit players, the unexpected twists, the turning point you missed. Join Walkley award-winner Marc Fennell as he uncovers the incredible moments that changed the course of history. New episodes out Tuesday."
+        title: "No Filter: Nia Sharma",
+        subTitle: "BHARTI TV",
+        content: "Nia Sharma joins Bharti on Bharti TV for a fun-filled, honest, and heartfelt conversation. From industry struggles to personal highs, Nia opens up like never before. Bharti’s wit and Nia’s boldness make this episode a must-watch!",
+        videoUrlId:"sP60inei1aw",
+        youtubeUrl:"https://youtu.be/sP60inei1aw?si=UR269PhepWMoBAG2"
     },
     {
         id: 5,
-        image: "https://static.pocketcasts.com/discover/images/webp/480/ecf0df70-f750-013d-1b45-0acc26574db2.webp",
+        image: "https://i.ytimg.com/vi/pzBvb4umRzo/maxresdefault.jpg",
         linkTitle: "featured",
-        title: "What We Spend",
-        subTitle: "Audacy",
-        content: "Imagine if you could ask someone anything you wanted about their finances. On What We Spend, people from across the country and across the financial spectrum are opening their wallets—and their lives—to tell you everything: what they make, what they want, and—for one week—what they spend. If you want to be on What We Spend, we’d love to hear from you. Write us at: whatwespendpodcast@gmail.com"
+        title: "Alia Bhatt's",
+        subTitle: "Jay Shetty Podcast",
+        content: "Alia Bhatt sits down with Jay Shetty for a deep and soulful conversation about fame, motherhood, and mental wellness. She shares untold stories from her journey in Bollywood and beyond. Jay’s calm energy and Alia’s authenticity make this episode truly inspiring.",
+        videoUrlId:"pzBvb4umRzo",
+        youtubeUrl:"https://youtu.be/pzBvb4umRzo?si=6a3w6Hu8AW__VdLW"
     },
     {
         id: 6,
-        image: "https://static.pocketcasts.com/discover/images/webp/480/9911a4f0-e72b-013d-46fd-02bb5ef11301.webp",
+        image: "https://www.bollywoodhungama.com/wp-content/uploads/2025/03/620x450-5901.jpg",
         linkTitle: "featured",
-        title: "It's Storytime with Wil Wheaton",
-        subTitle: "Wil Wheaton",
-        content: "You may recognize Wil Wheaton's name from his acting work in television shows like The Big Bang Theory, Leverage, and Star Trek: The Next Generation, or 1985's timeless classic, Stand By Me."
+        title: "Bill Gates",
+        subTitle: "Raj Shamani",
+        content: "Raj Shamani sits down with the legendary Bill Gates in a thought-provoking conversation on entrepreneurship, innovation, and philanthropy. Bill shares his insights on changing the world through technology and giving back. This episode is a goldmine of knowledge for aspiring leaders and changemakers.",
+        videoUrlId:"xAt1xcC6qfM",
+        youtubeUrl:"https://youtu.be/xAt1xcC6qfM?si=2b7hA1lF7hMIHSF7"
     }
 ];
 
