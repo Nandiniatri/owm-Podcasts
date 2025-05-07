@@ -1,10 +1,9 @@
 import { useContext, useState } from "react";
-import { AppContext } from "../../../contextApi/AppContext";
 import '../commonCss.css';
 import Modal from "../../../component/modal/Modal";
 import YouTube from "react-youtube";
 import Button from "../../../component/Button";
-import { Link } from "react-router-dom";
+import { AppContext } from "../../../contextApi/AppContext";
 
 const opts = {
     width: '100%',
@@ -14,12 +13,11 @@ const opts = {
     },
 };
 
-const ReLivingSingleOUTER = () => {
+const ReLivingSingleInnerFile = () => {
     const { reLivingSingleOUTER, showData, setShowData } = useContext(AppContext);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleOpenModal = (podcast) => {
-        // console.log(podcast);
         setIsModalOpen(true);
         setShowData([podcast]);
     }
@@ -32,10 +30,10 @@ const ReLivingSingleOUTER = () => {
         <div className="section-container">
             <div className="section-header">
                 <h2 className="section-title">Re Living Single</h2>
-                <Link to={'/new-releases/ReLivingSingle'} className="section-seeall-link">
+                <a href="#seeAll" className="section-seeall-link">
                     <span>See All</span>
                     <span className="section-seeall-icon">→</span>
-                </Link>
+                </a>
             </div>
 
             <div className="card-grid">
@@ -47,21 +45,6 @@ const ReLivingSingleOUTER = () => {
                     </div>
                 ))}
             </div>
-
-            {/* <div>
-                <Modal isOpen={isModalOpen} isClosed={handleCloseModal}>
-                    <div className="modal-btn-div">
-                        <Button onClick={handleCloseModal} className="modal-close-button">Close</Button>
-                    </div>
-                    <div>
-                        {showData.map((item) => (
-                            <div className="youtube-video" key={item.id}>
-                                <YouTube videoId={item.videoUrlId} className="youtube-y" opts={opts} />
-                            </div>
-                        ))}
-                    </div>
-                </Modal>
-            </div> */}
 
             {isModalOpen && (
                 <div className="modal-overlay">
@@ -80,4 +63,4 @@ const ReLivingSingleOUTER = () => {
     );
 };
 
-export default ReLivingSingleOUTER;
+export default ReLivingSingleInnerFile ;

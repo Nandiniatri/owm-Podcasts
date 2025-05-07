@@ -7,6 +7,7 @@ import NewRelease from './podcasts/new_Release/NewRelease'
 import BhartiTvInner from './podcasts/new_Release/bhartiTv/BhartiTVInner'
 import RajShamaniInnerFile from './podcasts/new_Release/rajShamani/rajShamaniInnerFile/RajShamaniInnerLinkFile'
 import RanveerAllabadiaInnerFile from './podcasts/new_Release/ranveerallahbadia/RanveerAllahbadiaInner'
+import ReLivingSingleInnerFile from './podcasts/new_Release/reLivingSingleOuter/RelivingSingleInner'
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
             <Route path='/new-releases/RajShamani' element={<RajShamaniInnerFile />} />
             <Route path="/new-releases/bhartiTV" element={<BhartiTvInner />}/>
             <Route path="/new-releases/RanveerAllahbadia" element={<RanveerAllabadiaInnerFile />}/>
+            <Route path="/new-releases/ReLivingSingle" element={<ReLivingSingleInnerFile />}/>
           </Routes>
         </div>
       </div>
