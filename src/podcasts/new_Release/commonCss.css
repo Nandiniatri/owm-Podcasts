@@ -1,7 +1,13 @@
 .new-release-main-container {
-    padding: 12px;
+    /* padding: 12px; */
+    /* border: solid; */
+    margin-left: 10px;
+    margin-top: 10px;
 }
-
+.new-release-div1-h1-div h1{
+    /* border: solid; */
+    font-size: 37px;
+}
 .section-container {
     color: white;
     font-family: Arial, sans-serif;
@@ -81,7 +87,7 @@
     justify-content: center;
     align-items: center;
     height: 55vh;
-    padding: 1rem;
+    padding: 1rem; 
     box-sizing: border-box;
 }
 
