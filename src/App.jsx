@@ -15,7 +15,6 @@ function App() {
   return (
     <>
      <UpperComponent />
-
       <div className='sidebar-app-main-container'>
         <div className='sideBar-div'>
           <Sidebar />
