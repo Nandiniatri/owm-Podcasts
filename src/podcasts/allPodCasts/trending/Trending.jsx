@@ -3,6 +3,7 @@ import "./Trending.css";
 import { AppContext } from "../../../contextApi/AppContext";
 import Image from "../../../component/Image";
 import YouTube from "react-youtube";
+import { Link } from "react-router-dom";
 
 const opts = {
     width: '100%',
@@ -29,10 +30,10 @@ const Trending = () => {
         <div className="trending-container">
             <div className="trending-div1">
                 <h2 className="trending-title">Trending</h2>
-                <a href="#seeAll" className="see-all-link">
+                <Link to={"/discover/trending"} className="see-all-link">
                     <span>See All</span>
                     <span className="see-all-icon">→</span>
-                </a>
+                </Link>
             </div>
 
             <div className="trending-list">
