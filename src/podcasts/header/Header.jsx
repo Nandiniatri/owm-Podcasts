@@ -15,7 +15,7 @@ const Header = () => {
         setLogoData(result);
     };
 
-    useEffect(() => {
+    useEffect(() => { 
         fetchLogoApi();
     }, []);
 

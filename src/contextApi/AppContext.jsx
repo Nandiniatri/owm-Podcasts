@@ -57,7 +57,7 @@ const AppContextProvider = ({ children }) => {
 
   const fetchBhartiTvInnerDataApi = async () => {
     try {
-      const response = await fetch('/api/bhartiTvInner');
+      const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/bhartitvinner');
       const result = await response.json();
       setBhartiTVInnerData(result);
     } catch (error) {
@@ -68,7 +68,7 @@ const AppContextProvider = ({ children }) => {
 
   const fetchRelivingSingleOUTERDataApi = async () => {
     try {
-      const response = await fetch('/api/reLivingSingleOUTER');
+      const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/relivingsingleouters');
       const result = await response.json();
       setRelivingSingleOUTER(result);
     } catch (error) {
@@ -78,7 +78,7 @@ const AppContextProvider = ({ children }) => {
 
   const fetchranveerAllahbadiaOUTERDataApi = async () => {
     try {
-      const response = await fetch('/api/ranveerAllahbadiaOUTER');
+      const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/ranveerallahbadiaouter');
       const result = await response.json();
       setRanveerAllahbadiaOUTER(result);
     } catch (error) {
