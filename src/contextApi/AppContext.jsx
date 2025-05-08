@@ -22,6 +22,17 @@ const AppContextProvider = ({ children }) => {
   const [ranveerAllabadiaInnerData , setRanveerAllabadiaInnerData] = useState([]);
   const [newReleseCarousel , setNewReleseCarousel] = useState([]);
   const [trendingInnerData , setTrendingInnerData] = useState([]);
+  const [webByAwardWinInnerData , setWebByAwardWinInnerData] = useState([]);
+
+  const fetchWebByAwardWinDataApi = async () => {
+    try {
+      const response = await fetch('/DiscoverTrendingInner');
+      const result = await response.json();
+      setWebByAwardWinInnerData(result);
+    } catch (error) {
+      console.error("Error fetching sidebar data:", error);
+    }
+  };
 
 
   const fetchTrendingInnerDataApi = async () => {
@@ -33,7 +44,7 @@ const AppContextProvider = ({ children }) => {
       console.error("Error fetching sidebar data:", error);
     }
   };
-  
+
 
   const fetchNewReleaseCarouselDataApi = async () => {
     try {
@@ -232,6 +243,7 @@ const AppContextProvider = ({ children }) => {
     fetchRanveerAllabadiaInnerDataApi();
     fetchNewReleaseCarouselDataApi();
     fetchTrendingInnerDataApi();
+    fetchWebByAwardWinDataApi();
   }, []);
 
   return (
@@ -256,7 +268,8 @@ const AppContextProvider = ({ children }) => {
       rajShamaniInnerData,
       ranveerAllabadiaInnerData,
       newReleseCarousel,
-      trendingInnerData
+      trendingInnerData,
+      webByAwardWinInnerData
     }}>
       {children}
     </AppContext.Provider>
