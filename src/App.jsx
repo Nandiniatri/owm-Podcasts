@@ -7,13 +7,13 @@ import BhartiTvInner from './podcasts/new_Release/bhartiTv/BhartiTVInner'
 import RajShamaniInnerFile from './podcasts/new_Release/rajShamani/rajShamaniInnerFile/RajShamaniInnerLinkFile'
 import RanveerAllabadiaInnerFile from './podcasts/new_Release/ranveerallahbadia/RanveerAllahbadiaInner'
 import ReLivingSingleInnerFile from './podcasts/new_Release/reLivingSingleOuter/RelivingSingleInner'
-import Header from './podcasts/Header/Header'
+import UpperComponent from './podcasts/Header/Header'
 
 function App() {
 
   return (
     <>
-      <Header />
+      <UpperComponent />
       <div className='sidebar-app-main-container'>
         <div className='sideBar-div'>
           <Sidebar />
