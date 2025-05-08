@@ -3,10 +3,30 @@ import { AppContext } from "../../../contextApi/AppContext";
 import Button from "../../../component/Button";
 import Image from "../../../component/Image";
 import "./DiscoverCarousel.css";
- 
+import YouTube from "react-youtube";
+
+const opts = {
+    width: '100%',
+    height: '100%',
+    playerVars: {
+        autoplay: 1,
+    },
+};
+
+
 const DiscoverCarousel = () => {
-    const { discoverCaroData } = useContext(AppContext);
+    const { discoverCaroData, showData, setShowData } = useContext(AppContext);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleDiscoverCarousel = (currentSlide) => {
+        setIsModalOpen(true);
+        setShowData([currentSlide]);
+    }
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+    }
 
     useEffect(() => {
         if (!discoverCaroData || discoverCaroData.length === 0) return;
@@ -38,6 +58,7 @@ const DiscoverCarousel = () => {
                             src={currentSlide.image}
                             alt={currentSlide.title}
                             className="carousel-image"
+                            onClick={() => handleDiscoverCarousel(currentSlide)}
                         />
                     )}
                 </div>
@@ -74,16 +95,30 @@ const DiscoverCarousel = () => {
             </div>
 
             <div className="carousel-index-image-div">
-                {discoverCaroData.map((item , index) => {
+                {discoverCaroData.map((item, index) => {
                     const isActive = index === currentIndex;
                     return (
-                        <div key={index} className={`carousel-image-div ${isActive ? "active" : ""}`} 
+                        <div key={index} className={`carousel-image-div ${isActive ? "active" : ""}`}
                         >
                             <Image src={item.image} onClick={() => handleImageIndex(index)} />
                         </div>
                     )
                 })}
             </div>
+
+            {isModalOpen && (
+                <div className="modal-overlay">
+                    <div className="custom-modal">
+                        <button onClick={handleCloseModal} className="modal-close-button">✕</button>
+                        {showData.map((item) => (
+                            <div className="youtube-video" key={item.id}>
+                                <YouTube videoId={item.videoUrlId} className="youtube-y" opts={opts} />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
+
         </div>
     );
 };
