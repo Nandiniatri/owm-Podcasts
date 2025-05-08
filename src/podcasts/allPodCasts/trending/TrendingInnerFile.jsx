@@ -11,7 +11,7 @@ const opts = {
 };
 
 const TrendingInnerFile = () => {
-    const { rajShamaniInnerData, showData, setShowData } = useContext(AppContext);
+    const { trendingInnerData, showData, setShowData } = useContext(AppContext);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleOpenModal = (podcast) => {
@@ -30,7 +30,7 @@ const TrendingInnerFile = () => {
             </div>
 
             <div className="media-card-grid">
-                {rajShamaniInnerData.map((podcast) => (
+                {trendingInnerData.map((podcast) => (
                     <div className="media-card" key={podcast.id} onClick={() => handleOpenModal(podcast)}>
                         <img src={podcast.image} alt={podcast.title} className="media-card-img" />
                         <h3 className="media-card-title">{podcast.title}</h3>
