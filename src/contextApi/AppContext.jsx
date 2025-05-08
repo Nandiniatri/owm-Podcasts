@@ -108,7 +108,7 @@ const AppContextProvider = ({ children }) => {
 
   const fetchPodcastStartedApi = async () => {
     try {
-      const response = await fetch('/api/podcastStarted');
+      const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/podcastStarted');
       const result = await response.json();
       setPodCasteStartedData(result);
     } catch (error) {
@@ -129,7 +129,7 @@ const AppContextProvider = ({ children }) => {
 
   const fetchUnder20MinApi = async () => {
     try {
-      const response = await fetch('/api/under20Min');
+      const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/under20Min');
       const result = await response.json();
       setUnder20MinData(result);
     } catch (error) {
@@ -170,7 +170,7 @@ const AppContextProvider = ({ children }) => {
 
   const fetchDiscoverCarDataApi = async () => {
     try {
-      const response = await fetch('/api/discoverCarousel');
+      const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/discoverCarousel');
       const result = await response.json();
       setDiscoverCaroData(result);
     } catch (error) {
@@ -180,7 +180,7 @@ const AppContextProvider = ({ children }) => {
 
   const fetchDiscoverBtnDataApi = async () => {
     try {
-      const response = await fetch('/api/discoverBtn');
+      const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/discoverBtn');
       const result = await response.json();
       setDiscoverBtn(result);
     } catch (error) {
