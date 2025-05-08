@@ -6,7 +6,7 @@ import Input from "../../component/Input";
 import { FaArrowLeft } from "react-icons/fa6"; 
 import { FaArrowRight } from "react-icons/fa6";
 
-const Header = () => {
+const UpperComponent = () => {
     const [logoData, setLogoData] = useState([]);
 
     const fetchLogoApi = async () => {
@@ -56,4 +56,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default UpperComponent;
