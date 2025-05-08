@@ -35,7 +35,7 @@ const AppContextProvider = ({ children }) => {
 
   const fetchRanveerAllabadiaInnerDataApi = async () => {
     try {
-      const response = await fetch('ranveerAllahbadiaINNER');
+      const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/ranveerallahbadiainners');
       const result = await response.json();
       setRanveerAllabadiaInnerData(result);
     } catch (error) {
