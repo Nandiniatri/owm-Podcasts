@@ -46,7 +46,7 @@ const AppContextProvider = ({ children }) => {
 
   const fetchRajShamaniInnerDataApi = async () => {
     try {
-      const response = await fetch('/api/rajShamaniINNER');
+      const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/rajshamaninners');
       const result = await response.json();
       setRajShamaniInnerData(result);
     } catch (error) {
@@ -118,7 +118,7 @@ const AppContextProvider = ({ children }) => {
 
   const fetchNetworkHighLightApi = async () => {
     try {
-      const response = await fetch('/api/networkHighlight');
+      const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/networkhighlight');
       const result = await response.json();
       setNetWorkHigh(result);
     } catch (error) {
@@ -140,7 +140,7 @@ const AppContextProvider = ({ children }) => {
 
   const fetchGuestCuratorApi = async () => {
     try {
-      const response = await fetch('/api/guestCuratorCard');
+      const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/guestcuratorcards');
       const result = await response.json();
       setGuestCurator(result);
     } catch (error) {
