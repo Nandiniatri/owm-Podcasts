@@ -88,7 +88,7 @@ const AppContextProvider = ({ children }) => {
 
   const fetchBhartiTvOuterDataApi = async () => {
     try {
-      const response = await fetch('/api/bhartiTvOUTER');
+      const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/bhartitvouter');
       const result = await response.json();
       setBhartiTvOUTERData(result);
     } catch (error) {
