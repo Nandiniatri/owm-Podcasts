@@ -238,17 +238,19 @@
 .common-carousel-container {
     background-color: #000;
     color: white;
-    padding: 20px;
+    /* padding: 20px; */
     font-family: sans-serif;
     margin-top: 20px;
-    border: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .common-carousel-wrapper {
     display: flex;
-    align-items: flex-start;
     gap: 32px;
-    position: relative;
+    flex-wrap: wrap;
 }
 
 .common-carousel-image {
@@ -267,7 +269,8 @@
     max-width: 600px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 1px;
+    height: 33vh;
 }
 
 .common-carousel-link-title {
@@ -313,7 +316,7 @@
     margin-top: 20px;
     width: 100%;
     position: relative;
-    bottom: 236px;
+    bottom: 150px;
 }
 
 .common-carousel-button {
@@ -349,7 +352,6 @@
 }
 
 .common-carousel-image-div img {
-    width: 100%;
     height: 100%;
     border-radius: 2px;
     object-fit: cover;

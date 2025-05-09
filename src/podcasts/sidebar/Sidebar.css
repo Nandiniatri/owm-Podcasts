@@ -65,9 +65,18 @@
 
 
 @media(max-width: 493px) {
-    .sidebar-container {
-        border: solid;
-        width: 300px;
+    .sideBar-div {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        height: 100vh;
+        /* background-color: #fff; */
+        z-index: 1000;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .sideBar-div.show {
+        left: 0;
     }
 
 }

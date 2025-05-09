@@ -12,19 +12,25 @@ import TrendingInnerFile from './podcasts/allPodCasts/trending/TrendingInnerFile
 import WebByAwardInner from './podcasts/allPodCasts/webbyAwardWinners2025/webByAwardWinnerInner'
 import Under20MinFileInner from './podcasts/allPodCasts/under20Min/Under20MinInner'
 import PodcastKitInner from './podcasts/allPodCasts/podcastStarted/PodcastStaredKitInner'
+import { useState } from 'react'
 
 
 function App() {
+  const [showSidebar, setShowSidebar] = useState(false);
+
+  const toggleSidebar = () => {
+    setShowSidebar(prev => !prev);
+  };
 
   return (
     <>
-      <UpperComponent />
+      <UpperComponent toggleSidebar={toggleSidebar} />
       <div className='app-main-container'>
-        <div className='sideBar-div'>
+        <div className={`sideBar-div ${showSidebar ? 'show' : ''}`} >
           <Sidebar />
         </div>
 
-        <div className='AllPodcaste-div'>
+        <div className={`AllPodcaste-div ${showSidebar ? 'sidebar-open' : ''}`}>
           <Routes>
             <Route path='*' element={<AllPodcaste />} />
             <Route path='/discover' element={<AllPodcaste />} />

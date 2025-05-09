@@ -7,9 +7,9 @@ body {
     overflow: hidden;
 }
 
-.sidebar-app-main-container {
+.app-main-container {
     display: flex;
-    height: calc(100vh - 60px); 
+    height: calc(100vh - 60px);
 }
 
 .sideBar-div {
@@ -17,10 +17,11 @@ body {
     height: 100%;
     overflow-y: auto;
     position: fixed;
-    top: 88px; 
+    top: 88px;
     left: 0;
     /* border-right: 1px solid #444; */
     background-color: #000;
+    transition: left 0.3s ease;
 }
 
 .AllPodcaste-div {
@@ -33,6 +34,8 @@ body {
     border: solid blue;
     scrollbar-width: thin;
     scrollbar-color: #717070 transparent;
+    flex: 1;
+  padding: 1rem;
 }
 
 .AllPodcaste-div::-webkit-scrollbar {
@@ -40,21 +43,14 @@ body {
 }
 
 @media(max-width: 425px) {
-    .sideBar-div,
-    .AllPodcaste-div {
-        width: 100%;
-        margin-left: 0;
-    }
+     .AllPodcaste-div {
+    width: 100%;
+  }
 
-    .sideBar-div {
-        position: relative;
-        height: auto;
-    }
-
-    .AllPodcaste-div {
-        display: block;
-        height: auto;
-    }
+  .AllPodcaste-div.sidebar-open {
+    opacity: 0.3;
+    pointer-events: none;
+  }
 }
 
 

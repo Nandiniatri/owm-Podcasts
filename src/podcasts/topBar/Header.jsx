@@ -7,10 +7,10 @@ import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
 import { IoMdMenu } from "react-icons/io";
 import { IoIosSearch } from "react-icons/io";
-import { Link } from "react-router-dom";
 
 
-const UpperComponent = () => {
+
+const UpperComponent = ({ toggleSidebar }) => {
     const [logoData, setLogoData] = useState([]);
     const [showSearchBar, setShowSearchBar] = useState(false);
 
@@ -82,7 +82,7 @@ const UpperComponent = () => {
                     </div>
                 )}
                 <div>
-                    <IoMdMenu size={23} className="responsive-menu-icon" />
+                    <IoMdMenu size={23} className="responsive-menu-icon" onClick={toggleSidebar} />
                 </div>
             </div>
 

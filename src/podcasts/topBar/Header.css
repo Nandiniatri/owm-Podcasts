@@ -4,6 +4,15 @@
     justify-content: space-between;
     background-color: black;
     color: white;
+    /* display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0 1rem;
+    background-color: #f5f5f5;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 999; */
 }
 
 .header-left {
@@ -132,6 +141,7 @@
         align-items: center;
         gap: 10px;
         margin-right: 45px;
+        /* display: block; */
     }
 
     .responsive-search-container {
@@ -159,7 +169,7 @@
     }
 
     .responsive-searchbar.show {
-       width: 151px;
+        width: 151px;
     }
 
     .search-input::-webkit-input-placeholder {
