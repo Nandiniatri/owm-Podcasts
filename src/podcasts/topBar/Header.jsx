@@ -50,10 +50,8 @@ const UpperComponent = () => {
                     <FaUserCircle className="user-avatar" />
                 </div>
             </div>
-
-
         </div>
-    );
+    ); 
 };
 
 export default UpperComponent;

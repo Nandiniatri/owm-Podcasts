@@ -88,5 +88,13 @@
 .header-right .user-avatar {
     font-size: 40px;
     color: #ccc;
-    cursor: pointer;
+    cursor: pointer; 
+}
+
+@media(max-width: 480px){
+
+}
+
+@media (max-width: 768px) {
+
 }

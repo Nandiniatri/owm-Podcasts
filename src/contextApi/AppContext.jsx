@@ -24,6 +24,17 @@ const AppContextProvider = ({ children }) => {
   const [trendingInnerData , setTrendingInnerData] = useState([]);
   const [webByAwardWinInnerData , setWebByAwardWinInnerData] = useState([]);
   const [under20minInnerData , setUnder20MinInnerData] = useState([]);
+  const [podcastStartedKitInnerData , setPodcastStartedKitInnerData] = useState([]);
+
+   const fetchpodcastKitInnerDataApi = async () => {
+    try {
+      const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/podcaststaredkitinners');
+      const result = await response.json();
+      setPodcastStartedKitInnerData(result);
+    } catch (error) {
+      console.error("Error fetching sidebar data:", error);
+    }
+  };
 
    const fetchUnder20MinInnerDataApi = async () => {
     try {
@@ -257,6 +268,7 @@ const AppContextProvider = ({ children }) => {
     fetchTrendingInnerDataApi();
     fetchWebByAwardWinDataApi();
     fetchUnder20MinInnerDataApi();
+    fetchpodcastKitInnerDataApi();
   }, []);
 
   return (
@@ -281,7 +293,8 @@ const AppContextProvider = ({ children }) => {
       newReleseCarousel,
       trendingInnerData,
       webByAwardWinInnerData,
-      under20minInnerData
+      under20minInnerData,
+      podcastStartedKitInnerData
     }}>
       {children}
     </AppContext.Provider>

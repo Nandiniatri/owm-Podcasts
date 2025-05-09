@@ -2,6 +2,7 @@ import { useContext , useState} from "react";
 import { AppContext } from "../../../contextApi/AppContext";
 import YouTube from "react-youtube";
 import Image from "../../../component/Image";
+import { Link } from "react-router-dom";
 
 const opts = {
     width: '100%',
@@ -28,10 +29,10 @@ const PodcasteStatedKit = () => {
         <div className="webbyaward-container">
             <div className="trending-div1">
                 <h2 className="trending-title">Podcast Starter Kit</h2>
-                <a href="#seeAll" className="see-all-link">
+                <Link to={'/discover/podcastKitInner'} className="see-all-link">
                     <span>See All</span>
                     <span className="see-all-icon">→</span>
-                </a>
+                </Link>
             </div>
 
             <div className="webbyaward-grid">
