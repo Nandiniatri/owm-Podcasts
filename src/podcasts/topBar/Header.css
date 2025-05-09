@@ -126,43 +126,6 @@
         display: none;
     }
 
-    /* .responsive-div {
-        display: block;
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        margin-right: 50px;
-        align-items: center;
-    }
-
-
-    .responsive-search-container {
-        display: flex;
-        width: 100%;
-    }
-
-    .responsive-searchbar {
-        background-color: #2c2c2c;
-        border-radius: 8px;
-        padding: 12px;
-        display: flex;
-        align-items: center;
-        transition: all 0.3s ease;
-        opacity: 1;
-        margin-right: 10px;
-        width: 160px;
-    }
-
-    .responsive-search-icon {
-        cursor: pointer;
-    }
-
-    .responsive-menu-icon {
-        font-size: 25px;
-        color: white;
-        flex-shrink: 0;
-    } */
-
     .responsive-div {
         display: flex;
         align-items: center;
@@ -183,7 +146,7 @@
         display: flex;
         align-items: center;
         width: 100%;
-        max-width: 200px;
+        max-width: 300px;
         transition: all 0.3s ease;
     }
 
@@ -194,6 +157,9 @@
         margin-left: 5px;
     }
 
+    .responsive-searchbar.show {
+        max-width: 500px;
+    }
 
     .search-input::-webkit-input-placeholder {
         color: #aaa;

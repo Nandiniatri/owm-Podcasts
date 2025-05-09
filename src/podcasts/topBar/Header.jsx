@@ -59,7 +59,9 @@ const UpperComponent = () => {
                 </div>
             </div>
 
-            <div className="responsive-div">
+
+
+            {/* <div className="responsive-div">
                 {!showSearchBar ? (
                     <IoIosSearch
                         size={23}
@@ -69,6 +71,29 @@ const UpperComponent = () => {
                 ) : (
                     <div className="responsive-search-container">
                         <div className={`header-center1 responsive-searchbar show`}>
+                            <FaSearch className="search-icon" />
+                            <Input
+                                type="text"
+                                placeholder="Search or enter URL"
+                                className="search-input"
+                            />
+                        </div>
+                    </div>
+                )}
+                <IoMdMenu size={23} className="responsive-menu-icon" />
+            </div> */}
+
+
+            <div className="responsive-div">
+                {!showSearchBar ? (
+                    <IoIosSearch
+                        size={23}
+                        className="responsive-search-icon"
+                        onClick={handleRespSearchIcon}
+                    />
+                ) : (
+                    <div className="responsive-search-container">
+                        <div className={`header-center1 responsive-searchbar ${showSearchBar ? 'show' : ''}`}>
                             <FaSearch className="search-icon" />
                             <Input
                                 type="text"
