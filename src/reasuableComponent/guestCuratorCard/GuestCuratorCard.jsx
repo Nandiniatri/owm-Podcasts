@@ -7,7 +7,7 @@ const GuestCuratorCardFile = ({ data }) => {
     <div className="guestCurator-Main-Container">
       {data && data.map((item) => {
         return (
-          <div className="guestCurator-inner-Container">
+          <div className="guestCurator-inner-Container" key={item.id}>
             
             <div key={item.id} className="guestCurator-inner-div1">
               <Image src={item.image} />

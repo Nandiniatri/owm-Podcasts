@@ -2,12 +2,16 @@ import { useState, useEffect } from "react";
 import { FaSearch, FaUserCircle } from "react-icons/fa";
 import './Header.css';
 import Image from "../../component/Image";
-import Input from "../../component/Input"; 
-import { FaArrowLeft } from "react-icons/fa6"; 
+import Input from "../../component/Input";
+import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
+import { IoMdMenu } from "react-icons/io";
+import { IoIosSearch } from "react-icons/io";
+
 
 const UpperComponent = () => {
     const [logoData, setLogoData] = useState([]);
+    const [showSearchBar, setShowSearchBar] = useState(false);
 
     const fetchLogoApi = async () => {
         const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/logo');
@@ -15,9 +19,13 @@ const UpperComponent = () => {
         setLogoData(result);
     };
 
-    useEffect(() => { 
+    useEffect(() => {
         fetchLogoApi();
     }, []);
+
+    const handleRespSearchIcon = () => {
+        setShowSearchBar(!showSearchBar);
+    }
 
     return (
         <div className="header-container">
@@ -32,8 +40,8 @@ const UpperComponent = () => {
             <div className="header-center-main-Container">
                 <div className="header-center">
                     <div className="header-center-div1">
-                        <FaArrowLeft className="nav-icon" color="white" size={23}/>
-                        <FaArrowRight className="nav-icon" color="gray" size={23}/>
+                        <FaArrowLeft className="nav-icon" color="white" size={23} />
+                        <FaArrowRight className="nav-icon" color="gray" size={23} />
                     </div>
 
                     <div className="header-center1">
@@ -50,8 +58,31 @@ const UpperComponent = () => {
                     <FaUserCircle className="user-avatar" />
                 </div>
             </div>
+
+            <div className="responsive-div">
+                {!showSearchBar ? (
+                    <IoIosSearch
+                        size={23}
+                        className="responsive-search-icon"
+                        onClick={handleRespSearchIcon}
+                    />
+                ) : (
+                    <div className="responsive-search-container">
+                        <div className={`header-center1 responsive-searchbar show`}>
+                            <FaSearch className="search-icon" />
+                            <Input
+                                type="text"
+                                placeholder="Search or enter URL"
+                                className="search-input"
+                            />
+                        </div>
+                    </div>
+                )}
+                <IoMdMenu size={23} className="responsive-menu-icon" />
+            </div>
+
         </div>
-    ); 
+    );
 };
 
 export default UpperComponent;
