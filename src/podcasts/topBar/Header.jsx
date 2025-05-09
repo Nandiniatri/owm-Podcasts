@@ -7,6 +7,7 @@ import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
 import { IoMdMenu } from "react-icons/io";
 import { IoIosSearch } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 
 const UpperComponent = () => {
@@ -22,6 +23,7 @@ const UpperComponent = () => {
     useEffect(() => {
         fetchLogoApi();
     }, []);
+
 
     const handleRespSearchIcon = () => {
         setShowSearchBar(!showSearchBar);
@@ -79,7 +81,9 @@ const UpperComponent = () => {
                         </div>
                     </div>
                 )}
-                <IoMdMenu size={23} className="responsive-menu-icon" />
+                <div>
+                    <IoMdMenu size={23} className="responsive-menu-icon" />
+                </div>
             </div>
 
         </div>

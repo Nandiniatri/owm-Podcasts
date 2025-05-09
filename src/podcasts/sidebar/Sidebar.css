@@ -1,13 +1,11 @@
 .sidebar-container {
-    width: 250px;
-    height: 81vh;
     color: white;
     display: flex;
     flex-direction: column;
     padding-top: 20px;
     padding-left: 10px;
     padding-right: 10px;
-    border-right: solid;
+    /* border: solid red; */
 }
 
 .sidebar-logo {
@@ -63,4 +61,13 @@
 
 .sidebar-label {
     font-size: 16px;
+}
+
+
+@media(max-width: 493px) {
+    .sidebar-container {
+        border: solid;
+        width: 300px;
+    }
+
 }

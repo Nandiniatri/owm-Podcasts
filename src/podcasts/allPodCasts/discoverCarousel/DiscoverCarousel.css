@@ -1,4 +1,4 @@
-.discover-container {
+/* .discover-container {
     background-color: #000;
     color: white;
     padding: 20px;
@@ -22,7 +22,7 @@
 .carousel-text-content {
     max-width: 600px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     gap: 12px;
 }
 
@@ -114,4 +114,4 @@
 
 .carousel-image-div.active {
     border: 2px solid #60a5fa;
-}
+} */
