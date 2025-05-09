@@ -10,7 +10,7 @@ const UpperComponent = () => {
     const [logoData, setLogoData] = useState([]);
 
     const fetchLogoApi = async () => {
-        const response = await fetch('/api/logo');
+        const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/logo');
         const result = await response.json();
         setLogoData(result);
     };
