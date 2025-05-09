@@ -271,12 +271,10 @@ const AppContextProvider = ({ children }) => {
       under20MinData,
       netWorkHigh,
       podcasteStartedData,
-
       rajShami,
       bhartiTvOUTERData,
       ranveerAllahbadiaOUTER,
       reLivingSingleOUTER,
-
       bhartiTVInnerData,
       rajShamaniInnerData,
       ranveerAllabadiaInnerData,
