@@ -158,7 +158,7 @@
     }
 
     .responsive-searchbar.show {
-       width: 199px;
+       width: 150px;
     }
 
     .search-input::-webkit-input-placeholder {
