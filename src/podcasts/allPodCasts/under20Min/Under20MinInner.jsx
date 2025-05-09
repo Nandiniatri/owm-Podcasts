@@ -3,19 +3,18 @@ import { AppContext } from "../../../contextApi/AppContext";
 import './Under20Min.css';
 import Image from "../../../component/Image";
 import YouTube from "react-youtube";
-import { Link } from "react-router-dom";
 
 const opts = {
     width: '100%',
     height: '100%',
     playerVars: {
-        autoplay: 1,
+        autoplay: 1, 
     }, 
 };
 
 
-const Under20MinFIle = () => {
-    const { under20MinData , showData, setShowData  } = useContext(AppContext);
+const Under20MinFileInner = () => {
+    const { under20minInnerData , showData, setShowData  } = useContext(AppContext);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleUnderMin = (podcast) => {
@@ -31,14 +30,10 @@ const Under20MinFIle = () => {
         <div className="under20MinData-container">
             <div className="trending-div1">
                 <h2 className="trending-title">Under 20 Minutes</h2>
-                <Link to={'/discover/under20Min'} className="see-all-link">
-                    <span>See All</span>
-                    <span className="see-all-icon">→</span>
-                </Link>
             </div>
 
             <div className="webbyaward-grid">
-                {under20MinData.map((podcast) => (
+                {under20minInnerData.map((podcast) => (
                     <div className="webbyaward-card" key={podcast.id}>
                         <Image src={podcast.image} alt={podcast.title} className="webbyaward-img"
                             onClick={() => handleUnderMin(podcast)}
@@ -65,4 +60,4 @@ const Under20MinFIle = () => {
     );
 };
 
-export default Under20MinFIle;
+export default Under20MinFileInner;

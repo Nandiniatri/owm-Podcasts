@@ -1,6 +1,6 @@
-import { useContext , useState} from "react";
+import { useContext, useState } from "react";
 import { AppContext } from "../../../contextApi/AppContext";
-import './Under20Min.css';
+import './WebbyAwardWinners.css';
 import Image from "../../../component/Image";
 import YouTube from "react-youtube";
 import { Link } from "react-router-dom";
@@ -10,39 +10,34 @@ const opts = {
     height: '100%',
     playerVars: {
         autoplay: 1,
-    }, 
+    },
 };
 
 
-const Under20MinFIle = () => {
-    const { under20MinData , showData, setShowData  } = useContext(AppContext);
+const WebByAwardInner = () => {
+    const { webByAwardWinInnerData, showData, setShowData } = useContext(AppContext);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const handleUnderMin = (podcast) => {
+    const handleOpenModal = (podcast) => {
+        // console.log(podcast);
         setIsModalOpen(true);
         setShowData([podcast]);
     }
-
     const handleCloseModal = () => {
         setIsModalOpen(false);
     }
 
+
     return (
-        <div className="under20MinData-container">
+        <div className="webbyaward-container">
             <div className="trending-div1">
-                <h2 className="trending-title">Under 20 Minutes</h2>
-                <Link to={'/discover/under20Min'} className="see-all-link">
-                    <span>See All</span>
-                    <span className="see-all-icon">→</span>
-                </Link>
+                <h2 className="trending-title">Webby Award Winners 2025</h2>
             </div>
 
             <div className="webbyaward-grid">
-                {under20MinData.map((podcast) => (
+                {webByAwardWinInnerData.map((podcast) => (
                     <div className="webbyaward-card" key={podcast.id}>
-                        <Image src={podcast.image} alt={podcast.title} className="webbyaward-img"
-                            onClick={() => handleUnderMin(podcast)}
-                        />
+                        <Image src={podcast.image} alt={podcast.title} className="webbyaward-img" onClick={() => handleOpenModal(podcast)} />
                         <h3 className="webbyaward-name">{podcast.title}</h3>
                         <p className="webbyaward-author">{podcast.publisher}</p>
                     </div>
@@ -65,4 +60,4 @@ const Under20MinFIle = () => {
     );
 };
 
-export default Under20MinFIle;
+export default WebByAwardInner;

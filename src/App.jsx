@@ -9,6 +9,8 @@ import RanveerAllabadiaInnerFile from './podcasts/new_Release/ranveerallahbadia/
 import ReLivingSingleInnerFile from './podcasts/new_Release/reLivingSingleOuter/RelivingSingleInner'
 import UpperComponent from './podcasts/topBar/Header'
 import TrendingInnerFile from './podcasts/allPodCasts/trending/TrendingInnerFile'
+import WebByAwardInner from './podcasts/allPodCasts/webbyAwardWinners2025/webByAwardWinnerInner'
+import Under20MinFileInner from './podcasts/allPodCasts/under20Min/Under20MinInner'
 
 
 function App() {
@@ -31,6 +33,8 @@ function App() {
             <Route path="/new-releases/RanveerAllahbadia" element={<RanveerAllabadiaInnerFile />} />
             <Route path="/new-releases/ReLivingSingle" element={<ReLivingSingleInnerFile />} />
             <Route path="/discover/trending" element={<TrendingInnerFile />} />
+            <Route path="/discover/webByAward" element={<WebByAwardInner />} />
+            <Route path='/discover/under20Min' element={<Under20MinFileInner />} />
           </Routes>
         </div>
       </div>
