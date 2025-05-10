@@ -12,7 +12,7 @@ const Discover = () => {
         console.log(allCategoryBtnData);
         console.log(category);
         fetchAllCategoryBtnDataApi(category);
-        navigate(`/discover/${category}`);
+        navigate(`/discover/${category}`); 
     }
 
     return (
