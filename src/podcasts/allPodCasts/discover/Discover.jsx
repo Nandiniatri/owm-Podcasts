@@ -2,9 +2,18 @@ import { useContext } from 'react';
 import './Discover.css';
 import { AppContext } from '../../../contextApi/AppContext';
 import Button from '../../../component/Button';
+import { useNavigate } from 'react-router-dom';
 
 const Discover = () => {
-    const { discoverBtn } = useContext(AppContext);
+    const { discoverBtn, fetchAllCategoryBtnDataApi, setBtnCategory, allCategoryBtnData } = useContext(AppContext);
+    const navigate = useNavigate();
+
+    const handleDiscoverBtn = (category) => {
+        console.log(allCategoryBtnData);
+        console.log(category);
+        fetchAllCategoryBtnDataApi(category);
+        navigate(`/discover/${category}`);
+    }
 
     return (
         <div className='discover-btn-main-container'>
@@ -16,7 +25,7 @@ const Discover = () => {
                 {discoverBtn.map((disBtn) => {
                     return (
                         <div key={disBtn.id}>
-                            <Button>{disBtn.title}</Button>
+                            <Button onClick={() => handleDiscoverBtn(disBtn.category)}>{disBtn.title}</Button>
                         </div>
                     )
                 })}

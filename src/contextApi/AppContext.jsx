@@ -13,20 +13,38 @@ const AppContextProvider = ({ children }) => {
   const [under20MinData, setUnder20MinData] = useState([]);
   const [netWorkHigh, setNetWorkHigh] = useState([]);
   const [podcasteStartedData, setPodCasteStartedData] = useState([]);
-  const [rajShami , setRajShami] = useState([]);
-  const [bhartiTvOUTERData , setBhartiTvOUTERData] = useState([]);
-  const [ranveerAllahbadiaOUTER , setRanveerAllahbadiaOUTER] = useState([]);
-  const [reLivingSingleOUTER , setRelivingSingleOUTER] = useState([]);
-  const [bhartiTVInnerData , setBhartiTVInnerData] = useState([]);
-  const [rajShamaniInnerData , setRajShamaniInnerData] = useState([]);
-  const [ranveerAllabadiaInnerData , setRanveerAllabadiaInnerData] = useState([]);
-  const [newReleseCarousel , setNewReleseCarousel] = useState([]);
-  const [trendingInnerData , setTrendingInnerData] = useState([]);
-  const [webByAwardWinInnerData , setWebByAwardWinInnerData] = useState([]);
-  const [under20minInnerData , setUnder20MinInnerData] = useState([]);
-  const [podcastStartedKitInnerData , setPodcastStartedKitInnerData] = useState([]);
+  const [rajShami, setRajShami] = useState([]);
+  const [bhartiTvOUTERData, setBhartiTvOUTERData] = useState([]);
+  const [ranveerAllahbadiaOUTER, setRanveerAllahbadiaOUTER] = useState([]);
+  const [reLivingSingleOUTER, setRelivingSingleOUTER] = useState([]);
+  const [bhartiTVInnerData, setBhartiTVInnerData] = useState([]);
+  const [rajShamaniInnerData, setRajShamaniInnerData] = useState([]);
+  const [ranveerAllabadiaInnerData, setRanveerAllabadiaInnerData] = useState([]);
+  const [newReleseCarousel, setNewReleseCarousel] = useState([]);
+  const [trendingInnerData, setTrendingInnerData] = useState([]);
+  const [webByAwardWinInnerData, setWebByAwardWinInnerData] = useState([]);
+  const [under20minInnerData, setUnder20MinInnerData] = useState([]);
+  const [podcastStartedKitInnerData, setPodcastStartedKitInnerData] = useState([]);
+  const [allCategoryBtnData, setAllCategoryBtnData] = useState([]);
+  const [btnCategory, setBtnCategory] = useState([]);
 
-   const fetchpodcastKitInnerDataApi = async () => {
+  const fetchAllCategoryBtnDataApi = async (category) => {
+    try {
+      // const url = 
+      const response = await fetch(`https://podcasts-backend-j9ty.onrender.com/api/podcastallcategory?category=${category}`);
+      const result = await response.json();
+      if (!response.ok) {
+        console.error("error:", result);
+        return;
+      }
+      console.log(result);
+      setAllCategoryBtnData(result);
+    } catch (error) {
+      console.error("Error fetching category data:", error);
+    }
+  };
+
+  const fetchpodcastKitInnerDataApi = async () => {
     try {
       const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/podcaststaredkitinners');
       const result = await response.json();
@@ -36,7 +54,7 @@ const AppContextProvider = ({ children }) => {
     }
   };
 
-   const fetchUnder20MinInnerDataApi = async () => {
+  const fetchUnder20MinInnerDataApi = async () => {
     try {
       const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/under20mmininners');
       const result = await response.json();
@@ -269,6 +287,7 @@ const AppContextProvider = ({ children }) => {
     fetchWebByAwardWinDataApi();
     fetchUnder20MinInnerDataApi();
     fetchpodcastKitInnerDataApi();
+    fetchAllCategoryBtnDataApi();
   }, []);
 
   return (
@@ -294,7 +313,10 @@ const AppContextProvider = ({ children }) => {
       trendingInnerData,
       webByAwardWinInnerData,
       under20minInnerData,
-      podcastStartedKitInnerData
+      podcastStartedKitInnerData,
+      allCategoryBtnData,
+      btnCategory, setBtnCategory,
+      fetchAllCategoryBtnDataApi
     }}>
       {children}
     </AppContext.Provider>

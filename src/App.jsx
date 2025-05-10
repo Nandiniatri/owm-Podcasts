@@ -13,6 +13,7 @@ import WebByAwardInner from './podcasts/allPodCasts/webbyAwardWinners2025/webByA
 import Under20MinFileInner from './podcasts/allPodCasts/under20Min/Under20MinInner'
 import PodcastKitInner from './podcasts/allPodCasts/podcastStarted/PodcastStaredKitInner'
 import { useState } from 'react'
+import RenderCategoryBtnData from './podcasts/allPodCasts/discover/RenderCategoryBtnData'
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
             <Route path="/discover/webByAward" element={<WebByAwardInner />} />
             <Route path='/discover/under20Min' element={<Under20MinFileInner />} />
             <Route path='/discover/podcastKitInner' element={<PodcastKitInner />} />
+            <Route path='/discover/:category' element={<RenderCategoryBtnData />} />
           </Routes>
         </div>
       </div>

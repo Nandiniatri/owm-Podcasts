@@ -43,6 +43,7 @@
     white-space: nowrap;
     padding: 8px 20px;
     font-family: Retina, helvetica, arial, sans-serif;
+    cursor: pointer;
 }
 
 @media (max-width:427px) {

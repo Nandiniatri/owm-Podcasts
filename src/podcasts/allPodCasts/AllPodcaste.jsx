@@ -14,7 +14,7 @@ const AllPodcaste = () => {
     const { guestCurator, netWorkHigh } = useContext(AppContext);
 
     return (
-        <>
+        <div>
             <Discover />
             <DiscoverCarousel />
             <Trending />
@@ -23,7 +23,7 @@ const AllPodcaste = () => {
             <Under20MinFIle />
             <GuestCuratorCardFile data={netWorkHigh} />
             <PodcasteStatedKit />
-        </>
+        </div>
     )
 }
 
