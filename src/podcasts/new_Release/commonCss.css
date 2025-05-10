@@ -364,9 +364,6 @@
 
 
 @media (max-width: 493px) {
-    .common-carousel-container {
-        /* border: solid; */
-    }
 
     .common-carousel-wrapper {
         /* border: solid red; */
@@ -417,14 +414,14 @@
     .common-carousel-index-image-div {
         display: flex;
         gap: 0px;
-        margin-top: -19px;
+        margin-top: -6px;
         flex-wrap: nowrap;
         justify-content: center;
-        /* border: solid;/ */
         width: 80%;
         gap: 10px;
         margin-left: 40px;
     }
+
     .common-carousel-image-div {
         border: 2px solid transparent;
         border-radius: 6px;
@@ -443,6 +440,7 @@
         height: 100%;
         object-fit: contain;
         border-radius: 2px;
+        object-fit: cover;
     }
 
     .common-carousel-image-div.active {
