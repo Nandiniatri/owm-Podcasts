@@ -74,12 +74,12 @@
 
 @media (max-width:493px) {
     .webbyaward-container {
-    padding: 10px;
-    color: white;
-    font-family: Arial, sans-serif;
-    border-top: none;
-    margin-top: 20px;
-}
+        padding: 10px;
+        color: white;
+        font-family: Arial, sans-serif;
+        border-top: none;
+        margin-top: 20px;
+    }
 
     .trending-div1 .webByAward-title {
         font-size: 20px;
@@ -90,18 +90,19 @@
     }
 
     .webbyaward-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-        max-height: 55vh;
-        overflow-y: auto;
+        display: flex !important;
+        flex-direction: column !;
+        max-height: 30vh;
+        overflow-x: scroll;
+        padding-right: 8px;
     }
 
     .webbyaward-card {
-        /* border: solid; */
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 16px;
+        /* spacing between cards */
     }
 
     .webbyaward-name {
@@ -110,5 +111,19 @@
         margin: 0;
         color: #ffffff;
         text-align: center;
+    }
+
+    /* Optional: Show scrollbar on WebKit browsers */
+    .webbyaward-grid::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .webbyaward-grid::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 3px;
+    }
+
+    .webbyaward-grid::-webkit-scrollbar-track {
+        background: transparent;
     }
 }
