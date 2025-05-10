@@ -93,7 +93,8 @@
     }
 
     .guestCurator-inner-div3 {
-        width: 100%;
+        /* width: 100%; */
+        width: 100vw;
         height: 200px;
     }
 
@@ -140,8 +141,10 @@
         color: #d1d5db;
         line-height: 1.4;
         width: 200px;
+    }
 
-
+    .guestCurator-inner-div2 {
+        min-width: 220px;
     }
 
 }

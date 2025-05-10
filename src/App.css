@@ -81,6 +81,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* outline: 1px solid red; */
 }
 body {
   background-color: black;
@@ -140,7 +141,8 @@ body {
   }
 
   .sideBar-div {
-    width: 100%;
+    /* width: 100%; */
+    width: 100vw;
     height: 100vh;
     top: 60px;
     left: 0;
@@ -152,7 +154,8 @@ body {
 
   .AllPodcaste-div {
     margin: 0;
-    width: 100%;
+    /* width: 100%; */
+     width: 100vw;
     overflow-y: auto;
     box-sizing: border-box;
     scrollbar-width: thin;
