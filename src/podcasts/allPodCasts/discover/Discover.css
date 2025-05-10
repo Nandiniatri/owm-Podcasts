@@ -61,7 +61,8 @@
     }
 
     .discover-btn-main-container {
-        border: solid white;
+        /* border: solid white; */
+        padding: 10px;
     }
 
     .discover-btn-div2 {
@@ -71,6 +72,7 @@
         overflow-x: scroll;
         flex-wrap: nowrap;
         gap: 6px;
+        padding: 2px;
     }
 
     .discover-btn-div2 button {
