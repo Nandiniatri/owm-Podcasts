@@ -446,4 +446,18 @@
     .common-carousel-image-div.active {
         border: 2px solid #60a5fa;
     }
+
+    .media-section-header .media-section-title {
+        font-size: 36px;
+    }
+
+    .media-card-grid {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .media-card-img {
+        width: 160px;
+        height: 150px;
+    }
 }

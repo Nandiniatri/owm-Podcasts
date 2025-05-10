@@ -137,7 +137,7 @@ body {
     flex-direction: column;
     /* height: 100vh; */
     overflow: hidden;
-    border: solid;
+    /* border: solid; */
   }
 
   .sideBar-div {
