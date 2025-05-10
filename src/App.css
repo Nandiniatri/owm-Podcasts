@@ -142,9 +142,8 @@ body {
   .AllPodcaste-div {
     margin: 0;
     width: 100%;
-    height: calc(100vh - 360px); /* Full screen minus top nav */
     overflow-y: auto;
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
     box-sizing: border-box;
     scrollbar-width: thin;
     scrollbar-color: #717070 transparent;
