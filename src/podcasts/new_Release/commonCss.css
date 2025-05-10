@@ -455,4 +455,19 @@
         display: grid;
         grid-template-columns: auto auto;
     }
+
+    .new-release-div1-h1-div h1 {
+        /* border: solid; */
+        font-size: 30px;
+    }
+
+    .section-title {
+        font-family: Retina, Helvetica, Arial, sans-serif;
+        font-size: 30px;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+        letter-spacing: -0.8px;
+        /* border: solid; */
+    }
 }

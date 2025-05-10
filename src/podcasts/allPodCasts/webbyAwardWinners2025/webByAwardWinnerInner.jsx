@@ -13,7 +13,6 @@ const opts = {
     },
 }; 
 
-
 const WebByAwardInner = () => {
     const { webByAwardWinInnerData, showData, setShowData } = useContext(AppContext);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -29,17 +28,17 @@ const WebByAwardInner = () => {
 
 
     return (
-        <div className="webbyaward-container">
+        <div className="webbyaward-container-inner">
             <div className="trending-div1">
                 <h2 className="trending-title">Webby Award Winners 2025</h2>
             </div>
 
-            <div className="webbyaward-grid">
+            <div className="webbyaward-grid-inner">
                 {webByAwardWinInnerData.map((podcast) => (
-                    <div className="webbyaward-card" key={podcast.id}>
-                        <Image src={podcast.image} alt={podcast.title} className="webbyaward-img" onClick={() => handleOpenModal(podcast)} />
-                        <h3 className="webbyaward-name">{podcast.title}</h3>
-                        <p className="webbyaward-author">{podcast.publisher}</p>
+                    <div className="webbyaward-card-inner" key={podcast.id}>
+                        <Image src={podcast.image} alt={podcast.title} className="webbyaward-img-inner" onClick={() => handleOpenModal(podcast)} />
+                        <h3 className="webbyaward-name-inner">{podcast.title}</h3>
+                        <p className="webbyaward-author-inner">{podcast.publisher}</p>
                     </div>
                 ))}
             </div>

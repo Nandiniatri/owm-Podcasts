@@ -27,19 +27,19 @@ const Under20MinFileInner = () => {
     }
 
     return (
-        <div className="under20MinData-container">
+        <div className="webbyaward-container-inner">
             <div className="trending-div1">
                 <h2 className="trending-title">Under 20 Minutes</h2>
             </div>
 
-            <div className="webbyaward-grid">
+            <div className="webbyaward-grid-inner">
                 {under20minInnerData.map((podcast) => (
-                    <div className="webbyaward-card" key={podcast.id}>
-                        <Image src={podcast.image} alt={podcast.title} className="webbyaward-img"
+                    <div className="webbyaward-card-inner" key={podcast.id}>
+                        <Image src={podcast.image} alt={podcast.title} className="webbyaward-img-inner"
                             onClick={() => handleUnderMin(podcast)}
                         />
-                        <h3 className="webbyaward-name">{podcast.title}</h3>
-                        <p className="webbyaward-author">{podcast.publisher}</p>
+                        <h3 className="webbyaward-name-inner">{podcast.title}</h3>
+                        <p className="webbyaward-author-inner">{podcast.publisher}</p>
                     </div>
                 ))}
             </div>
