@@ -70,6 +70,7 @@
         flex-direction: row;
         overflow-x: scroll;
         flex-wrap: nowrap;
+        gap: 6px;
     }
 
     .discover-btn-div2 button {
