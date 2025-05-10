@@ -101,14 +101,16 @@ body {
 
 .sideBar-div {
   width: 250px;
-  height: 100%;
+  /* height: 100%; */
+  height: 86.6%;
   overflow-y: auto;
   position: fixed;
-  top: 60px;
+  top: 88px;
   left: 0;
   background-color: #000;
   transition: transform 0.3s ease;
   z-index: 999;
+  /* border: solid; */
 }
 
 .sideBar-div.show {
