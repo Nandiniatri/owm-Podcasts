@@ -51,7 +51,7 @@ body {
   .app-main-container {
     flex-direction: column;
     height: auto;
-    border: solid;
+    /* border: solid; */
     padding: 0px;
   }
 
