@@ -98,7 +98,6 @@
 
 @media(max-width:493px) {
     .trending-container{
-        /* border: solid; */
         margin-top: 37px;
         border: none;
     }
@@ -121,22 +120,16 @@
 
     .trending-list {
         grid-template-columns: 1fr;
-        /* border: solid; */
         height: 32.7vh;
-        overflow-y: auto;
+        overflow-y: scroll !important;
     }
 
     .trending-item {
         flex-direction: row;
         align-items: center;
-        /* border: solid red; */
         display: flex;
     }
     .sr{
         display: none;
     }
-
-    /* .podcast-info .podcast-title{
-        font-size: 10px;
-    } */
 }

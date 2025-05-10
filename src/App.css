@@ -43,9 +43,9 @@ body {
   border: solid blue;
 }
 
-.AllPodcaste-div::-webkit-scrollbar {
+/* .AllPodcaste-div::-webkit-scrollbar {
   width: 6px;
-}
+} */
 
 @media (max-width: 493px) {
   .app-main-container {
