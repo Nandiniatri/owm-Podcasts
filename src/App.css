@@ -77,6 +77,11 @@
   }
 } */
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   background-color: black;
   font-family: Retina, helvetica, arial, sans-serif;
@@ -124,7 +129,7 @@ body {
 @media (max-width: 493px) {
   body {
     max-width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
   }
 
   .app-main-container {
@@ -149,11 +154,10 @@ body {
     margin: 0;
     width: 100%;
     overflow-y: auto;
-    /* padding: 0.5rem; */
     box-sizing: border-box;
     scrollbar-width: thin;
     scrollbar-color: #717070 transparent;
     transition: all 0.3s ease;
-    border: solid;
+    /* border: solid; */
   }
 }

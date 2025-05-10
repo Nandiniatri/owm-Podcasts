@@ -92,7 +92,7 @@
     .webbyaward-grid {
         display: flex !important;
         flex-direction: column !;
-        max-height: 30vh;
+        max-height: 46vh;
         overflow-x: scroll;
         padding-right: 8px;
         margin-top: 20px;
