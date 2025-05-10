@@ -414,7 +414,7 @@
     .common-carousel-index-image-div {
         display: flex;
         gap: 0px;
-        margin-top: -6px;
+        margin-top: 16px;
         flex-wrap: nowrap;
         justify-content: center;
         width: 80%;
@@ -428,7 +428,7 @@
         cursor: pointer;
         transition: border 0.3s ease;
         width: 60px;
-        height: 45px;
+        height: 40px;
         overflow: hidden;
         display: flex;
         align-items: center;
