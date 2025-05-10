@@ -66,14 +66,19 @@
     }
 
     .discover-btn-div2 {
-        /* border: solid; */
         display: flex;
         flex-direction: row;
-        overflow-x: scroll;
+        overflow-x: auto;
         flex-wrap: nowrap;
         gap: 10px;
-        /* padding: 2px; */
+        scrollbar-width: none;
+        -ms-overflow-style: none;
     }
+
+    .discover-btn-div2::-webkit-scrollbar {
+        display: none;
+    }
+
 
     .discover-btn-div2 button {
         font-size: 13px;
