@@ -1,4 +1,4 @@
-body {
+/* body {
   background-color: black;
   font-family: Retina, helvetica, arial, sans-serif;
   color: white;
@@ -40,19 +40,14 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #717070 transparent;
   transition: margin-left 0.3s ease;
-  border: solid blue;
 }
-
-/* .AllPodcaste-div::-webkit-scrollbar {
-  width: 6px;
-} */
 
 @media (max-width: 493px) {
   .app-main-container {
     flex-direction: column;
     height: auto;
-    /* border: solid; */
     padding: 0px;
+    overflow-y: scroll;
   }
 
   .sideBar-div {
@@ -69,18 +64,90 @@ body {
   .AllPodcaste-div {
     margin-left: -3px;
     width: 100%;
-    overflow-y: auto;
+    overflow-y: scroll;
     opacity: 1;
-    pointer-events: all;
-  }
-
-  .AllPodcaste-div {
-    overflow-y: auto;
     padding: 0.1rem;
     box-sizing: border-box;
     scrollbar-width: thin;
     scrollbar-color: #717070 transparent;
     transition: margin-left 0.3s ease;
     margin: 0;
+    height: auto;
+    border: solid red;
+  }
+} */
+
+body {
+  background-color: black;
+  font-family: Retina, helvetica, arial, sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-main-container {
+  display: flex;
+  height: calc(100vh - 60px); /* Full height minus header */
+  overflow: hidden;
+}
+
+.sideBar-div {
+  width: 250px;
+  height: 100%;
+  overflow-y: auto;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  background-color: #000;
+  transition: transform 0.3s ease;
+  z-index: 999;
+}
+
+.sideBar-div.show {
+  transform: translateX(0);
+}
+
+.AllPodcaste-div {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  padding: 1rem;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #717070 transparent;
+  transition: margin-left 0.3s ease;
+}
+
+@media (max-width: 493px) {
+  .app-main-container {
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .sideBar-div {
+    width: 100%;
+    height: 100vh;
+    top: 60px;
+    left: 0;
+    background-color: #000;
+    position: fixed;
+    transform: translateX(-100%);
+    z-index: 1000;
+  }
+
+  .AllPodcaste-div {
+    margin: 0;
+    width: 100%;
+    height: calc(100vh - 360px); /* Full screen minus top nav */
+    overflow-y: auto;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: #717070 transparent;
+    transition: all 0.3s ease;
   }
 }
