@@ -428,7 +428,7 @@
         cursor: pointer;
         transition: border 0.3s ease;
         width: 60px;
-        height: 60px;
+        height: 45px;
         overflow: hidden;
         display: flex;
         align-items: center;
