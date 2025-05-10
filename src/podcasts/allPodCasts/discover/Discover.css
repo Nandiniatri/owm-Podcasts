@@ -17,7 +17,6 @@
     line-height: 64px;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .discover-btn-div2 {
@@ -44,4 +43,23 @@
     white-space: nowrap;
     padding: 8px 20px;
     font-family: Retina, helvetica, arial, sans-serif;
+}
+
+@media (max-width:427px) {
+    .discover-btn-div1 h1 {
+        font-family: Retina, helvetica, arial, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        margin: 0px;
+        /* padding: 0px; */
+        letter-spacing: -0.8px;
+        line-height: 64px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .discover-btn-main-container {
+        border: solid white;
+    }
 }
