@@ -89,7 +89,7 @@ body {
 
 .app-main-container {
   display: flex;
-  height: calc(100vh - 60px); /* Full height minus header */
+  height: calc(100vh - 60px);
   overflow: hidden;
 }
 
@@ -122,10 +122,16 @@ body {
 }
 
 @media (max-width: 493px) {
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   .app-main-container {
     flex-direction: column;
-    height: 100vh;
+    /* height: 100vh; */
     overflow: hidden;
+    border: solid;
   }
 
   .sideBar-div {
@@ -148,5 +154,6 @@ body {
     scrollbar-width: thin;
     scrollbar-color: #717070 transparent;
     transition: all 0.3s ease;
+    border: solid;
   }
 }
