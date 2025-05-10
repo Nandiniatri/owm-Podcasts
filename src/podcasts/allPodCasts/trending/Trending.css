@@ -120,7 +120,7 @@
 
     .trending-list {
         grid-template-columns: 1fr;
-        height: 42.7vh;
+        height: 42vh;
         overflow-y: scroll !important;
     }
 

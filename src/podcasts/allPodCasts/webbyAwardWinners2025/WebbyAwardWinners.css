@@ -93,7 +93,7 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
-        max-height: 50vh;
+        max-height: 53vh;
         overflow-y: auto;
     }
 
