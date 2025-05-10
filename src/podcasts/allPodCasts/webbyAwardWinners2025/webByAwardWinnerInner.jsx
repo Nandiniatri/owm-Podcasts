@@ -11,7 +11,7 @@ const opts = {
     playerVars: {
         autoplay: 1,
     },
-};
+}; 
 
 
 const WebByAwardInner = () => {

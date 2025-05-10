@@ -455,9 +455,4 @@
         display: grid;
         grid-template-columns: auto auto;
     }
-
-    .media-card-img {
-        width: 160px;
-        height: 150px;
-    }
 }
