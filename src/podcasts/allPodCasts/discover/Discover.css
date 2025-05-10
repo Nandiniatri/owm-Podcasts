@@ -72,7 +72,7 @@
         overflow-x: scroll;
         flex-wrap: nowrap;
         gap: 6px;
-        padding: 2px;
+        /* padding: 2px; */
     }
 
     .discover-btn-div2 button {
