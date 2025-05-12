@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import './OtherComp.css'
+import Modal from "../../component/modal/Modal";
+import { AppContext } from "../../contextApi/AppContext";
 
 const OtherComp = () => {
     const [podcasts, setPodcast] = useState([]);
-    const { category } = useParams();
-    console.log(category);
-
+    // const { category } = useParams();
+    // console.log(category); 
+    // const { isModalOpen, setIsModalOpen } = useContext(AppContext);
 
     useEffect(() => {
         const fetchApi = async () => {
@@ -32,10 +34,11 @@ const OtherComp = () => {
 
     return (
         <>
+            {/* <Modal isOpen={isModalOpen}> */}
             <div className="podcast-container">
                 {podcasts.length > 0 ? (
                     <h2>{podcasts[0].category.charAt(0).toUpperCase() + podcasts[0].category.slice(1)}</h2>
-                ):""}
+                ) : ""}
                 {podcasts.length > 0 ? podcasts.map((itm) => (
                     <div key={itm.id} className="podcastsContainer">
                         <div className="podcastsinner">
@@ -50,6 +53,9 @@ const OtherComp = () => {
                     </div>
                 )) : <p>No Data</p>}
             </div>
+
+            {/* <h1>Hello</h1> */}
+            {/* </Modal> */}
         </>
     );
 };

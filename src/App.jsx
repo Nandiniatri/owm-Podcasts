@@ -46,8 +46,8 @@ function App() {
             <Route path='/discover/uander20Min' element={<Under20MinFileInner />} />
             <Route path='/discover/podcastKitInner' element={<PodcastKitInner />} />
             <Route path='/discover/:category' element={<RenderCategoryBtnData />} />
-            <Route path='/discover' element={<OtherComp />} />
-            <Route path='/:category' element={<OtherComp />} />
+            {/* <Route path='/discover' element={<OtherComp />} /> */}
+            {/* <Route path='/:category' element={<OtherComp />} /> */}
           </Routes>
         </div>
       </div>

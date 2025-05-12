@@ -28,6 +28,7 @@ const AppContextProvider = ({ children }) => {
   const [podcastStartedKitInnerData, setPodcastStartedKitInnerData] = useState([]);
   const [allCategoryBtnData, setAllCategoryBtnData] = useState([]);
   const [btnCategory, setBtnCategory] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const fetchAllCategoryBtnDataApi = async (category) => {
     try {
@@ -318,7 +319,8 @@ const AppContextProvider = ({ children }) => {
       podcastStartedKitInnerData,
       allCategoryBtnData,
       btnCategory, setBtnCategory,
-      fetchAllCategoryBtnDataApi
+      fetchAllCategoryBtnDataApi,
+      isModalOpen, setIsModalOpen
     }}>
       {children}
     </AppContext.Provider>
