@@ -27,7 +27,7 @@ body {
   height: 86.6%;
   overflow-y: auto;
   position: fixed;
-  top: 93px;
+  top: 108px;
   left: 0;
   background-color: #000;
   transition: transform 0.3s ease;
@@ -49,7 +49,7 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #717070 transparent;
   transition: margin-left 0.3s ease;
-  border: solid blue;
+  /* border: solid blue; */
 }
 
 @media (max-width: 493px) {
