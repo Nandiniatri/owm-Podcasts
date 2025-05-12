@@ -1,46 +1,68 @@
+.podcast-container {
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .podcastsContainer {
-   padding: 24px 32px;
-   display: flex;
-   justify-content: space-between;
-   width: 250px;
-   border-radius: 3px;
-   background-color: white;
-   font-family: sans-serif;
-   border: solid 1px black;
-   color: black;
+    padding: 16px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    max-width: 600px;
+    margin: 16px auto;
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    color: #333;
 }
 
 .podcastsinner {
-   display: flex;
-   flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
-.podcastsinner p{
-    font-size: 11px;
+
+.podcastsinner h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
 }
-body {
-    /* background-color: rgb(0 0 0 / 15%); */
+
+.podcastsinner p {
+    font-size: 13px;
+    color: #555;
+    margin: 0;
 }
 
 .btn-container {
-    cursor: pointer;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 10px;
-    max-width: 200px;
+    margin-top: 10px;
 }
 
 button {
-    background-color: rgb(3, 169, 244); 
-    color: white; 
-    padding: 8px 12px; 
-    border: none;   
-    border-radius: 5px; 
+    background-color: #ff4d4f;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
     font-size: 13px;
-    cursor: pointer; 
-    transition: background-color 0.3s; 
-
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: rgb(2, 130, 195); 
+.modal-close-button {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
 }
+

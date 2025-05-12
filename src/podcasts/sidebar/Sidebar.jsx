@@ -1,10 +1,11 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AppContext } from '../../contextApi/AppContext';
 import './Sidebar.css';
 import { FiSearch, FiZap, FiClock, FiStar, FiBookmark, FiActivity } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import Modal from '../../component/modal/Modal';
 import OtherComp from '../allOtherComponent/OtherComp';
+import Button from '../../component/Button';
 
 const iconMap = {
     FiSearch: < FiSearch />,
@@ -17,11 +18,12 @@ const iconMap = {
 
 const Sidebar = ({ setShowSidebar }) => {
     const { sidebar, setIsModalOpen, isModalOpen } = useContext(AppContext);
+    const [accrodingToCategory, setAccrodingToCategory] = useState([]);
 
     const handleLinkClick = (item) => {
         console.log(item);
-        if (item.label === "In Progress") {
-            alert('in process');
+        if (item.category) {
+            setAccrodingToCategory(item.category);
             setIsModalOpen(true);
         }
 
@@ -41,8 +43,9 @@ const Sidebar = ({ setShowSidebar }) => {
 
 
             <div>
+
                 <Modal isOpen={isModalOpen}>
-                    
+                    {accrodingToCategory && <OtherComp category={accrodingToCategory} />}
                 </Modal>
             </div>
         </div>
