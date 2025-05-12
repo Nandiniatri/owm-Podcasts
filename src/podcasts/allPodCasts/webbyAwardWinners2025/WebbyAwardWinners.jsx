@@ -31,7 +31,7 @@ const WebByAward = () => {
     return (
         <div className="webbyaward-container">
             <div className="trending-div1">
-                <h2 className="webByAward-title">Webby Award Winners 2025</h2>
+                <h2 className="trending-title">Webby Award Winners 2025</h2>
                 <Link to={'/discover/webByAward'} className="web-see-all-link see-all-link">
                     <span>See All</span>
                     <span className="see-all-icon">→</span>

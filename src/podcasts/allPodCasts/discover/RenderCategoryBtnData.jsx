@@ -35,10 +35,7 @@ const RenderCategoryBtnData = () => {
     if (allCategoryBtnData.length === 0) {
         return <p>Loading...</p>;
     }
-
-    // console.log(allCategoryBtnData[0].category);
     
-
     return (
         <>
             <div className="webbyaward-container-inner">
