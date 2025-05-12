@@ -4,7 +4,7 @@
 }
 
 .podcastsContainer {
-    padding: 16px 24px;
+    padding: 16px 22px;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -12,10 +12,6 @@
     max-width: 600px;
     margin: 16px auto;
     border-radius: 8px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    color: #333;
 }
 
 .podcastsinner {
@@ -43,7 +39,22 @@
     margin-top: 10px;
 }
 
-button {
+
+.pod-btn-div{
+    /* border: solid; */
+    text-align: end;
+}
+.pod-btn-div button {
+    background-color: #ff4d4f;
+    color: white;
+    padding: 7px 10px;
+    border: none;
+    /* border-radius: 6px; */
+    /* font-size: 10px; */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-data{
     background-color: #ff4d4f;
     color: white;
     padding: 8px 14px;
@@ -54,15 +65,7 @@ button {
     transition: background-color 0.3s ease;
 }
 
-.modal-close-button {
-    position: absolute;
-    top: 10px;
-    right: 12px;
-    background: transparent;
-    border: none;
-    font-size: 22px;
-    font-weight: bold;
-    color: #555;
-    cursor: pointer;
+.podcast-title-div h2{
+    margin-left: 20px;
+    font-size: 25px;
 }
-

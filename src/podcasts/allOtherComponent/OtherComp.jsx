@@ -1,13 +1,10 @@
 import { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import './OtherComp.css'
-import Modal from "../../component/modal/Modal";
 import { AppContext } from "../../contextApi/AppContext";
+import Button from "../../component/Button";
 
 const OtherComp = ({ category }) => {
     const [podcasts, setPodcast] = useState([]);
-    // const { category } = useParams();
-    // console.log(category); 
     const { setIsModalOpen } = useContext(AppContext);
 
     useEffect(() => {
@@ -29,30 +26,39 @@ const OtherComp = ({ category }) => {
             fetchApi();
         }
 
-
     }, [category]);
 
     return (
         <>
             <div className="podcast-container">
                 <div>
-                    {podcasts.length > 0 ? (
-                        <h2>{podcasts[0].category.charAt(0).toUpperCase() + podcasts[0].category.slice(1)}</h2>
-                    ) : ""}
-                    {podcasts.length > 0 ? podcasts.map((itm) => (
-                        <div key={itm.id} className="podcastsContainer">
-                            <div className="podcastsinner">
-                                <h4>{itm.title}</h4>
-                                <p>{itm.description}</p>
-                                <div className="btn-container">
-                                    {itm.options.map((item) => (
-                                        <button key={item.id}>{item.option}</button>
-                                    ))}
+                    <div className="pod-btn-div">
+                        <Button onClick={() => setIsModalOpen(false)}>✖</Button>
+                    </div>
+
+                    <div className="podcast-title-div">
+                        {podcasts.length > 0 ? (
+                            <h2>{podcasts[0].category.charAt(0).toUpperCase() + podcasts[0].category.slice(1)}</h2>
+                        ) : ""}
+                    </div>
+
+                    </div>
+                        {podcasts.length > 0 ? podcasts.map((itm) => (
+                            <>
+                                <div key={itm.id} className="podcastsContainer">
+                                    <div className="podcastsinner">
+                                        <h4>{itm.title}</h4>
+                                        <p>{itm.description}</p>
+                                        <div className="btn-container">
+                                            {itm.options.map((item) => (
+                                                <Button key={item.id} className="btn-data">{item.option}</Button>
+                                            ))}
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    )) : <p>No Data</p>}
-                    <button className="modal-close-button" onClick={() => setIsModalOpen(false)}>✖</button>
+                            </>
+                        )) : <p>Loading......</p>}
+                    <div>
                 </div>
             </div>
         </>
