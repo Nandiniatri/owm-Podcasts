@@ -4,16 +4,7 @@
     justify-content: space-between;
     background-color: black;
     color: white;
-    /* display: flex;
-    align-items: center;
-    height: 60px;
-    padding: 0 1rem;
-    background-color: #f5f5f5;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 999; */
-    /* border: solid; */
+    border: solid;
 }
 
 .header-left {

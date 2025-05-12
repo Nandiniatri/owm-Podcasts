@@ -19,9 +19,11 @@ const iconMap = {
 const Sidebar = ({ setShowSidebar }) => {
     const { sidebar, setIsModalOpen, isModalOpen } = useContext(AppContext);
     const [accrodingToCategory, setAccrodingToCategory] = useState([]);
+    const [selectedLabel , setSelectedLebel] = useState('');
 
     const handleLinkClick = (item) => {
         console.log(item);
+        setSelectedLebel(item.label);
         if (item.category) {
             setAccrodingToCategory(item.category);
             setIsModalOpen(true);
@@ -34,7 +36,7 @@ const Sidebar = ({ setShowSidebar }) => {
         <div className="sidebar-container">
             <div className="sidebar-menu">
                 {sidebar.map((item, index) => (
-                    <Link to={item.path} className="sidebar-item" key={index} onClick={() => handleLinkClick(item)}>
+                    <Link to={item.path} className={`sidebar-item ${selectedLabel  === item.label ? 'selectedLebelClass' : ''}`} key={index} onClick={() => handleLinkClick(item)}>
                         <span className="sidebar-icon">{iconMap[item.icon]}</span>
                         <span className="sidebar-label">{item.label}</span>
                     </Link>
@@ -43,7 +45,6 @@ const Sidebar = ({ setShowSidebar }) => {
 
 
             <div>
-
                 <Modal isOpen={isModalOpen}>
                     {accrodingToCategory && <OtherComp category={accrodingToCategory} />}
                 </Modal>

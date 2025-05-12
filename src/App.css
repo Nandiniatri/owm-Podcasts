@@ -1,10 +1,11 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   /* outline: 1px solid red; */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
 }
+
 body {
   background-color: black;
   color: white;
@@ -26,7 +27,7 @@ body {
   height: 86.6%;
   overflow-y: auto;
   position: fixed;
-  top: 88px;
+  top: 93px;
   left: 0;
   background-color: #000;
   transition: transform 0.3s ease;
@@ -48,6 +49,7 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #717070 transparent;
   transition: margin-left 0.3s ease;
+  border: solid blue;
 }
 
 @media (max-width: 493px) {
@@ -78,7 +80,7 @@ body {
   .AllPodcaste-div {
     margin: 0;
     /* width: 100%; */
-     width: 100vw;
+    width: 100vw;
     overflow-y: auto;
     box-sizing: border-box;
     scrollbar-width: thin;
