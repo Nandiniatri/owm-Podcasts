@@ -14,6 +14,7 @@ import Under20MinFileInner from './podcasts/allPodCasts/under20Min/Under20MinInn
 import PodcastKitInner from './podcasts/allPodCasts/podcastStarted/PodcastStaredKitInner'
 import { useState } from 'react'
 import RenderCategoryBtnData from './podcasts/allPodCasts/discover/RenderCategoryBtnData'
+import OtherComp from './podcasts/allOtherComponent/OtherComp'
 
  
 function App() {
@@ -28,7 +29,7 @@ function App() {
       <UpperComponent toggleSidebar={toggleSidebar} />
       <div className='app-main-container'>
         <div className={`sideBar-div ${showSidebar ? 'show' : ''}`} >
-          <Sidebar />
+          <Sidebar setShowSidebar={setShowSidebar} />
         </div>
 
         <div className={`AllPodcaste-div ${showSidebar ? 'sidebar-open' : ''}`}>
@@ -42,9 +43,11 @@ function App() {
             <Route path="/new-releases/ReLivingSingle" element={<ReLivingSingleInnerFile />} />
             <Route path="/discover/trending" element={<TrendingInnerFile />} />
             <Route path="/discover/webByAward" element={<WebByAwardInner />} />
-            <Route path='/discover/under20Min' element={<Under20MinFileInner />} />
+            <Route path='/discover/uander20Min' element={<Under20MinFileInner />} />
             <Route path='/discover/podcastKitInner' element={<PodcastKitInner />} />
             <Route path='/discover/:category' element={<RenderCategoryBtnData />} />
+            <Route path='/discover' element={<OtherComp />} />
+            <Route path='/:category' element={<OtherComp />} />
           </Routes>
         </div>
       </div>

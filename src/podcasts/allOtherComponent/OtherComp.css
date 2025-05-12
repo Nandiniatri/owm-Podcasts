@@ -1,0 +1,46 @@
+.podcastsContainer {
+   padding: 24px 32px;
+   display: flex;
+   justify-content: space-between;
+   width: 250px;
+   border-radius: 3px;
+   background-color: white;
+   font-family: sans-serif;
+   border: solid 1px black;
+   color: black;
+}
+
+.podcastsinner {
+   display: flex;
+   flex-direction: column;
+}
+.podcastsinner p{
+    font-size: 11px;
+}
+body {
+    /* background-color: rgb(0 0 0 / 15%); */
+}
+
+.btn-container {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    max-width: 200px;
+}
+
+button {
+    background-color: rgb(3, 169, 244); 
+    color: white; 
+    padding: 8px 12px; 
+    border: none;   
+    border-radius: 5px; 
+    font-size: 13px;
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+
+}
+
+button:hover {
+    background-color: rgb(2, 130, 195); 
+}

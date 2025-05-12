@@ -13,17 +13,21 @@ const iconMap = {
     FiHistory: <FiActivity />
 };
 
-const Sidebar = () => {
+const Sidebar = ({ setShowSidebar }) => {
     const { sidebar } = useContext(AppContext);
+
+    const handleLinkClick = () => {
+        setShowSidebar(false);
+    }
 
     return (
         <div className="sidebar-container">
             <div className="sidebar-menu">
                 {sidebar.map((item, index) => (
-                        <Link to={item.path} className="sidebar-item" key={index} >
-                            <span className="sidebar-icon">{iconMap[item.icon]}</span>
-                            <span className="sidebar-label">{item.label}</span>
-                        </Link>
+                    <Link to={item.path} className="sidebar-item" key={index} onClick={handleLinkClick}>
+                        <span className="sidebar-icon">{iconMap[item.icon]}</span>
+                        <span className="sidebar-label">{item.label}</span>
+                    </Link>
                 ))}
             </div>
         </div>
