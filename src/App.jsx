@@ -12,18 +12,18 @@ import TrendingInnerFile from './podcasts/allPodCasts/trending/TrendingInnerFile
 import WebByAwardInner from './podcasts/allPodCasts/webbyAwardWinners2025/webByAwardWinnerInner'
 import Under20MinFileInner from './podcasts/allPodCasts/under20Min/Under20MinInner'
 import PodcastKitInner from './podcasts/allPodCasts/podcastStarted/PodcastStaredKitInner'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import RenderCategoryBtnData from './podcasts/allPodCasts/discover/RenderCategoryBtnData'
 import OtherComp from './podcasts/allOtherComponent/OtherComp'
 
- 
+
 function App() {
   const [showSidebar, setShowSidebar] = useState(false);
 
   const toggleSidebar = () => {
     setShowSidebar(prev => !prev);
   };
-
+  
   return (
     <>
       <UpperComponent toggleSidebar={toggleSidebar} />

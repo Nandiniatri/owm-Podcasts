@@ -21,7 +21,7 @@ const OtherComp = ({ category }) => {
                 console.error("Error fetching data:", error);
             }
         }
-
+ 
         if (category) {
             fetchApi();
         }

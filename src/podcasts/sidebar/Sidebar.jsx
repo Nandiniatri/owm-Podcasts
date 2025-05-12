@@ -44,7 +44,7 @@ const Sidebar = ({ setShowSidebar }) => {
             </div>
 
 
-            <div>
+            <div className='otherComp-modal-div'>
                 <Modal isOpen={isModalOpen}>
                     {accrodingToCategory && <OtherComp category={accrodingToCategory} />}
                 </Modal>
