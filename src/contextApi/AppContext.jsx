@@ -3,6 +3,7 @@ import { createContext, useEffect, useState } from "react";
 export const AppContext = createContext();
 
 const AppContextProvider = ({ children }) => {
+  const [isSidebarVisible, setIsSidebarVisible] = useState(false);
   const [showData, setShowData] = useState([]);
   const [sidebar, setSidebar] = useState([]);
   const [discoverBtn, setDiscoverBtn] = useState([]);
@@ -292,6 +293,7 @@ const AppContextProvider = ({ children }) => {
 
   return (
     <AppContext.Provider value={{
+      isSidebarVisible, setIsSidebarVisible,
       showData, setShowData,
       sidebar,
       discoverBtn,

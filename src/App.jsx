@@ -15,7 +15,7 @@ import PodcastKitInner from './podcasts/allPodCasts/podcastStarted/PodcastStared
 import { useState } from 'react'
 import RenderCategoryBtnData from './podcasts/allPodCasts/discover/RenderCategoryBtnData'
 
-
+ 
 function App() {
   const [showSidebar, setShowSidebar] = useState(false);
 

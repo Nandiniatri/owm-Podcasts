@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { FaSearch, FaUserCircle } from "react-icons/fa";
 import './Header.css';
 import Image from "../../component/Image";
@@ -7,12 +7,12 @@ import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
 import { IoMdMenu } from "react-icons/io";
 import { IoIosSearch } from "react-icons/io";
-
-
+import { AppContext } from "../../contextApi/AppContext";
 
 const UpperComponent = ({ toggleSidebar }) => {
-    const [logoData, setLogoData] = useState([]);
+    const [logoData, setLogoData,] = useState([]);
     const [showSearchBar, setShowSearchBar] = useState(false);
+    const { isSidebarVisible, setIsSidebarVisible } = useContext(AppContext);
 
     const fetchLogoApi = async () => {
         const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/logo');
@@ -28,6 +28,9 @@ const UpperComponent = ({ toggleSidebar }) => {
     const handleRespSearchIcon = () => {
         setShowSearchBar(!showSearchBar);
     }
+    const handleToggleSidebar = () => {
+        setIsSidebarVisible(!isSidebarVisible);
+    };
 
     return (
         <div className="header-container">
