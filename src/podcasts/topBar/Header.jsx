@@ -8,6 +8,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { IoMdMenu } from "react-icons/io";
 import { IoIosSearch } from "react-icons/io";
 import { AppContext } from "../../contextApi/AppContext";
+import { Link } from "react-router-dom";
 
 const UpperComponent = ({ toggleSidebar }) => {
     const [logoData, setLogoData,] = useState([]);
@@ -36,9 +37,11 @@ const UpperComponent = ({ toggleSidebar }) => {
         <div className="header-container">
 
             <div className="header-left">
-                {logoData.map((logoItm, index) => (
-                    <Image key={index} src={logoItm.image} alt="Logo" className="logo-img" />
-                ))}
+                <Link to={"*"}>
+                    {logoData.map((logoItm, index) => (
+                        <Image key={index} src={logoItm.image} alt="Logo" className="logo-img" />
+                    ))}
+                </Link>
             </div>
 
 
