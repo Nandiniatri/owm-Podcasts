@@ -4,6 +4,7 @@ import Button from "../../../component/Button";
 import Image from "../../../component/Image";
 import YouTube from "react-youtube";
 import '../commonCss.css';
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const opts = {
     width: '100%',
@@ -81,7 +82,7 @@ const NewReleaseSliderFile = () => {
                         )
                     }
                 >
-                    {"<"}
+                    <FaChevronLeft />
                 </Button>
 
                 <Button
@@ -90,7 +91,7 @@ const NewReleaseSliderFile = () => {
                         setCurrentIndex((prev) => (prev + 1) % newReleseCarousel.length)
                     }
                 >
-                    {">"}
+                    <FaChevronRight />
                 </Button>
             </div>
 
