@@ -28,13 +28,19 @@ const OtherComp = ({ category }) => {
 
     }, [category]);
 
+    const handleOtherBtn = (item) => {
+        if(item.action === 'not_now'){
+            setIsModalOpen(false)
+        }
+    }
+
     return (
         <>
             <div className="podcast-container">
                 <div>
-                    <div className="pod-btn-div">
+                    {/* <div className="pod-btn-div">
                         <Button onClick={() => setIsModalOpen(false)}>✖</Button>
-                    </div>
+                    </div> */}
 
                     <div className="podcast-title-div">
                         {podcasts.length > 0 ? (
@@ -51,7 +57,9 @@ const OtherComp = ({ category }) => {
                                         <p>{itm.description}</p>
                                         <div className="btn-container">
                                             {itm.options.map((item) => (
-                                                <Button key={item.id} className="btn-data">{item.option}</Button>
+                                                <Button key={item.id} className="btn-data"  onClick={() => 
+                                                    handleOtherBtn(item)
+                                                }>{item.option}</Button>
                                             ))}
                                         </div>
                                     </div>

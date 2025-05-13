@@ -96,7 +96,7 @@
     display: none;
 }
 
-@media(max-width: 493px) {
+@media(max-width: 793px) {
     .header-center-main-Container .header-center .nav-icon {
         display: none;
     }
