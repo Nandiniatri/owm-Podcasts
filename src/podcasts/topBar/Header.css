@@ -4,14 +4,12 @@
     justify-content: space-between;
     background-color: black;
     color: white;
-    border: solid;
+    /* border: solid; */
 }
 
 .header-left {
     width: 19%;
     padding: 15px;
-    /* border: solid; */
-    /* margin-left: 15px; */
 }
 
 .header-center-main-Container {
@@ -173,5 +171,4 @@
         color: #aaa;
         font-size: 12px;
     }
-
 }

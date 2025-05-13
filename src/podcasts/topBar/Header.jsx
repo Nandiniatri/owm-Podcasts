@@ -8,12 +8,13 @@ import { FaArrowRight } from "react-icons/fa6";
 import { IoMdMenu } from "react-icons/io";
 import { IoIosSearch } from "react-icons/io";
 import { AppContext } from "../../contextApi/AppContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const UpperComponent = ({ toggleSidebar }) => {
     const [logoData, setLogoData,] = useState([]);
     const [showSearchBar, setShowSearchBar] = useState(false);
     // const { isSidebarVisible, setIsSidebarVisible } = useContext(AppContext);
+    const navigate = useNavigate();
 
     const fetchLogoApi = async () => {
         const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/logo');
@@ -33,6 +34,14 @@ const UpperComponent = ({ toggleSidebar }) => {
     //     setIsSidebarVisible(!isSidebarVisible);
     // };
 
+    const handleLeftIcon = () => {
+        navigate('*')
+    }
+
+    // const handleRightIcon = () => {
+
+    // }
+
     return (
         <div className="header-container">
 
@@ -48,8 +57,8 @@ const UpperComponent = ({ toggleSidebar }) => {
             <div className="header-center-main-Container">
                 <div className="header-center">
                     <div className="header-center-div1">
-                        <FaArrowLeft className="nav-icon" color="white" size={23} />
-                        <FaArrowRight className="nav-icon" color="gray" size={23} />
+                        <FaArrowLeft className="nav-icon" color="white" size={23} onClick={handleLeftIcon} />
+                        {/* <FaArrowRight className="nav-icon" color="gray" size={23} onClick={handleRightIcon} /> */}
                     </div>
 
                     <div className="header-center1">
