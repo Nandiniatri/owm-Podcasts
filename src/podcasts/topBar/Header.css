@@ -4,7 +4,7 @@
     justify-content: space-between;
     background-color: black;
     color: white;
-    /* border: solid; */
+    border: solid;
 }
 
 .header-left {
@@ -136,8 +136,9 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        margin-right: 45px;
+        margin-right: 66px;
         /* display: block; */
+        /* border: solid red; */
     }
 
     .responsive-search-container {
