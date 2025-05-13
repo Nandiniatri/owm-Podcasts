@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 const UpperComponent = ({ toggleSidebar }) => {
     const [logoData, setLogoData,] = useState([]);
     const [showSearchBar, setShowSearchBar] = useState(false);
-    const { isSidebarVisible, setIsSidebarVisible } = useContext(AppContext);
+    // const { isSidebarVisible, setIsSidebarVisible } = useContext(AppContext);
 
     const fetchLogoApi = async () => {
         const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/logo');
@@ -29,9 +29,9 @@ const UpperComponent = ({ toggleSidebar }) => {
     const handleRespSearchIcon = () => {
         setShowSearchBar(!showSearchBar);
     }
-    const handleToggleSidebar = () => {
-        setIsSidebarVisible(!isSidebarVisible);
-    };
+    // const handleToggleSidebar = () => {
+    //     setIsSidebarVisible(!isSidebarVisible);
+    // };
 
     return (
         <div className="header-container">
