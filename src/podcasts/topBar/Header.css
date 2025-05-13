@@ -135,8 +135,8 @@
     .responsive-div {
         display: flex;
         align-items: center;
-        gap: 10px;
-        margin-right: 70px;
+        gap: 2px;
+        margin-right: 75px;
         /* display: block; */
         /* border: solid red; */
     }
