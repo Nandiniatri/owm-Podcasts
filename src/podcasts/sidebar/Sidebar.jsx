@@ -3,7 +3,6 @@ import { AppContext } from '../../contextApi/AppContext';
 import './Sidebar.css';
 import { FiSearch, FiZap, FiClock, FiStar, FiBookmark, FiActivity } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
-import Modal from '../../component/modal/Modal';
 import OtherComp from '../allOtherComponent/OtherComp';
 import Button from '../../component/Button';
 
@@ -16,21 +15,21 @@ const iconMap = {
     FiHistory: <FiActivity />
 };
 
-const Sidebar = ({ setShowSidebar }) => {
+const Sidebar = ({ handleLinkClick , selectedLabel}) => {
     const { sidebar, setIsModalOpen, isModalOpen } = useContext(AppContext);
-    const [accrodingToCategory, setAccrodingToCategory] = useState([]);
-    const [selectedLabel , setSelectedLebel] = useState('');
+    // const [accrodingToCategory, setAccrodingToCategory] = useState([]);
+    // const [selectedLabel , setSelectedLebel] = useState('');
 
-    const handleLinkClick = (item) => {
-        console.log(item);
-        setSelectedLebel(item.label);
-        if (item.category) {
-            setAccrodingToCategory(item.category);
-            setIsModalOpen(true);
-        }
+    // const handleLinkClick = (item) => {
+    //     console.log(item);
+    //     setSelectedLebel(item.label);
+    //     if (item.category) {
+    //         setAccrodingToCategory(item.category);
+    //         setIsModalOpen(true);
+    //     }
 
-        setShowSidebar(false);
-    }
+    //     setShowSidebar(false);
+    // }
 
     return (
         <div className="sidebar-container">
@@ -41,13 +40,6 @@ const Sidebar = ({ setShowSidebar }) => {
                         <span className="sidebar-label">{item.label}</span>
                     </Link>
                 ))}
-            </div>
-
-
-            <div className='otherComp-modal-div'>
-                <Modal isOpen={isModalOpen}>
-                    {accrodingToCategory && <OtherComp category={accrodingToCategory} />}
-                </Modal>
             </div>
         </div>
     );

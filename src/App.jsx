@@ -12,24 +12,41 @@ import TrendingInnerFile from './podcasts/allPodCasts/trending/TrendingInnerFile
 import WebByAwardInner from './podcasts/allPodCasts/webbyAwardWinners2025/webByAwardWinnerInner'
 import Under20MinFileInner from './podcasts/allPodCasts/under20Min/Under20MinInner'
 import PodcastKitInner from './podcasts/allPodCasts/podcastStarted/PodcastStaredKitInner'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import RenderCategoryBtnData from './podcasts/allPodCasts/discover/RenderCategoryBtnData'
 import OtherComp from './podcasts/allOtherComponent/OtherComp'
+import { AppContext } from './contextApi/AppContext'
+import Modal from './component/modal/Modal'
 
 
 function App() {
   const [showSidebar, setShowSidebar] = useState(false);
+  const [accrodingToCategory, setAccrodingToCategory] = useState([]);
+  const [selectedLabel, setSelectedLebel] = useState('');
+  const { setIsModalOpen, isModalOpen } = useContext(AppContext);
 
   const toggleSidebar = () => {
     setShowSidebar(prev => !prev);
   };
-  
+
+
+  const handleLinkClick = (item) => {
+    console.log(item);
+    setSelectedLebel(item.label);
+    if (item.category) {
+      setAccrodingToCategory(item.category);
+      setIsModalOpen(true);
+    }
+
+    setShowSidebar(false);
+  }
+
   return (
     <>
       <UpperComponent toggleSidebar={toggleSidebar} />
       <div className='app-main-container'>
         <div className={`sideBar-div ${showSidebar ? 'show' : ''}`} >
-          <Sidebar setShowSidebar={setShowSidebar} />
+          <Sidebar setShowSidebar={setShowSidebar} handleLinkClick={handleLinkClick} selectedLabel={selectedLabel} />
         </div>
 
         <div className={`AllPodcaste-div ${showSidebar ? 'sidebar-open' : ''}`}>
@@ -50,9 +67,17 @@ function App() {
             {/* <Route path='/:category' element={<OtherComp />} /> */}
           </Routes>
         </div>
+
+
+        <div className='otherComp-modal-div'>
+          <Modal isOpen={isModalOpen}>
+            {accrodingToCategory && <OtherComp category={accrodingToCategory} />}
+          </Modal>
+        </div>
       </div>
     </>
   )
 }
 
-export default App
+
+export default App;
