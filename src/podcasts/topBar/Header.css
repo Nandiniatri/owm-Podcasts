@@ -1,10 +1,9 @@
-.header-container {
+/* .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: black;
     color: white;
-    /* border: solid; */
 }
 
 .header-left {
@@ -22,13 +21,11 @@
     padding: 20px;
     border-bottom: thin solid #ccc;
     padding-bottom: 20px;
-    /* border: solid; */
     margin-right: 20px;
 }
 
 .logo-img {
     height: 43px;
-    /* border: solid; */
     margin-left: 20px;
 }
 
@@ -48,7 +45,6 @@
     align-items: center;
     width: 100%;
     justify-content: space-between;
-    /* border: solid; */
 }
 
 .header-center-div1 {
@@ -65,7 +61,6 @@
     border-radius: 8px;
     padding: 15px;
     max-width: 400px;
-    /* border: solid red; */
 }
 
 .search-icon {
@@ -120,7 +115,7 @@
     }
 
     .header-container {
-        /* border: solid; */
+
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -135,8 +130,6 @@
         align-items: center;
         gap: 2px;
         margin-right: 75px;
-        /* display: block; */
-        /* border: solid red; */
     }
 
     .responsive-search-container {
@@ -169,6 +162,189 @@
 
     .search-input::-webkit-input-placeholder {
         color: #aaa;
+        font-size: 12px;
+    }
+} */
+
+
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+}
+
+.header-left {
+    width: 19%;
+    padding: 15px;
+}
+
+.header-center-main-Container {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    width: 77.7%;
+    justify-content: space-around;
+    padding: 20px;
+    border-bottom: thin solid #ccc;
+    padding-bottom: 20px;
+    margin-right: 20px;
+}
+
+.logo-img {
+    height: 43px;
+    margin-left: 20px;
+}
+
+.nav-icon {
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav-icon:hover {
+    color: white;
+}
+
+.header-center {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.header-center-div1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+}
+
+.header-center1 {
+    display: flex;
+    align-items: center;
+    background-color: #2c2c2c;
+    border-radius: 8px;
+    padding: 15px;
+    max-width: 400px;
+}
+
+.search-icon {
+    color: #aaa;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 14px;
+    width: 100%;
+}
+
+.search-input::placeholder {
+    color: #aaa;
+}
+
+.search-input::-webkit-input-placeholder {
+    color: #aaa;
+}
+
+.header-right .user-avatar {
+    font-size: 40px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+/* ========== Responsive ========== */
+
+.responsive-div {
+    display: none;
+}
+
+@media(max-width: 493px) {
+    .header-center-main-Container .header-center .nav-icon {
+        display: none;
+    }
+
+    .header-center-main-Container {
+        border-bottom: none;
+    }
+
+    .header-right .user-avatar {
+        display: none;
+    }
+
+    .header-left .logo-img {
+        height: 33px;
+        margin-left: 22px;
+    }
+
+    .header-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header-center1 {
+        display: none;
+    }
+
+    .responsive-div {
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+        gap: 10px;
+    }
+
+    .responsive-search-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .responsive-searchbar {
+        background-color: #2c2c2c;
+        border-radius: 8px;
+        padding: 8px 10px;
+        display: flex;
+        align-items: center;
+        width: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .responsive-searchbar.show {
+        width: 180px;
+        opacity: 1;
+    }
+
+    .responsive-searchbar .search-input {
+        width: 100%;
+        border: none;
+        background: transparent;
+        outline: none;
+        color: white;
+        font-size: 14px;
+    }
+
+    .responsive-menu-icon {
+        font-size: 24px;
+        color: white;
+    }
+
+    .responsive-search-icon {
+        font-size: 24px;
+        color: white;
+    }
+
+    .search-input::placeholder {
         font-size: 12px;
     }
 }
