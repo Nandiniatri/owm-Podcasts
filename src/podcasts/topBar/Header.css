@@ -1,4 +1,4 @@
-/* .header-container {
+.header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -164,13 +164,13 @@
         color: #aaa;
         font-size: 12px;
     }
-} */
+}
 
 
 
 
 
-.header-container {
+/* .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -353,4 +353,4 @@
     .search-input::placeholder {
         font-size: 12px;
     }
-}
+} */
