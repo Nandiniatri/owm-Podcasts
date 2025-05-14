@@ -26,7 +26,7 @@
 
 .logo-img {
     height: 43px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 
 .nav-icon {
@@ -108,7 +108,7 @@
     display: none;
 }
 
-/* Hide desktop-only elements in mobile */
+
 @media (max-width: 600px) {
   .header-center-main-Container {
     display: none;
@@ -119,8 +119,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #1c1c1e;
-    border-bottom: 1px solid #333;
+    gap: 10px;
+    /* background-color: #1c1c1e;
+    border-bottom: 1px solid #333; */
   }
 
   .responsive-search-container {
@@ -155,7 +156,6 @@
   }
 }
 
-/* Desktop-only elements */
 @media (min-width: 601px) {
   .responsive-div {
     display: none;
@@ -166,8 +166,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 12px 20px;
-    background-color: #1c1c1e;
-    border-bottom: 1px solid #333;
+    /* background-color: #1c1c1e;
+    border-bottom: 1px solid #333; */
   }
 
   .header-center {
