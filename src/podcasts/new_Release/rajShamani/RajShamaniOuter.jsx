@@ -5,6 +5,7 @@ import Modal from "../../../component/modal/Modal";
 import YouTube from "react-youtube";
 import Button from "../../../component/Button";
 import { Link } from "react-router-dom";
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 const opts = {
   width: '100%',
@@ -26,7 +27,7 @@ const RajShamani = () => {
   }
   const handleCloseModal = () => {
     setIsModalOpen(false);
-  } 
+  }
 
   return (
     <div className="section-container">
@@ -34,7 +35,7 @@ const RajShamani = () => {
         <h2 className="section-title">Raj Shamani</h2>
         <Link to={"/new-releases/RajShamani"} className="section-seeall-link">
           <span>See All</span>
-          <span className="section-seeall-icon">→</span>
+          <span className="section-seeall-icon"><FaLongArrowAltRight /></span>
         </Link>
       </div>
 

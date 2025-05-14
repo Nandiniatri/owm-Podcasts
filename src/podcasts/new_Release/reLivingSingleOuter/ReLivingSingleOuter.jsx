@@ -5,13 +5,14 @@ import Modal from "../../../component/modal/Modal";
 import YouTube from "react-youtube";
 import Button from "../../../component/Button";
 import { Link } from "react-router-dom";
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 const opts = {
     width: '100%',
     height: '100%',
     playerVars: {
         autoplay: 1,
-    }, 
+    },
 };
 
 const ReLivingSingleOUTER = () => {
@@ -34,7 +35,7 @@ const ReLivingSingleOUTER = () => {
                 <h2 className="section-title">Re Living Single</h2>
                 <Link to={'/new-releases/ReLivingSingle'} className="section-seeall-link">
                     <span>See All</span>
-                    <span className="section-seeall-icon">→</span>
+                    <span className="section-seeall-icon"><FaLongArrowAltRight /></span>
                 </Link>
             </div>
 

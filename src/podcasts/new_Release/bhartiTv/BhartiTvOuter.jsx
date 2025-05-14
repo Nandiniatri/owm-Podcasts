@@ -5,6 +5,7 @@ import Modal from "../../../component/modal/Modal";
 import YouTube from "react-youtube";
 import Button from "../../../component/Button";
 import { Link } from "react-router-dom";
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 
 const opts = {
@@ -35,7 +36,7 @@ const BhartiTvOuter = () => {
                 <h2 className="section-title">Bharti TV</h2>
                 <Link to={"/new-releases/bhartiTV"} className="section-seeall-link">
                     <span>See All</span>
-                    <span className="section-seeall-icon">→</span>
+                    <span className="section-seeall-icon"><FaLongArrowAltRight /></span>
                 </Link>
             </div>
 
