@@ -4,6 +4,7 @@ import { AppContext } from "../../../contextApi/AppContext";
 import Image from "../../../component/Image";
 import YouTube from "react-youtube";
 import { Link } from "react-router-dom";
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 const opts = {
     width: '100%',
@@ -14,7 +15,7 @@ const opts = {
 };
 
 const Trending = () => {
-    const { trending , showData, setShowData} = useContext(AppContext);
+    const { trending, showData, setShowData } = useContext(AppContext);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleTrendingImg = (item) => {
@@ -29,10 +30,12 @@ const Trending = () => {
     return (
         <div className="trending-container">
             <div className="trending-div1">
-                <h2 className="trending-title">Trending</h2>
+                <div>
+                    <h2 className="trending-title">Trending</h2>
+                </div>
                 <Link to={"/discover/trending"} className="see-all-link">
                     <span>See All</span>
-                    <span className="see-all-icon">→</span>
+                    <span className="see-all-icon"><FaLongArrowAltRight /></span>
                 </Link>
             </div>
 

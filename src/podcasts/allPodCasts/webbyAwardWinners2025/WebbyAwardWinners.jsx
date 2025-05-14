@@ -4,6 +4,7 @@ import './WebbyAwardWinners.css';
 import Image from "../../../component/Image";
 import YouTube from "react-youtube";
 import { Link } from "react-router-dom";
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 const opts = {
     width: '100%', 
@@ -34,7 +35,7 @@ const WebByAward = () => {
                 <h2 className="trending-title">Webby Award Winners 2025</h2>
                 <Link to={'/discover/webByAward'} className="web-see-all-link see-all-link">
                     <span>See All</span>
-                    <span className="see-all-icon">→</span>
+                    <span className="see-all-icon"><FaLongArrowAltRight /></span>
                 </Link>
             </div>
 

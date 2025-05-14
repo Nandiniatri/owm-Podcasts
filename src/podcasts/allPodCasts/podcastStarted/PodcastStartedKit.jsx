@@ -3,6 +3,7 @@ import { AppContext } from "../../../contextApi/AppContext";
 import YouTube from "react-youtube";
 import Image from "../../../component/Image";
 import { Link } from "react-router-dom";
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 const opts = {
     width: '100%',
@@ -31,7 +32,7 @@ const PodcasteStatedKit = () => {
                 <h2 className="trending-title">Podcast Starter Kit</h2>
                 <Link to={'/discover/podcastKitInner'} className="see-all-link">
                     <span>See All</span>
-                    <span className="see-all-icon">→</span>
+                    <span className="see-all-icon"><FaLongArrowAltRight /></span>
                 </Link>
             </div>
 

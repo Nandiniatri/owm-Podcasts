@@ -69,7 +69,7 @@
     /* font-weight: bold; */
     width: 30px;
     text-align: center;
-}
+} 
 
 .podcast-image {
     width: 60px;
@@ -103,20 +103,25 @@
         border: none;
     }
     .trending-div1 {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
+        /* display: flex; */
+        /* flex-direction: row; */
+        /* align-items: flex-start; */
+        border: solid red;
     }
 
     .trending-title {
-        font-size: 28px;
+        font-size: 25px;
         margin-bottom: 8px;
+        border: solid blue;
     }
 
     .see-all-link {
-        margin-top: 10px;
+        /* margin-top: 10px; */
         align-self: flex-start;
         font-size: 14px;
+        border: solid gray;
+        display: flex;
+        flex-direction: row;
     }
 
     .trending-list {
