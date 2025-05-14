@@ -15,13 +15,13 @@ const UpperComponent = ({ toggleSidebar }) => {
     const [showSearchBar, setShowSearchBar] = useState(false);
     const navigate = useNavigate();
     const [searchInputValue, setSearchInputValue] = useState('');
-    const { setSearchingData } = useContext(AppContext)
+    const { setSearchingData, setIsSearchActive } = useContext(AppContext)
 
     const fetchSearchingApi = async (query) => {
         try {
             const response = await fetch(`https://podcasts-backend-j9ty.onrender.com/api/search/podcasts?q=${query}`);
             const result = await response.json();
-            setSearchingData(result); 
+            setSearchingData(result);
         } catch (error) {
             console.error('Search fetch error:', error);
             setSearchingData([]);
@@ -50,9 +50,12 @@ const UpperComponent = ({ toggleSidebar }) => {
     const handleInputFirst = (e) => {
         const value = e.target.value;
         setSearchInputValue(value);
+
         if (value.trim() !== '') {
             fetchSearchingApi(value);
-            navigate('/search');
+            setIsSearchActive(true);
+        } else {
+            setIsSearchActive(false);
         }
     }
 

@@ -29,7 +29,10 @@ const AppContextProvider = ({ children }) => {
   const [allCategoryBtnData, setAllCategoryBtnData] = useState([]);
   const [btnCategory, setBtnCategory] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [searchingData, setSearchingData] = useState([]);
+
   const [searchingData, setSearchingData] = useState([]);
+  const [isSearchActive, setIsSearchActive] = useState(false);
 
 
   const fetchAllCategoryBtnDataApi = async (category) => {
@@ -323,7 +326,13 @@ const AppContextProvider = ({ children }) => {
       btnCategory, setBtnCategory,
       fetchAllCategoryBtnDataApi,
       isModalOpen, setIsModalOpen,
-      searchingData, setSearchingData
+      searchingData, setSearchingData,
+
+      isModalOpen,
+      setIsModalOpen,
+      isSearchActive,
+      setIsSearchActive,
+      searchingData, setSearchingData, isSearchActive, setIsSearchActive
     }}>
       {children}
     </AppContext.Provider>
