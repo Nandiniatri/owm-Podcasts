@@ -16,7 +16,7 @@ import { useContext, useEffect, useState } from 'react'
 import RenderCategoryBtnData from './podcasts/allPodCasts/discover/RenderCategoryBtnData'
 import OtherComp from './podcasts/allOtherComponent/OtherComp'
 import { AppContext } from './contextApi/AppContext'
-import Modal from './component/modal/Modal'
+import Modal from './component/modal/Modal';
 
 
 function App() {

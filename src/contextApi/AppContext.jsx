@@ -29,6 +29,25 @@ const AppContextProvider = ({ children }) => {
   const [allCategoryBtnData, setAllCategoryBtnData] = useState([]);
   const [btnCategory, setBtnCategory] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [searchInputValue, setSearchInputValue] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+
+  const fetchSearchingApi = async (query) => {
+    try {
+      // const url = 
+      const response = await fetch(`https://podcasts-backend-j9ty.onrender.com/api/search/podcasts?q=${query}`);
+      const result = await response.json();
+      if (!response.ok) {
+        console.error("error:", result);
+        return;
+      }
+      console.log("searching result" , result);
+      setSearchResults(result);
+    } catch (error) {
+      console.error("Error fetching category data:", error);
+    }
+  };
+
 
   const fetchAllCategoryBtnDataApi = async (category) => {
     try {
@@ -290,6 +309,7 @@ const AppContextProvider = ({ children }) => {
     fetchUnder20MinInnerDataApi();
     fetchpodcastKitInnerDataApi();
     fetchAllCategoryBtnDataApi();
+    fetchSearchingApi();
   }, []);
 
   return (
@@ -320,7 +340,11 @@ const AppContextProvider = ({ children }) => {
       allCategoryBtnData,
       btnCategory, setBtnCategory,
       fetchAllCategoryBtnDataApi,
-      isModalOpen, setIsModalOpen
+      isModalOpen, setIsModalOpen,
+      searchInputValue,
+      setSearchInputValue,
+      fetchSearchingApi,
+      searchResults,
     }}>
       {children}
     </AppContext.Provider>
