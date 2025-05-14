@@ -14,7 +14,19 @@ const UpperComponent = ({ toggleSidebar }) => {
     const [logoData, setLogoData,] = useState([]);
     const [showSearchBar, setShowSearchBar] = useState(false);
     const navigate = useNavigate();
-    const { searchInputValue, setSearchInputValue, fetchSearchingApi } = useContext(AppContext)
+    const [searchInputValue, setSearchInputValue] = useState('');
+    const { setSearchingData } = useContext(AppContext)
+
+    const fetchSearchingApi = async (query) => {
+        try {
+            const response = await fetch(`https://podcasts-backend-j9ty.onrender.com/api/search/podcasts?q=${query}`);
+            const result = await response.json();
+            setSearchingData(result); 
+        } catch (error) {
+            console.error('Search fetch error:', error);
+            setSearchingData([]);
+        }
+    };
 
     const fetchLogoApi = async () => {
         const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/logo');
@@ -38,7 +50,10 @@ const UpperComponent = ({ toggleSidebar }) => {
     const handleInputFirst = (e) => {
         const value = e.target.value;
         setSearchInputValue(value);
-        fetchSearchingApi(value);
+        if (value.trim() !== '') {
+            fetchSearchingApi(value);
+            navigate('/search');
+        }
     }
 
     return (
@@ -60,7 +75,8 @@ const UpperComponent = ({ toggleSidebar }) => {
 
                     <div className="header-center1 desktop-search">
                         <FaSearch className="search-icon" />
-                        <Input type="search" placeholder="Search or enter URL" className="search-input" onChange={handleInputFirst} value={searchInputValue} />
+                        <Input type="search" placeholder="Search or enter URL" className="search-input" value={searchInputValue}
+                            onChange={handleInputFirst} />
                     </div>
                 </div>
 

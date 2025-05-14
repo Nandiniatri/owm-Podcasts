@@ -17,6 +17,7 @@ import RenderCategoryBtnData from './podcasts/allPodCasts/discover/RenderCategor
 import OtherComp from './podcasts/allOtherComponent/OtherComp'
 import { AppContext } from './contextApi/AppContext'
 import Modal from './component/modal/Modal';
+import SearchResults from './podcasts/search/SearchInput'
 
 
 function App() {
@@ -62,8 +63,7 @@ function App() {
             <Route path='/discover/uander20Min' element={<Under20MinFileInner />} />
             <Route path='/discover/podcastKitInner' element={<PodcastKitInner />} />
             <Route path='/discover/:category' element={<RenderCategoryBtnData />} />
-            {/* <Route path='/discover' element={<OtherComp />} /> */}
-            {/* <Route path='/:category' element={<OtherComp />} /> */}
+            <Route path="/search" element={<SearchResults />} />
           </Routes>
         </div>
 

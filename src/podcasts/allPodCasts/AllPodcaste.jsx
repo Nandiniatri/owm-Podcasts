@@ -27,4 +27,4 @@ const AllPodcaste = () => {
     )
 }
 
-export default AllPodcaste; 
+export default AllPodcaste;  
