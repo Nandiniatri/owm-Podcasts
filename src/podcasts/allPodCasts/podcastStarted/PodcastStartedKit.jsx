@@ -32,7 +32,7 @@ const PodcasteStatedKit = () => {
                 <h2 className="trending-title">Podcast Starter Kit</h2>
                 <Link to={'/discover/podcastKitInner'} className="see-all-link">
                     <span>See All</span>
-                    <span className="see-all-icon"><FaLongArrowAltRight /></span>
+                    <span><FaLongArrowAltRight /></span>
                 </Link>
             </div>
 

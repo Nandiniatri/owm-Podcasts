@@ -35,7 +35,7 @@ const Trending = () => {
                 </div>
                 <Link to={"/discover/trending"} className="see-all-link">
                     <span>See All</span>
-                    <span className="see-all-icon"><FaLongArrowAltRight /></span>
+                    <span><FaLongArrowAltRight /></span>
                 </Link>
             </div>
 

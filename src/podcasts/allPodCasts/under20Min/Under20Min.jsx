@@ -35,7 +35,7 @@ const Under20MinFIle = () => {
                 <h2 className="trending-title">Under 20 Minutes</h2>
                 <Link to={'/discover/under20Min'} className="see-all-link">
                     <span>See All</span>
-                    <span className="see-all-icon"><FaLongArrowAltRight /></span>
+                    <span><FaLongArrowAltRight /></span>
                 </Link>
             </div>
 

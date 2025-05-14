@@ -118,13 +118,14 @@
         margin-top: 20px;
     }
 
-    .trending-div1 .webByAward-title {
+    /* .trending-div1 .webByAward-title {
         font-size: 20px;
-    }
+    } */
 
-    .web-see-all-link {
+    /* .web-see-all-link {
         margin-top: 16px;
-    }
+        border: solid;
+    } */
 
     .webbyaward-grid {
         display: flex !important;

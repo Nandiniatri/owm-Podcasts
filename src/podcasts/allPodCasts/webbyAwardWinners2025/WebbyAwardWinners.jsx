@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
 const opts = {
-    width: '100%', 
+    width: '100%',
     height: '100%',
     playerVars: {
         autoplay: 1,
@@ -32,10 +32,11 @@ const WebByAward = () => {
     return (
         <div className="webbyaward-container">
             <div className="trending-div1">
-                <h2 className="trending-title">Webby Award Winners 2025</h2>
+                <h2 className="trending-title web-title">Webby Award Winners 2025</h2>
                 <Link to={'/discover/webByAward'} className="web-see-all-link see-all-link">
                     <span>See All</span>
-                    <span className="see-all-icon"><FaLongArrowAltRight /></span>
+                    {/* <span className="see-all-icon"><FaLongArrowAltRight /></span> */}
+                    <FaLongArrowAltRight />
                 </Link>
             </div>
 
