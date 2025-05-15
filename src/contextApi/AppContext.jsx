@@ -325,8 +325,7 @@ const AppContextProvider = ({ children }) => {
       fetchAllCategoryBtnDataApi,
       isModalOpen, setIsModalOpen,
       searchingData, setSearchingData,
-
-      searchingData, setSearchingData, isSearchActive, setIsSearchActive
+      isSearchActive, setIsSearchActive
     }}>
       {children}
     </AppContext.Provider>
