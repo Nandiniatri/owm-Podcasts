@@ -29,7 +29,7 @@ const AppContextProvider = ({ children }) => {
   const [allCategoryBtnData, setAllCategoryBtnData] = useState([]);
   const [btnCategory, setBtnCategory] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  // const [searchingData, setSearchingData] = useState([]);
+
   const [searchingData, setSearchingData] = useState([]);
   const [isSearchActive, setIsSearchActive] = useState(false);
 
@@ -326,10 +326,6 @@ const AppContextProvider = ({ children }) => {
       isModalOpen, setIsModalOpen,
       searchingData, setSearchingData,
 
-      isModalOpen,
-      setIsModalOpen,
-      isSearchActive,
-      setIsSearchActive,
       searchingData, setSearchingData, isSearchActive, setIsSearchActive
     }}>
       {children}
