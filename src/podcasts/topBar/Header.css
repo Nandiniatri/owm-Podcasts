@@ -159,6 +159,9 @@
 }
 
 @media (min-width: 601px) {
+   .logo-img {
+    width: 50%; 
+  }
   .responsive-div {
     display: none;
   }
@@ -202,4 +205,5 @@
     display: flex;
     align-items: center;
   }
+
 }
