@@ -98,9 +98,11 @@ const UpperComponent = ({ toggleSidebar }) => {
                         <div className="responsive-searchbar">
                             <FaSearch className="search-icon" />
                             <Input
-                                type="text"
+                                type="search"
                                 placeholder="Search or enter URL"
                                 className="search-input"
+                                value={searchInputValue}
+                                onChange={handleInputFirst}
                             />
                         </div>
                     </div>
