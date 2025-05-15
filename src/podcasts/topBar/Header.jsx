@@ -11,7 +11,7 @@ import { AppContext } from "../../contextApi/AppContext";
 import { Link, useNavigate } from "react-router-dom";
 
 const UpperComponent = ({ toggleSidebar }) => {
-    // const [logoData, setLogoData,] = useState([]);
+    const [logoData, setLogoData,] = useState([]);
     const [showSearchBar, setShowSearchBar] = useState(false);
     const navigate = useNavigate();
     const [searchInputValue, setSearchInputValue] = useState('');
@@ -28,15 +28,15 @@ const UpperComponent = ({ toggleSidebar }) => {
         }
     };
 
-    // const fetchLogoApi = async () => {
-    //     const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/logo');
-    //     const result = await response.json();
-    //     setLogoData(result);
-    // };
+    const fetchLogoApi = async () => {
+        const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/logo');
+        const result = await response.json();
+        setLogoData(result);
+    };
 
-    // useEffect(() => {
-    //     fetchLogoApi();
-    // }, []);
+    useEffect(() => {
+        fetchLogoApi();
+    }, []);
 
 
     const handleRespSearchIcon = () => {
@@ -64,7 +64,9 @@ const UpperComponent = ({ toggleSidebar }) => {
 
             <div className="header-left">
                 <Link to={"*"}>
-                    <Image src="/public/image/logo1.png" alt="Logo" className="logo-img" />
+                    {logoData.map((Logoitem) => (
+                        <Image src={Logoitem.image} alt="Logo" className="logo-img" />
+                    ))}
                 </Link>
             </div>
 
