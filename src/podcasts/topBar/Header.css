@@ -156,12 +156,17 @@
     color: white;
     cursor: pointer;
   }
+
+  .logo-img {
+    width: 80%;
+  }
 }
 
 @media (min-width: 601px) {
-   .logo-img {
-    width: 50%; 
+  .logo-img {
+    width: 50%;
   }
+
   .responsive-div {
     display: none;
   }
