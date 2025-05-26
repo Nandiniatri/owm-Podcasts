@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import LocalSidebarData from "../fixtures/Sidebar";
 import LocalDiscoverBtnData from "../fixtures/discoverBtnData";
+import LocalDiscoverCarousel from "../fixtures/discoverCarousalData";
 
 
 export const AppContext = createContext();
@@ -13,8 +14,12 @@ const AppContextProvider = ({ children }) => {
 
   // const [discoverBtn, setDiscoverBtn] = useState([]);
   const [discoverBtn, setDiscoverBtn] = useState(LocalDiscoverBtnData);
-  
-  const [discoverCaroData, setDiscoverCaroData] = useState([]);
+  console.log(discoverBtn);
+
+
+  // const [discoverCaroData, setDiscoverCaroData] = useState([]);
+  const [discoverCaroData, setDiscoverCaroData] = useState(LocalDiscoverCarousel);
+
   const [trending, setTrending] = useState([]);
   const [webByAward, setWebByAward] = useState([]);
   const [guestCurator, setGuestCurator] = useState([]);
@@ -245,11 +250,24 @@ const AppContextProvider = ({ children }) => {
     }
   };
 
+  // const fetchDiscoverCarDataApi = async () => {
+  //   try {
+  //     const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/discoverCarousel');
+  //     const result = await response.json();
+  //     setDiscoverCaroData(result);
+  //   } catch (error) {
+  //     console.error("Error fetching sidebar data:", error);
+  //   }
+  // };
+
   const fetchDiscoverCarDataApi = async () => {
     try {
       const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/discoverCarousel');
       const result = await response.json();
-      setDiscoverCaroData(result);
+      // setDiscoverCaroData(result);
+      if (Array.isArray(result) && result.length > 0) {
+        setDiscoverCaroData(result);
+      }
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
     }

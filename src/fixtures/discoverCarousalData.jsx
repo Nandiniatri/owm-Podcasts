@@ -1,4 +1,4 @@
-export default [
+const LocalDiscoverCarousel = [
     {
         id: 1,
         image: "https://static.pocketcasts.com/discover/images/webp/480/f278a6d0-fdea-013d-4721-02bb5ef11301.webp",
@@ -9,7 +9,7 @@ export default [
         videoUrlId: "7rb1H_NpgRQ",
         youtubeUrl: "https://youtu.be/7rb1H_NpgRQ?si=o1gCJ3zvX7mifS6j"
     },
-    {
+    { 
         id: 2,
         image: "https://static.pocketcasts.com/discover/images/webp/480/9e20ba70-6dba-013b-f25a-0acc26574db2.webp",
         linkTitle: "featured",
@@ -62,3 +62,4 @@ export default [
 ];
 
 
+export default LocalDiscoverCarousel;
