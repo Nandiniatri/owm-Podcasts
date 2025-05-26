@@ -1,4 +1,4 @@
-export default  [
+const LocalDiscoverBtnData =  [
     {
         id: 1,
         title: "All Categories",
@@ -17,7 +17,7 @@ export default  [
             { id: 12, title: "News" },
             { id: 13, title: "Religion & Spirituality" },
             { id: 14, title: "Science" },
-            { id: 15, title: "Society & Culture" },
+            { id: 15, title: "Society & Culture" },  
             { id: 16, title: "Sports" },
             { id: 17, title: "Technology" },
             { id: 18, title: "True Crime" },
@@ -31,4 +31,6 @@ export default  [
     { id: 6, title: "Fiction" },
     { id: 7, title: "Technology" }
 ];
+
+export default LocalDiscoverBtnData;
 

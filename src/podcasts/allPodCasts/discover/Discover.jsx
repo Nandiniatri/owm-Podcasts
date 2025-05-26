@@ -5,7 +5,7 @@ import Button from '../../../component/Button';
 import { useNavigate } from 'react-router-dom';
 
 const Discover = () => {
-    const { discoverBtn, fetchAllCategoryBtnDataApi, setBtnCategory, allCategoryBtnData } = useContext(AppContext);
+    const { discoverBtn, fetchAllCategoryBtnDataApi, setBtnCategory, allCategoryBtnData } = useContext(AppContext); 
     const navigate = useNavigate();
 
     const handleDiscoverBtn = (category) => {
@@ -14,7 +14,7 @@ const Discover = () => {
         fetchAllCategoryBtnDataApi(category);
         navigate(`/discover/${category}`); 
     }
-
+ 
     return (
         <div className='discover-btn-main-container'>
             <div className='discover-btn-div1'>
