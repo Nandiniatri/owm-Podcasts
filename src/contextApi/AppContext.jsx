@@ -6,6 +6,7 @@ const AppContextProvider = ({ children }) => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
   const [showData, setShowData] = useState([]);
   const [sidebar, setSidebar] = useState([]);
+  
   const [discoverBtn, setDiscoverBtn] = useState([]);
   const [discoverCaroData, setDiscoverCaroData] = useState([]);
   const [trending, setTrending] = useState([]);
