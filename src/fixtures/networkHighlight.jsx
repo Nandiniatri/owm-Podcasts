@@ -1,4 +1,4 @@
-export default [
+const LocalNetworkHighLight = [
     {
         id: 1,
         image: "https://static.pocketcasts.com/share/images/c184f332-cc51-456d-8547-e8406317b269-author.jpg",
@@ -9,3 +9,5 @@ export default [
         guestCurImg: "https://static.pocketcasts.com/share/images/c184f332-cc51-456d-8547-e8406317b269-collage-web.png"
     }
 ] 
+
+export default LocalNetworkHighLight;

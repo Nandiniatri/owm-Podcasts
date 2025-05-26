@@ -1,4 +1,4 @@
-export default [
+const LocalUnder20ApiData = [
     {
         id: 1,
         title: "Financially Inclined",
@@ -96,3 +96,6 @@ export default [
         youtubeUrl: "https://youtu.be/Gxb65amXnac?si=CksGy4KBLCKIjJsq"
     },
 ];
+
+
+export default LocalUnder20ApiData;

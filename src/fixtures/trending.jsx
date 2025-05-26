@@ -1,4 +1,4 @@
-export default [
+const LocalDiscoverTrendingApi =  [
     {
         id: 1,
         sr: 1,
@@ -72,3 +72,6 @@ export default [
         youtubeUrl: "https://youtu.be/OCw145kwwLs?si=sl-WtKVZ8RUXmIF3"
     }
 ];
+
+
+export default LocalDiscoverTrendingApi;

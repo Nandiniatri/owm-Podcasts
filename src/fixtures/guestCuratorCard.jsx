@@ -1,4 +1,4 @@
-export default [
+const LocalGuestCuratorCardApi =  [
     {
         id:1,
         image:"https://static.pocketcasts.com/share/images/942c7c15-46e0-45a5-86b1-4a49e12f8479-author.jpg",
@@ -9,3 +9,5 @@ export default [
         guestCurImg:"https://static.pocketcasts.com/share/images/942c7c15-46e0-45a5-86b1-4a49e12f8479-collage-web.png"
     }
 ]
+
+export default LocalGuestCuratorCardApi;

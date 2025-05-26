@@ -1,4 +1,4 @@
-export default [
+const LocalWebAwardWinnerApi =  [
   {
     id: 1,
     title: "Personal Best",
@@ -96,3 +96,6 @@ export default [
     youtubeUrl: "https://youtu.be/T96gQ7HMdls?si=VEim1ylqrrmJbsWU"
   },
 ];
+
+
+export default LocalWebAwardWinnerApi;

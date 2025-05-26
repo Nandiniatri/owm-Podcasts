@@ -2,6 +2,12 @@ import { createContext, useEffect, useState } from "react";
 import LocalSidebarData from "../fixtures/Sidebar";
 import LocalDiscoverBtnData from "../fixtures/discoverBtnData";
 import LocalDiscoverCarousel from "../fixtures/discoverCarousalData";
+import LocalDiscoverTrendingApi from "../fixtures/trending";
+import LocalWebAwardWinnerApi from "../fixtures/webbyAwardWinners";
+import LocalUnder20ApiData from "../fixtures/under20Minutes";
+import LocalGuestCuratorCardApi from "../fixtures/guestCuratorCard";
+import LocalNetworkHighLight from "../fixtures/networkHighlight";
+import LocalPodcastStaredKit from "../fixtures/podcastStarterKit";
 
 
 export const AppContext = createContext();
@@ -20,12 +26,25 @@ const AppContextProvider = ({ children }) => {
   // const [discoverCaroData, setDiscoverCaroData] = useState([]);
   const [discoverCaroData, setDiscoverCaroData] = useState(LocalDiscoverCarousel);
 
-  const [trending, setTrending] = useState([]);
-  const [webByAward, setWebByAward] = useState([]);
-  const [guestCurator, setGuestCurator] = useState([]);
-  const [under20MinData, setUnder20MinData] = useState([]);
-  const [netWorkHigh, setNetWorkHigh] = useState([]);
-  const [podcasteStartedData, setPodCasteStartedData] = useState([]);
+  // const [trending, setTrending] = useState([]);
+  const [trending, setTrending] = useState(LocalDiscoverTrendingApi);
+
+  // const [webByAward, setWebByAward] = useState([]);
+  const [webByAward, setWebByAward] = useState(LocalWebAwardWinnerApi);
+
+  // const [guestCurator, setGuestCurator] = useState([]);
+  const [guestCurator, setGuestCurator] = useState(LocalGuestCuratorCardApi);
+
+  // const [under20MinData, setUnder20MinData] = useState([]);
+  const [under20MinData, setUnder20MinData] = useState(LocalUnder20ApiData);
+
+  // const [netWorkHigh, setNetWorkHigh] = useState([]);
+  const [netWorkHigh, setNetWorkHigh] = useState(LocalNetworkHighLight);
+
+  // const [podcasteStartedData, setPodCasteStartedData] = useState([]);
+  const [podcasteStartedData, setPodCasteStartedData] = useState(LocalPodcastStaredKit);
+
+
   const [rajShami, setRajShami] = useState([]);
   const [bhartiTvOUTERData, setBhartiTvOUTERData] = useState([]);
   const [ranveerAllahbadiaOUTER, setRanveerAllahbadiaOUTER] = useState([]);
@@ -188,63 +207,141 @@ const AppContextProvider = ({ children }) => {
     }
   };
 
+  // const fetchPodcastStartedApi = async () => {
+  //   try {
+  //     const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/podcastStarted');
+  //     const result = await response.json();
+  //     setPodCasteStartedData(result);
+  //   } catch (error) {
+  //     console.error("Error fetching sidebar data:", error);
+  //   }
+  // };
+
   const fetchPodcastStartedApi = async () => {
     try {
       const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/podcastStarted');
       const result = await response.json();
-      setPodCasteStartedData(result);
+      // setPodCasteStartedData(result);
+      if (Array.isArray(result) && result.length > 0) {
+        setPodCasteStartedData(result);
+      }
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
     }
   };
+
+  // const fetchNetworkHighLightApi = async () => {
+  //   try {
+  //     const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/networkhighlight');
+  //     const result = await response.json();
+  //     setNetWorkHigh(result);
+  //   } catch (error) {
+  //     console.error("Error fetching sidebar data:", error);
+  //   }
+  // };
 
   const fetchNetworkHighLightApi = async () => {
     try {
       const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/networkhighlight');
       const result = await response.json();
-      setNetWorkHigh(result);
+      // setNetWorkHigh(result);
+      if (Array.isArray(result) && result.length > 0) {
+        setNetWorkHigh(result);
+      }
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
     }
   };
 
+
+  // const fetchUnder20MinApi = async () => {
+  //   try {
+  //     const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/under20Min');
+  //     const result = await response.json();
+  //     setUnder20MinData(result);
+  //   } catch (error) {
+  //     console.error("Error fetching sidebar data:", error);
+  //   }
+  // };
 
   const fetchUnder20MinApi = async () => {
     try {
       const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/under20Min');
       const result = await response.json();
-      setUnder20MinData(result);
+      // setUnder20MinData(result);
+      if (Array.isArray(result) && result.length > 0) {
+        setUnder20MinData(result);
+      }
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
     }
   };
 
+
+  // const fetchGuestCuratorApi = async () => {
+  //   try {
+  //     const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/guestcuratorcards');
+  //     const result = await response.json();
+  //     setGuestCurator(result);
+  //   } catch (error) {
+  //     console.error("Error fetching sidebar data:", error);
+  //   }
+  // };
 
   const fetchGuestCuratorApi = async () => {
     try {
       const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/guestcuratorcards');
       const result = await response.json();
-      setGuestCurator(result);
+      // setGuestCurator(result);
+      if (Array.isArray(result) && result.length > 0) {
+        setGuestCurator(result);
+      }
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
     }
   };
+
+  // const fetchWebByAwardWinnerApi = async () => {
+  //   try {
+  //     const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/webbyawards');
+  //     const result = await response.json();
+  //     setWebByAward(result);
+  //   } catch (error) {
+  //     console.error("Error fetching sidebar data:", error);
+  //   }
+  // };
 
   const fetchWebByAwardWinnerApi = async () => {
     try {
       const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/webbyawards');
       const result = await response.json();
-      setWebByAward(result);
+      // setWebByAward(result);
+      if (Array.isArray(result) && result.length > 0) {
+        setWebByAward(result);
+      }
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
     }
   };
 
+  // const fetchTrendingApi = async () => {
+  //   try {
+  //     const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/trending/');
+  //     const result = await response.json();
+  //     setTrending(result);
+  //   } catch (error) {
+  //     console.error("Error fetching sidebar data:", error);
+  //   }
+  // };
+
   const fetchTrendingApi = async () => {
     try {
       const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/trending/');
       const result = await response.json();
-      setTrending(result);
+      // setTrending(result);
+      if (Array.isArray(result) && result.length > 0) {
+        setTrending(result);
+      }
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
     }

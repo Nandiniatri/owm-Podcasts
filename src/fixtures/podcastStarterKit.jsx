@@ -1,4 +1,4 @@
-export default [
+const LocalPodcastStaredKit  = [
     {
         id: 1,
         title: "Alie Ward Interview - Home & Family",
@@ -96,3 +96,6 @@ export default [
         youtubeUrl: "https://youtu.be/uN5D1dZzDQA?si=e0iUEq6NFzwplBum"
     }
 ];
+
+
+export default LocalPodcastStaredKit;
