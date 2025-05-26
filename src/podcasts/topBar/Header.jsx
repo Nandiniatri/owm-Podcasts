@@ -11,7 +11,7 @@ import { AppContext } from "../../contextApi/AppContext";
 import { Link, useNavigate } from "react-router-dom";
 
 const UpperComponent = ({ toggleSidebar }) => {
-    const [logoData, setLogoData,] = useState([]);
+    const [logoData, setLogoData,] = useState('https://i.pinimg.com/736x/01/8d/88/018d88525aee612b19b14e49eaa18080.jpg');
     const [showSearchBar, setShowSearchBar] = useState(false);
     const navigate = useNavigate();
     const [searchInputValue, setSearchInputValue] = useState('');
