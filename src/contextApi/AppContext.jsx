@@ -393,9 +393,13 @@ const AppContextProvider = ({ children }) => {
     }
   };
 
+  const API_BASE = import.meta.env.MODE === "development"
+    ? "" // Mirage JS will intercept this
+    : "https://podcasts-backend-j9ty.onrender.com";
+
   const fetchSidebarApi = async () => {
     try {
-      const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/sidebar');
+      const response = await fetch(`${API_BASE}/api/sidebar`);
       const result = await response.json();
       setSidebar(result);
     } catch (error) {
@@ -403,12 +407,8 @@ const AppContextProvider = ({ children }) => {
     }
   };
 
-  fetchSidebarApi();
-
 
   useEffect(() => {
-    setSidebar(LocalSidebarData);
-    
     fetchSidebarApi();
     fetchDiscoverBtnDataApi();
     fetchDiscoverCarDataApi();

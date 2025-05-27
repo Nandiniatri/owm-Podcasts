@@ -6,7 +6,11 @@ import AppContextProvider from './contextApi/AppContext.jsx'
 import makeServer from './mirage/server.js'
 import { BrowserRouter } from 'react-router-dom'
 
-makeServer();
+// makeServer();
+if (import.meta.env.MODE === "development") {
+  makeServer();
+}
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AppContextProvider>
