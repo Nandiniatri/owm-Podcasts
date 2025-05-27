@@ -15,8 +15,9 @@ export const AppContext = createContext();
 const AppContextProvider = ({ children }) => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
   const [showData, setShowData] = useState([]);
-  // const [sidebar, setSidebar] = useState([]);
-  const [sidebar, setSidebar] = useState(LocalSidebarData);
+
+  const [sidebar, setSidebar] = useState([]);
+  // const [sidebar, setSidebar] = useState(LocalSidebarData);
 
   // const [discoverBtn, setDiscoverBtn] = useState([]);
   const [discoverBtn, setDiscoverBtn] = useState(LocalDiscoverBtnData);
@@ -392,30 +393,22 @@ const AppContextProvider = ({ children }) => {
     }
   };
 
-  // const fetchSidebarApi = async () => {
-  //   try {
-  //     const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/sidebar');
-  //     const result = await response.json();
-  //     setSidebar(result);
-  //   } catch (error) {
-  //     console.error("Error fetching sidebar data:", error);
-  //   }
-  // };
-
   const fetchSidebarApi = async () => {
     try {
       const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/sidebar');
       const result = await response.json();
-      if (Array.isArray(result) && result.length > 0) {
-        setSidebar(result); // backend se aaya data
-      }
+      setSidebar(result);
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
     }
   };
 
+  fetchSidebarApi();
+
 
   useEffect(() => {
+    setSidebar(LocalSidebarData);
+    
     fetchSidebarApi();
     fetchDiscoverBtnDataApi();
     fetchDiscoverCarDataApi();
