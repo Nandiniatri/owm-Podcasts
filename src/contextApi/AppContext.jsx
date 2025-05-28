@@ -299,7 +299,7 @@ const AppContextProvider = ({ children }) => {
 
   const fetchSidebarApi = async () => {
     try {
-      const response = await fetch(`${API_BASE}/api/sidebar`);
+      const response = await fetch(`https://podcasts-backend-j9ty.onrender.com/api/sidebar`);
       const result = await response.json();
       setSidebar(result);
     } catch (error) {
