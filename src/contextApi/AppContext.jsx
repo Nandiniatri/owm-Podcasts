@@ -19,32 +19,31 @@ const AppContextProvider = ({ children }) => {
   const [sidebar, setSidebar] = useState([]);
   // const [sidebar, setSidebar] = useState(LocalSidebarData);
 
-  // const [discoverBtn, setDiscoverBtn] = useState([]);
-  const [discoverBtn, setDiscoverBtn] = useState(LocalDiscoverBtnData);
+  const [discoverBtn, setDiscoverBtn] = useState([]);
+  // const [discoverBtn, setDiscoverBtn] = useState(LocalDiscoverBtnData);
   console.log(discoverBtn);
 
 
-  // const [discoverCaroData, setDiscoverCaroData] = useState([]);
-  const [discoverCaroData, setDiscoverCaroData] = useState(LocalDiscoverCarousel);
+  const [discoverCaroData, setDiscoverCaroData] = useState([]);
+  // const [discoverCaroData, setDiscoverCaroData] = useState(LocalDiscoverCarousel);/
 
-  // const [trending, setTrending] = useState([]);
-  const [trending, setTrending] = useState(LocalDiscoverTrendingApi);
+  const [trending, setTrending] = useState([]);
+  // const [trending, setTrending] = useState(LocalDiscoverTrendingApi);
 
-  // const [webByAward, setWebByAward] = useState([]);
-  const [webByAward, setWebByAward] = useState(LocalWebAwardWinnerApi);
+  const [webByAward, setWebByAward] = useState([]);
+  // const [webByAward, setWebByAward] = useState(LocalWebAwardWinnerApi);
 
-  // const [guestCurator, setGuestCurator] = useState([]);
-  const [guestCurator, setGuestCurator] = useState(LocalGuestCuratorCardApi);
+  const [guestCurator, setGuestCurator] = useState([]);
+  // const [guestCurator, setGuestCurator] = useState(LocalGuestCuratorCardApi);
 
-  // const [under20MinData, setUnder20MinData] = useState([]);
-  const [under20MinData, setUnder20MinData] = useState(LocalUnder20ApiData);
+  const [under20MinData, setUnder20MinData] = useState([]);
+  // const [under20MinData, setUnder20MinData] = useState(LocalUnder20ApiData);
 
-  // const [netWorkHigh, setNetWorkHigh] = useState([]);
-  const [netWorkHigh, setNetWorkHigh] = useState(LocalNetworkHighLight);
+  const [netWorkHigh, setNetWorkHigh] = useState([]);
+  // const [netWorkHigh, setNetWorkHigh] = useState(LocalNetworkHighLight);
 
-  // const [podcasteStartedData, setPodCasteStartedData] = useState([]);
-  const [podcasteStartedData, setPodCasteStartedData] = useState(LocalPodcastStaredKit);
-
+  const [podcasteStartedData, setPodCasteStartedData] = useState([]);
+  // const [podcasteStartedData, setPodCasteStartedData] = useState(LocalPodcastStaredKit);
 
   const [rajShami, setRajShami] = useState([]);
   const [bhartiTvOUTERData, setBhartiTvOUTERData] = useState([]);
@@ -208,194 +207,95 @@ const AppContextProvider = ({ children }) => {
     }
   };
 
-  // const fetchPodcastStartedApi = async () => {
-  //   try {
-  //     const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/podcastStarted');
-  //     const result = await response.json();
-  //     setPodCasteStartedData(result);
-  //   } catch (error) {
-  //     console.error("Error fetching sidebar data:", error);
-  //   }
-  // };
-
   const fetchPodcastStartedApi = async () => {
     try {
       const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/podcastStarted');
       const result = await response.json();
-      // setPodCasteStartedData(result);
-      if (Array.isArray(result) && result.length > 0) {
-        setPodCasteStartedData(result);
-      }
+      setPodCasteStartedData(result);
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
     }
   };
-
-  // const fetchNetworkHighLightApi = async () => {
-  //   try {
-  //     const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/networkhighlight');
-  //     const result = await response.json();
-  //     setNetWorkHigh(result);
-  //   } catch (error) {
-  //     console.error("Error fetching sidebar data:", error);
-  //   }
-  // };
 
   const fetchNetworkHighLightApi = async () => {
     try {
       const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/networkhighlight');
       const result = await response.json();
-      // setNetWorkHigh(result);
-      if (Array.isArray(result) && result.length > 0) {
-        setNetWorkHigh(result);
-      }
+      setNetWorkHigh(result);
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
     }
   };
 
-
-  // const fetchUnder20MinApi = async () => {
-  //   try {
-  //     const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/under20Min');
-  //     const result = await response.json();
-  //     setUnder20MinData(result);
-  //   } catch (error) {
-  //     console.error("Error fetching sidebar data:", error);
-  //   }
-  // };
 
   const fetchUnder20MinApi = async () => {
     try {
       const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/under20Min');
       const result = await response.json();
-      // setUnder20MinData(result);
-      if (Array.isArray(result) && result.length > 0) {
-        setUnder20MinData(result);
-      }
+      setUnder20MinData(result);
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
     }
   };
 
-
-  // const fetchGuestCuratorApi = async () => {
-  //   try {
-  //     const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/guestcuratorcards');
-  //     const result = await response.json();
-  //     setGuestCurator(result);
-  //   } catch (error) {
-  //     console.error("Error fetching sidebar data:", error);
-  //   }
-  // };
 
   const fetchGuestCuratorApi = async () => {
     try {
       const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/guestcuratorcards');
       const result = await response.json();
-      // setGuestCurator(result);
-      if (Array.isArray(result) && result.length > 0) {
-        setGuestCurator(result);
-      }
+      setGuestCurator(result);
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
     }
   };
-
-  // const fetchWebByAwardWinnerApi = async () => {
-  //   try {
-  //     const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/webbyawards');
-  //     const result = await response.json();
-  //     setWebByAward(result);
-  //   } catch (error) {
-  //     console.error("Error fetching sidebar data:", error);
-  //   }
-  // };
 
   const fetchWebByAwardWinnerApi = async () => {
     try {
       const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/webbyawards');
       const result = await response.json();
-      // setWebByAward(result);
-      if (Array.isArray(result) && result.length > 0) {
-        setWebByAward(result);
-      }
+      setWebByAward(result);
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
     }
   };
-
-  // const fetchTrendingApi = async () => {
-  //   try {
-  //     const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/trending/');
-  //     const result = await response.json();
-  //     setTrending(result);
-  //   } catch (error) {
-  //     console.error("Error fetching sidebar data:", error);
-  //   }
-  // };
 
   const fetchTrendingApi = async () => {
     try {
       const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/trending/');
       const result = await response.json();
-      // setTrending(result);
-      if (Array.isArray(result) && result.length > 0) {
-        setTrending(result);
-      }
+      setTrending(result);
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
     }
   };
 
-  // const fetchDiscoverCarDataApi = async () => {
-  //   try {
-  //     const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/discoverCarousel');
-  //     const result = await response.json();
-  //     setDiscoverCaroData(result);
-  //   } catch (error) {
-  //     console.error("Error fetching sidebar data:", error);
-  //   }
-  // };
+
 
   const fetchDiscoverCarDataApi = async () => {
     try {
       const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/discoverCarousel');
       const result = await response.json();
-      // setDiscoverCaroData(result);
-      if (Array.isArray(result) && result.length > 0) {
-        setDiscoverCaroData(result);
-      }
+      setDiscoverCaroData(result);
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
     }
   };
 
-  // const fetchDiscoverBtnDataApi = async () => {
-  //   try {
-  //     const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/discoverBtn');
-  //     const result = await response.json();
-  //     setDiscoverBtn(result);
-  //   } catch (error) {
-  //     console.error("Error fetching sidebar data:", error);
-  //   }
-  // };
+
 
   const fetchDiscoverBtnDataApi = async () => {
     try {
       const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/discoverBtn');
       const result = await response.json();
-      if (Array.isArray(result) && result.length > 0) {
-        setDiscoverBtn(result);
-      }
+      setDiscoverBtn(result);
     } catch (error) {
-      console.error("Error fetching discover button data:", error);
+      console.error("Error fetching sidebar data:", error);
     }
   };
 
-  const API_BASE = import.meta.env.MODE === "development"
-    ? "" // Mirage JS will intercept this
-    : "https://podcasts-backend-j9ty.onrender.com";
+  // const API_BASE = import.meta.env.MODE === "development"
+  //   ? "" // Mirage JS will intercept this
+  //   : "https://podcasts-backend-j9ty.onrender.com";
 
   const fetchSidebarApi = async () => {
     try {
