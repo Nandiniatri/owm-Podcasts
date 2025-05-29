@@ -18,7 +18,7 @@ const LocalDiscoverBtnData =  [
             { id: 13, title: "Religion & Spirituality" },
             { id: 14, title: "Science" },
             { id: 15, title: "Society & Culture" },  
-            { id: 16, title: "Sports" },
+            { id: 16, title: "Sports" }, 
             { id: 17, title: "Technology" },
             { id: 18, title: "True Crime" },
             { id: 19, title: "TV & Film" }

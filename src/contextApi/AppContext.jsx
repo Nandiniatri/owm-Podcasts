@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import LocalSidebar from "../fixtures/Sidebar";
+import LocalDiscoverBtnData from "../fixtures/discoverBtnData";
 
 
 export const AppContext = createContext();
@@ -13,7 +14,10 @@ const AppContextProvider = ({ children }) => {
     return cached ? JSON.parse(cached) : LocalSidebar;
   });
 
-  const [discoverBtn, setDiscoverBtn] = useState([]);
+  const [discoverBtn, setDiscoverBtn] = useState(() => {
+    const cached = sessionStorage.getItem("discoverBtn");
+    return cached ? JSON.parse(cached) : LocalDiscoverBtnData;
+  });
 
   const [discoverCaroData, setDiscoverCaroData] = useState([]);
 
@@ -272,6 +276,7 @@ const AppContextProvider = ({ children }) => {
       const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/discoverBtn');
       const result = await response.json();
       setDiscoverBtn(result);
+      sessionStorage.setItem("discoverBtn", JSON.stringify(result));
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
     }
