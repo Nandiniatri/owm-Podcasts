@@ -48,7 +48,7 @@ const AppContextProvider = ({ children }) => {
 
   const [under20MinData, setUnder20MinData] = useState(() => {
     const cached = sessionStorage.getItem("under20MinData");
-    return cached ? JSON.parse(cached) : LocalUnder20ApiData;
+    return cached ? JSON.parse(cached) : LocalUnder20ApiData;  
   });
 
   const [netWorkHigh, setNetWorkHigh] = useState(() => {
