@@ -10,7 +10,7 @@ const LocalDiscoverCarousel = [
         youtubeUrl: "https://youtu.be/7rb1H_NpgRQ?si=o1gCJ3zvX7mifS6j"
     },
     { 
-        id: 2,
+        id: 2, 
         image: "https://static.pocketcasts.com/discover/images/webp/480/9e20ba70-6dba-013b-f25a-0acc26574db2.webp",
         linkTitle: "featured",
         title: "The White Lotus Official Season 3 Podcast | Episode 8 | HBO",

@@ -10,4 +10,4 @@ const LocalGuestCuratorCardApi =  [
     }
 ]
 
-export default LocalGuestCuratorCardApi;
+export default LocalGuestCuratorCardApi; 

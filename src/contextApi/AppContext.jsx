@@ -1,6 +1,10 @@
 import { createContext, useEffect, useState } from "react";
 import LocalDiscoverBtnData from "../fixtures/discoverBtnData";
 import LocalSidebar from "../../public/data/sidebar";
+import LocalDiscoverCarousel from "../fixtures/discoverCarousalData";
+import LocalDiscoverTrendingApi from "../fixtures/trending";
+import LocalWebAwardWinnerApi from "../fixtures/webByAwardWinners";
+import LocalGuestCuratorCardApi from "../fixtures/guestCuratorCard";
 
 
 export const AppContext = createContext();
@@ -19,13 +23,25 @@ const AppContextProvider = ({ children }) => {
     return cached ? JSON.parse(cached) : LocalDiscoverBtnData;
   });
 
-  const [discoverCaroData, setDiscoverCaroData] = useState([]);
+  const [discoverCaroData, setDiscoverCaroData] = useState(() => {
+    const cached = sessionStorage.getItem("discoverCaroData");
+    return cached ? JSON.parse(cached) : LocalDiscoverCarousel;
+  });
 
-  const [trending, setTrending] = useState([]);
+  const [trending, setTrending] = useState(() => {
+    const cached = sessionStorage.getItem("trending");
+    return cached ? JSON.parse(cached) : LocalDiscoverTrendingApi;
+  });
 
-  const [webByAward, setWebByAward] = useState([]);
+  const [webByAward, setWebByAward] = useState(() => {
+    const cached = sessionStorage.getItem("webByAward");
+    return cached ? JSON.parse(cached) : LocalWebAwardWinnerApi;
+  });
 
-  const [guestCurator, setGuestCurator] = useState([]);
+  const [guestCurator, setGuestCurator] = useState(() => {
+    const cached = sessionStorage.getItem("guestCurator");
+    return cached ? JSON.parse(cached) : LocalGuestCuratorCardApi;
+  });
 
   const [under20MinData, setUnder20MinData] = useState([]);
 
@@ -231,7 +247,10 @@ const AppContextProvider = ({ children }) => {
     try {
       const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/guestcuratorcards');
       const result = await response.json();
-      setGuestCurator(result);
+      if (Array.isArray(result) && result.length > 0) {
+        setGuestCurator(result);
+        sessionStorage.setItem("sidebar", JSON.stringify(result));
+      }
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
     }
@@ -241,7 +260,10 @@ const AppContextProvider = ({ children }) => {
     try {
       const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/webbyawards');
       const result = await response.json();
-      setWebByAward(result);
+      if (Array.isArray(result) && result.length > 0) {
+        setDiscoverCaroData(result);
+        sessionStorage.setItem("sidebar", JSON.stringify(result));
+      }
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
     }
@@ -251,7 +273,11 @@ const AppContextProvider = ({ children }) => {
     try {
       const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/trending/');
       const result = await response.json();
-      setTrending(result);
+      setDiscoverCaroData(result);
+      if (Array.isArray(result) && result.length > 0) {
+        setTrending(result);
+        sessionStorage.setItem("sidebar", JSON.stringify(result));
+      }
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
     }
@@ -264,6 +290,10 @@ const AppContextProvider = ({ children }) => {
       const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/discoverCarousel');
       const result = await response.json();
       setDiscoverCaroData(result);
+      if (Array.isArray(result) && result.length > 0) {
+        setDiscoverCaroData(result);
+        sessionStorage.setItem("sidebar", JSON.stringify(result));
+      }
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
     }
@@ -275,8 +305,10 @@ const AppContextProvider = ({ children }) => {
     try {
       const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/discoverBtn');
       const result = await response.json();
-      setDiscoverBtn(result);
-      sessionStorage.setItem("discoverBtn", JSON.stringify(result));
+      if (Array.isArray(result) && result.length > 0) {
+        setDiscoverBtn(result);
+        sessionStorage.setItem("sidebar", JSON.stringify(result));
+      }
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
     }
