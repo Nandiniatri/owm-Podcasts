@@ -1,10 +1,13 @@
 import { createContext, useEffect, useState } from "react";
 import LocalDiscoverBtnData from "../fixtures/discoverBtnData";
-import LocalSidebar from "../../public/data/sidebar";
+import LocalSidebar from "../fixtures/sidebar";
 import LocalDiscoverCarousel from "../fixtures/discoverCarousalData";
 import LocalDiscoverTrendingApi from "../fixtures/trending";
 import LocalWebAwardWinnerApi from "../fixtures/webByAwardWinners";
 import LocalGuestCuratorCardApi from "../fixtures/guestCuratorCard";
+import LocalUnder20ApiData from "../fixtures/under20Minutes";
+import LocalNetworkHighLight from "../fixtures/networkHighlight";
+import LocalPodcastStaredKit from "../fixtures/podcastStarterKit";
 
 
 export const AppContext = createContext();
@@ -43,11 +46,20 @@ const AppContextProvider = ({ children }) => {
     return cached ? JSON.parse(cached) : LocalGuestCuratorCardApi;
   });
 
-  const [under20MinData, setUnder20MinData] = useState([]);
+  const [under20MinData, setUnder20MinData] = useState(() => {
+    const cached = sessionStorage.getItem("under20MinData");
+    return cached ? JSON.parse(cached) : LocalUnder20ApiData;
+  });
 
-  const [netWorkHigh, setNetWorkHigh] = useState([]);
+  const [netWorkHigh, setNetWorkHigh] = useState(() => {
+    const cached = sessionStorage.getItem("netWorkHigh");
+    return cached ? JSON.parse(cached) : LocalNetworkHighLight;
+  });
 
-  const [podcasteStartedData, setPodCasteStartedData] = useState([]);
+  const [podcasteStartedData, setPodCasteStartedData] = useState(() => {
+    const cached = sessionStorage.getItem("netWorkHigh");
+    return cached ? JSON.parse(cached) : LocalPodcastStaredKit;
+  });
 
   const [rajShami, setRajShami] = useState([]);
   const [bhartiTvOUTERData, setBhartiTvOUTERData] = useState([]);
@@ -215,7 +227,10 @@ const AppContextProvider = ({ children }) => {
     try {
       const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/podcastStarted');
       const result = await response.json();
-      setPodCasteStartedData(result);
+      if (Array.isArray(result) && result.length > 0) {
+        setPodCasteStartedData(result);
+        sessionStorage.setItem("sidebar", JSON.stringify(result));
+      }
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
     }
@@ -225,7 +240,10 @@ const AppContextProvider = ({ children }) => {
     try {
       const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/networkhighlight');
       const result = await response.json();
-      setNetWorkHigh(result);
+      if (Array.isArray(result) && result.length > 0) {
+        setNetWorkHigh(result);
+        sessionStorage.setItem("sidebar", JSON.stringify(result));
+      }
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
     }
@@ -236,7 +254,10 @@ const AppContextProvider = ({ children }) => {
     try {
       const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/under20Min');
       const result = await response.json();
-      setUnder20MinData(result);
+      if (Array.isArray(result) && result.length > 0) {
+        setUnder20MinData(result);
+        sessionStorage.setItem("sidebar", JSON.stringify(result));
+      }
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
     }
@@ -261,7 +282,7 @@ const AppContextProvider = ({ children }) => {
       const response = await fetch('https://podcasts-backend-j9ty.onrender.com/api/webbyawards');
       const result = await response.json();
       if (Array.isArray(result) && result.length > 0) {
-        setDiscoverCaroData(result);
+        setWebByAward(result);
         sessionStorage.setItem("sidebar", JSON.stringify(result));
       }
     } catch (error) {

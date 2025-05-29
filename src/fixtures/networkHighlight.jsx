@@ -10,4 +10,4 @@ const LocalNetworkHighLight = [
     }
 ] 
 
-export default LocalNetworkHighLight;
+export default LocalNetworkHighLight; 
