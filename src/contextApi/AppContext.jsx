@@ -52,7 +52,7 @@ const AppContextProvider = ({ children }) => {
   });
 
   const [netWorkHigh, setNetWorkHigh] = useState(() => {
-    const cached = sessionStorage.getItem("netWorkHigh");
+    const cached = sessionStorage.getItem("netWorkHigh");   
     return cached ? JSON.parse(cached) : LocalNetworkHighLight;
   });
 
