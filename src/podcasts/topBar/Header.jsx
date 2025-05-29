@@ -65,7 +65,7 @@ const UpperComponent = ({ toggleSidebar }) => {
             <div className="header-left">
                 <Link to={"*"}>
                     {logoData.map((Logoitem) => (
-                        <Image src={Logoitem.image} alt="Logo" className="logo-img" />
+                        <Image key={Logoitem.id} src={Logoitem.image} alt="Logo" className="logo-img" />
                     ))}
                 </Link>
             </div>

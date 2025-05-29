@@ -1,13 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import LocalSidebarData from "../fixtures/Sidebar";
-import LocalDiscoverBtnData from "../fixtures/discoverBtnData";
-import LocalDiscoverCarousel from "../fixtures/discoverCarousalData";
-import LocalDiscoverTrendingApi from "../fixtures/trending";
-import LocalWebAwardWinnerApi from "../fixtures/webbyAwardWinners";
-import LocalUnder20ApiData from "../fixtures/under20Minutes";
-import LocalGuestCuratorCardApi from "../fixtures/guestCuratorCard";
-import LocalNetworkHighLight from "../fixtures/networkHighlight";
-import LocalPodcastStaredKit from "../fixtures/podcastStarterKit";
+import LocalSidebar from "../fixtures/Sidebar";
 
 
 export const AppContext = createContext();
@@ -21,7 +13,7 @@ const AppContextProvider = ({ children }) => {
 
   const [discoverBtn, setDiscoverBtn] = useState([]);
   // const [discoverBtn, setDiscoverBtn] = useState(LocalDiscoverBtnData);
-  console.log(discoverBtn);
+  // console.log(discoverBtn);
 
 
   const [discoverCaroData, setDiscoverCaroData] = useState([]);
@@ -298,10 +290,15 @@ const AppContextProvider = ({ children }) => {
   //   : "https://podcasts-backend-j9ty.onrender.com";
 
   const fetchSidebarApi = async () => {
+    console.log(LocalSidebar);
+    setSidebar(LocalSidebar);;
+
     try {
       const response = await fetch(`https://podcasts-backend-j9ty.onrender.com/api/sidebar`);
       const result = await response.json();
+      console.log("backend data" , result);
       setSidebar(result);
+      
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
     }

@@ -1,6 +1,6 @@
-export default [
+const LocalSidebar =  [
     {
-        id: "1",
+        id: "1", 
         icon: "FiSearch",
         label: "Discover",
         path: "/discover"
@@ -22,7 +22,7 @@ export default [
         icon: "FiStar",
         label: "Starred",
         path: "/starred"
-    },
+    }, 
     {
         id: "5",
         icon: "FiBookmark",
@@ -36,3 +36,5 @@ export default [
         path: "/history"
     },
 ];
+
+export default LocalSidebar;
