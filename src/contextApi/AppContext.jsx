@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
-import LocalSidebar from "../fixtures/Sidebar";
 import LocalDiscoverBtnData from "../fixtures/discoverBtnData";
+import LocalSidebar from "../../public/data/sidebar";
 
 
 export const AppContext = createContext();
@@ -282,21 +282,28 @@ const AppContextProvider = ({ children }) => {
     }
   };
 
-  const fetchSidebarApi = async () => {
-    try {
-      const response = await fetch(`https://podcasts-backend-j9ty.onrender.com/api/sidebar`);
-      const result = await response.json();
-      console.log("backend data", result);
-      setSidebar(result);
-      sessionStorage.setItem("sidebar", JSON.stringify(result));
-    } catch (error) {
-      console.error("Error fetching sidebar data:", error);
-    }
-  };
+  useEffect(() => {
+    const fetchSidebarApi = async () => {
+      try {
+        const response = await fetch("https://podcasts-backend-j9ty.onrender.com/api/sidebar");
+        const result = await response.json();
+        console.log("Fetched backend sidebar data:", result);
+
+        if (Array.isArray(result) && result.length > 0) {
+          setSidebar(result);
+          sessionStorage.setItem("sidebar", JSON.stringify(result));
+        }
+      } catch (error) {
+        console.error("Error fetching sidebar data:", error);
+      }
+    };
+
+    fetchSidebarApi();
+  }, []);
 
 
   useEffect(() => {
-    fetchSidebarApi();
+    // fetchSidebarApi();
     fetchDiscoverBtnDataApi();
     fetchDiscoverCarDataApi();
     fetchTrendingApi();
