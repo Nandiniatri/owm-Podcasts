@@ -8,34 +8,26 @@ const AppContextProvider = ({ children }) => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
   const [showData, setShowData] = useState([]);
 
-  const [sidebar, setSidebar] = useState([]);
-  // const [sidebar, setSidebar] = useState(LocalSidebarData);
+  const [sidebar, setSidebar] = useState(() => {
+    const cached = sessionStorage.getItem("sidebar");
+    return cached ? JSON.parse(cached) : LocalSidebar;
+  });
 
   const [discoverBtn, setDiscoverBtn] = useState([]);
-  // const [discoverBtn, setDiscoverBtn] = useState(LocalDiscoverBtnData);
-  // console.log(discoverBtn);
-
 
   const [discoverCaroData, setDiscoverCaroData] = useState([]);
-  // const [discoverCaroData, setDiscoverCaroData] = useState(LocalDiscoverCarousel);/
 
   const [trending, setTrending] = useState([]);
-  // const [trending, setTrending] = useState(LocalDiscoverTrendingApi);
 
   const [webByAward, setWebByAward] = useState([]);
-  // const [webByAward, setWebByAward] = useState(LocalWebAwardWinnerApi);
 
   const [guestCurator, setGuestCurator] = useState([]);
-  // const [guestCurator, setGuestCurator] = useState(LocalGuestCuratorCardApi);
 
   const [under20MinData, setUnder20MinData] = useState([]);
-  // const [under20MinData, setUnder20MinData] = useState(LocalUnder20ApiData);
 
   const [netWorkHigh, setNetWorkHigh] = useState([]);
-  // const [netWorkHigh, setNetWorkHigh] = useState(LocalNetworkHighLight);
 
   const [podcasteStartedData, setPodCasteStartedData] = useState([]);
-  // const [podcasteStartedData, setPodCasteStartedData] = useState(LocalPodcastStaredKit);
 
   const [rajShami, setRajShami] = useState([]);
   const [bhartiTvOUTERData, setBhartiTvOUTERData] = useState([]);
@@ -285,20 +277,14 @@ const AppContextProvider = ({ children }) => {
     }
   };
 
-  // const API_BASE = import.meta.env.MODE === "development"
-  //   ? "" // Mirage JS will intercept this
-  //   : "https://podcasts-backend-j9ty.onrender.com";
-
   const fetchSidebarApi = async () => {
-    console.log(LocalSidebar);
-    setSidebar(LocalSidebar);;
 
     try {
       const response = await fetch(`https://podcasts-backend-j9ty.onrender.com/api/sidebar`);
       const result = await response.json();
-      console.log("backend data" , result);
+      console.log("backend data", result);
       setSidebar(result);
-      
+      sessionStorage.setItem("sidebar", JSON.stringify(result));
     } catch (error) {
       console.error("Error fetching sidebar data:", error);
     }
